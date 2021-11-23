@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День Рождения Саши!</title>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="public/css/style.css?v=2">
+    <script src="public/lib/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <!-- <form action="/" method="POST" name="form1"> -->
+            <div class="x"><span class="lnr lnr-cross"></span></div>
+            <div class="input-block">
+                <p class="form-title">Загадывай желание! И на день рождения оно обязательно сбудется! А может быть и раньше...</p>
+            </div>
+            <div class="input-block">
+                <textarea class="input-block-textarea" name="text" required></textarea>
+            </div>
+            <div class="input-block">
+                <button type="submit" class="input-button">Загадать</button>
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+    <div class="wrapper">
+        <!-- <h1 class="countdown-title ct1">Осталось</h1> -->
+        <h1 class="countdown-title">До дня рождения Саши</h1>
+        <div id="countdown" class="countdown">
+            <div class="countdown-number">
+                <span class="countdown-text">Дни</span>
+                <span class="days countdown-time"></span>
+            </div>
+            <!-- <div>:</div> -->
+            <div class="countdown-number">
+                <span class="countdown-text">Часы</span>
+                <span class="hours countdown-time"></span>
+            </div>
+            <div class="countdown-number">
+                <span class="countdown-text">Минуты</span>
+                <span class="minutes countdown-time"></span>
+            </div>
+            <div class="countdown-number">
+                <span class="countdown-text">Секунды</span>
+                <span class="seconds countdown-time"></span>
+            </div>
+        </div>
+        <div class="bottom">
+            <!-- <img src="public/img/bottom5.svg" alt="-"> -->
+            <svg preserveAspectRatio="none" id="visual" viewBox="0 200 900 400" width="900" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M0 238L50 228.8C100 219.7 200 201.3 300 203C400 204.7 500 226.3 600 231.5C700 236.7 800 225.3 850 219.7L900 214L900 601L850 601C800 601 700 601 600 601C500 601 400 601 300 601C200 601 100 601 50 601L0 601Z" fill="#b9b5ff"></path><path d="M0 296L50 311.3C100 326.7 200 357.3 300 364.2C400 371 500 354 600 338.8C700 323.7 800 310.3 850 303.7L900 297L900 601L850 601C800 601 700 601 600 601C500 601 400 601 300 601C200 601 100 601 50 601L0 601Z" fill="#948cff"></path><path d="M0 398L50 409.7C100 421.3 200 444.7 300 444.3C400 444 500 420 600 409C700 398 800 400 850 401L900 402L900 601L850 601C800 601 700 601 600 601C500 601 400 601 300 601C200 601 100 601 50 601L0 601Z" fill="#6c63ff"></path></svg>
+            <!-- <a href="https://vk.com/kibby" target="_blank"><span class="lnr lnr-gift"></span></a> -->
+            <button class="bottom-btn">А что это здесь?</button>
+        </div>
+    </div>
+    
+    <script src="public/lib/sweetalert2.all.min.js"></script>
+    <script src="public/js/script.js?v=2"></script>
+</body>
+</html>
