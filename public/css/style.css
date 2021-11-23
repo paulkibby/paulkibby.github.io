@@ -34,6 +34,7 @@ body {
     text-align: center;
     font-size: 36px;
     font-weight: 300;
+    line-height: 1.5;
     text-transform: uppercase;
     margin-top: 60px;
     padding: 0 20px;
@@ -74,6 +75,7 @@ body {
     position: relative;
     width: 100%;
     z-index: 0;
+    margin-bottom: 100px;
 }
 
 .bottom img {
@@ -86,11 +88,19 @@ body {
     width: 100%;
     height: 100%;
     padding-top: 5px;
-    margin: 0;
 }
 
 .bottom svg path {
     opacity: 0;
+}
+
+.lnr-gift {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #FFFFFF;
+    font-size: 108px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -104,6 +114,14 @@ body {
 
     .countdown-text {
         font-size: 19px;
+    }
+
+    .lnr-gift {
+        transform: translate(-50%, 50%);
+    }
+
+    .bottom {
+        margin-bottom: 200px;
     }
 }
 
@@ -123,6 +141,11 @@ body {
     .countdown-text {
         font-size: 18px;
     }
+
+    .lnr-gift {
+        transform: translate(-50%, 100%);
+        font-size: 108px;
+    }
 }
 
 @media screen and (max-width: 692px) {
@@ -132,6 +155,10 @@ body {
 
     .countdown {
         flex-wrap: wrap;
+    }
+
+    .bottom {
+        margin-bottom: 200px;
     }
 }
 
@@ -143,6 +170,7 @@ body {
 
     .countdown-title {
         font-size: 24px;
+        margin-top: 30px;
     }
 
     .countdown-number {
@@ -152,11 +180,14 @@ body {
     .countdown-time {
         font-size: 82px;
     }
-}
 
-@media screen and (max-width: 524px) {
-    .countdown-title {
-        margin-top: 30px;
+    .lnr-gift {
+        transform: translate(-50%, 150%);
+        font-size: 108px;
+    }
+
+    .bottom {
+        margin-bottom: 300px;
     }
 }
 
