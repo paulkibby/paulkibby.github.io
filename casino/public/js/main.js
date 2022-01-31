@@ -31,7 +31,7 @@ $(document).ready(function() {
 
     function defaultValues() {
         var resetAll = getCookie('reset_all');
-        if (!resetAll) { setCookie('reset_all', money); setCookie('money', money); setCookie('credit', credit); }
+        if (!resetAll) { setCookie('reset_all', "1"); setCookie('money', money); setCookie('credit', credit); }
         var cookieMoney = getCookie('money');
         var cookieCredit = getCookie('credit');
         
