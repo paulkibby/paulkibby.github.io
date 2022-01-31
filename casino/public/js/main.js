@@ -17,7 +17,7 @@ $(document).ready(function() {
     var winAmount = 3000;
     var bet = 500;
     var credit = 0;
-    var creditAmount = 2000;
+    var creditAmount = 3500;
 
     function setCookie(name, value) {
         document.cookie = name + '=' + value;
