@@ -5,165 +5,189 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casino</title>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css?v=1">
+    <!-- <link href="public/fonts/fontawesome-free-6.0.0-beta3-web/css/all.css?v=1" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 <body>
-    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 20; background-color: #000000;">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #FFFFFF;">ВРЕМЕННО ЗАКРЫТО! МЫ ОБАНКРОТИЛИСЬ</div>
-    </div>
-    <div class="content">
-        <div class="balance">
-            <div class="balance-flex">
-                <div class="money">-</div>
-                <button class="balance-btn">+</button>
+    <!-- <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 20; background-color: #000000;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #FFFFFF;">ВРЕМЕННО ЗАКРЫТО!</div>
+    </div> -->
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-title">
+                <span class="header-title-text"><span class="htt-first">НЕ<i class="fa-solid fa-circle htt-first-circle"></i></span>КАЗИНО</span>
+            </div>
+            <div class="header-btn">
+                <button class="btn-bank">Банк</button>
             </div>
         </div>
-        <div class="canvas-flex canvas-flex-animate">
-            <!-- <div class="canvas-flex-particle"></div> -->
-            <!-- <div class="canvas-flex-particle"></div> -->
-            <div class="canvas">
-                <div class="canvas-flash"></div>
-                <div class="cards" style="margin-top: -95px;">
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
+        <div class="content">
+            <div class="content-header">
+                <div class="content-header-balance"><span class="content-header-balance-text">БАЛАНС:</span><span id="balance" class="balance">-</span><i class="fa-solid fa-coins balance-ico"></i></div>
+            </div>
+            <div class="content-wrapper">
+                <!-- <div class="balance">
+                    <div class="balance-flex">
+                        <div class="money">-</div>
+                        <button class="balance-btn">+</button>
+                    </div>
+                </div> -->
+                <div class="canvas-flex canvas-flex-animate">
+                    <div class="canvas">
+                        <div class="canvas-flash"></div>
+                        <div class="cards" style="margin-top: -95px;">
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                        </div>
+                    </div>
+                    <div class="canvas">
+                        <div class="canvas-flash"></div>
+                        <div class="cards" style="margin-top: -95px;">
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                        </div>
+                    </div>
+                    <div class="canvas">
+                        <div class="canvas-flash"></div>
+                        <div class="cards" style="margin-top: -95px;">
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-7 card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-heart card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-gem card-ico"></i></div>
+                            <div class="c-m"><i class="fa-regular fa-lemon card-ico"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-block">
+                    <div class="button-block-form">
+                        <div class="form-block">
+                            <span class="form-block-title">СТАВКА</span>
+                            <div class="input-block">
+                                <i class="fa-solid fa-coins input-balance-ico"></i>
+                                <input id="bet" class="input-text" type="number" name="bet">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn">Крутить</button>
                 </div>
             </div>
-            <div class="canvas">
-                <div class="canvas-flash"></div>
-                <div class="cards" style="margin-top: -95px;">
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                </div>
-            </div>
-            <div class="canvas">
-                <div class="canvas-flash"></div>
-                <div class="cards" style="margin-top: -95px;">
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/seven.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/heart.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/diamond.png" alt="."></div>
-                    <div class="c-m"><img class="card-img" src="public/img/crown.png" alt="."></div>
-                </div>
-            </div>
-        </div>
-        <div class="button-block">
-            <button class="btn">Крутить</button>
         </div>
     </div>
     <div class="credit-background">
-        <div class="credit-modal">
-            <div class="modal-close"><span>x</span></div>
+        <div class="modal">
+            <div class="modal-close"><i class="fa-solid fa-xmark modal-close-ico"></i></div>
             <div class="modal-title"><span>Кредит</span></div>
             <div class="modal-description"><span>Ты можешь брать до 3-х кредитов одновременно.<br>Кредит берётся под 10%.</span></div>
             <p class="modal-credit-num">Количество взятых кредитов: <span id="credit_num">-</span></p>
@@ -184,7 +208,7 @@
     <audio id="au">
         <source src="public/audio/click.mp3">
     </audio>
-    <script src="public/js/lib/jquery-3.6.0.min.js"></script>
-    <script src="public/js/main.js"></script>
+    <script src="public/js/lib/jquery-3.6.0.min.js?v=1"></script>
+    <script src="public/js/main.js?v=1"></script>
 </body>
 </html>
