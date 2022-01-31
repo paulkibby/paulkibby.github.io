@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+body {
+    background-color: #000000;
+}
+
+.body-overflow-hide {
+    overflow: hidden;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.balance {
+    margin-bottom: 50px;
+}
+
+.balance-flex {
+    width: 248px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.money {
+    width: 174px;
+    height: 64px;
+    padding: 20px 0;
+    border: 3px solid #FFFFFF;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.balance-btn {
+    width: 64px;
+    height: 64px;
+    margin-left: 10px;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 3px solid #FFFFFF;
+    outline: none;
+    cursor: pointer;
+}
+
+.balance-btn:hover {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.balance-btn:active {
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+}
+
+.balance-btn:disabled {
+    opacity: 0.5;
+    color: #FFFFFF;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
+.canvas-flex {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+/* .canvas-flex-animate::before {
+    height: 30px!important;
+}
+
+.canvas-flex-animate::after {
+    height: 30px!important;
+}
+
+.canvas-flex::before, .canvas-flex::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.canvas-flex::before {
+    position: absolute;
+    top: -15px;
+    left: -5px;
+    transform: rotate(-45deg);
+}
+
+.canvas-flex::after {
+    position: absolute;
+    top: -15px;
+    right: -5px;
+    transform: rotate(45deg);
+}
+
+.canvas-flex-particle {
+
+} */
+
+.canvas {
+    position: relative;
+    width: 248px;
+    height: 348px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0 10px 0 10px;
+}
+
+.canvas-flash {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+.cards {
+    /* position: relative; */
+    /* left: 0px; */
+    /* width: max-content; */
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /* padding: 12px 12px 12px 12px; */
+    /* transition: all 6s cubic-bezier(0, 0.11, 0.33, 1) 0s; */
+}
+
+.c-m {
+    /* float: left; */
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    /* background-color: #ebebeb; */
+    margin: 22px 0 22px 0;
+    /* margin: 12px 12px 12px 12px; */
+    border-radius: 4px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 28px;
+}
+
+.card-img {
+    display: block;
+    width: 64px;
+    height: 64px;
+}
+
+.button-block {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.btn {
+    /* display: block; */
+    width: 248px;
+    height: 59px;
+    border: 3px solid #FFFFFF;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    outline: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.118s ease;
+ }
+
+.btn:hover {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.btn:active {
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    color: #FFFFFF;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
+/* .btn {
+    width: 248px;
+    height: 44px;
+} */
+
+.background {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(0, 0, 0, .1); */
+    /* backdrop-filter: blur(15px); */
+    z-index: -2;
+}
+
+.bcg-item {
+    position: absolute;
+    width: 444px;
+    height: 444px;
+    border-radius: 50%;
+    z-index: -2;
+    /* opacity: .6; */
+}
+
+.bcg-item:nth-child(2) {
+    top: 50%;
+    left: 60%;
+    background-color: rgba(0, 0, 255, .6);
+}
+.bcg-item:nth-child(3) {
+    top: 40%;
+    left: 10%;
+    background-color: rgba(255, 0, 0, .6);
+}
+.bcg-item:nth-child(4) {
+    top: 5%;
+    left: 40%;
+    background-color: rgba(207, 145, 29, 0.6);
+}
+
+.credit-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+    /* transition: opacity 0.218s cubic-bezier(0, 0.11, 0.33, 1) 0s; */
+    /* transition: opacity 1s ease; */
+}
+
+.credit-modal {
+    display: none;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    width: 348px;
+    /* height: 388px; */
+    padding: 22px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.notify-modal {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    width: 348px;
+    padding: 22px 52px 22px 22px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: font-size 0.05s ease;
+}
+
+.modal-close:hover {
+    font-size: 32px;
+}
+
+.modal-close:active {
+    font-size: 28px;
+}
+
+.modal-title {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.modal-description {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modal-description-notify {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modal-credit-num {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.button {
+    width: 48%;
+    height: 42px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #000000;
+    background-color: #000000;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.118s ease;
+}
+
+.button:hover {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.button:active {
+    border: 1px solid #000000;
+}
+
+.button:disabled {
+    opacity: 0.8;
+    background-color: transparent;
+    color: #000000;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 804px) {
+    .canvas {
+        width: 200px;
+    }
+    
+    .balance-flex {
+        width: 200px;
+    }
+
+    .btn {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .canvas {
+        width: 100px;
+        height: 200px;
+    }
+
+    .c-m {
+        height: 78px;
+    }
+
+    .card-img {
+        width: 54px;
+        height: 54px;
+    }
+    
+    .balance-flex {
+        width: 100%;
+        padding: 0 10px 0 10px;
+    }
+
+    .money {
+        width: calc(80%);
+    }
+    
+    .balance-btn {
+        width: calc(20%);
+    }
+    
+    .button-block {
+        padding: 0 10px 0 10px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+
+    .credit-modal {
+        width: 90%;
+    }
+
+    .notify-modal {
+        width: 90%;
+    }
+
+    .modal-description, .modal-credit-num {
+        font-size: 20px;
+    }
+
+    .modal-description-notify {
+        font-size: 18px;
+    }
+
+    .button {
+        font-size: 14px;
+        height: 52px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .canvas {
+        margin: 0 4px 0 4px;
+    }
+}
