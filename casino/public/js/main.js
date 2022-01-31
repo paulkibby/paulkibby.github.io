@@ -267,6 +267,7 @@ $(document).ready(function() {
 
 
 /*
+
 НЕ КАЗИНО
 
 Аккаунт заблокирован!
@@ -284,11 +285,5 @@ background: #131B29
 window top panel (light): #283346
 window content (dark): #1D2738
 text (dark): #3A4D69 or opacity 0.45
-
-
-
-
-
-
 
 */
