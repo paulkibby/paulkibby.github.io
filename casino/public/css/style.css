@@ -502,6 +502,7 @@ body {
 .modal-buttons {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 32px;
 }
 
@@ -538,6 +539,11 @@ body {
     color: rgba(255, 255, 255, 0.7);
     background-color: #D95E76;
     cursor: not-allowed;
+}
+
+.get-money-btn {
+    width: 100%!important;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 948px) {

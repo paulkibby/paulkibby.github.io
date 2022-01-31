@@ -194,7 +194,7 @@ $(document).ready(function() {
 
     $('.btn-bank').click(function() {
         $('body').addClass('body-overflow-hide');
-        $('.credit-background, .modal').fadeIn(218);
+        $('.credit-background, .modal-credit').fadeIn(218);
     });
 
     $('.modal-close').click(function() {
@@ -208,6 +208,13 @@ $(document).ready(function() {
 
     $('#repay_credit').click(function() {
         repayCredit();
+    });
+
+    $('#get_money').click(function() {
+        $('body').addClass('body-overflow-hide');
+        $('.credit-background').css({'background-color':'#000000'});
+        $('.credit-background, .modal-credit').fadeOut(218);
+        $('.credit-background, .modal-ban').fadeIn(218);
     });
 
     // window.addEventListener('resize', start);
