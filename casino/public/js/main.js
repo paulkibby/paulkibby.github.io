@@ -237,7 +237,6 @@ $(document).ready(function() {
         width = $(window).width();
         if (lastWidth != width) {
             adaptive();
-            console.log(width);
         }
         
         lastWidth = width;
