@@ -7,6 +7,7 @@ $(document).ready(function() {
     var creditInfo = $('#credit_num');
 
     var width = $(window).width();
+    var lastWidth = width;
     var cycleValues = {0: 172, 1: 249};
     var sec = {0: "3", 1: "4", 2: "5"};
     var newGame = true;
@@ -227,7 +228,12 @@ $(document).ready(function() {
 
     $(window).resize(function() {
         width = $(window).width();
-        adaptive();
+        if (lastWidth != width) {
+            adaptive();
+            console.log(width);
+        }
+        
+        lastWidth = width;
     });
 
     function notify(text) {
