@@ -41,7 +41,7 @@ function initializeClock(id, endtime) {
     var timeinterval = setInterval(updateClock, 100);
 }
   
-var deadline="December 25 2021 00:00:00 GMT+0300";
+var deadline="December 25 2022 00:00:00 GMT+0300";
 initializeClock('countdown', deadline);
 
 $(document).ready(function() {
