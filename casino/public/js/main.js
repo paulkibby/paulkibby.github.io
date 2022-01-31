@@ -1,8 +1,9 @@
 $(document).ready(function() {
     var cardsBlock = $('.cards');
     var canvasFlashes = $('.canvas-flash');
+    var betInput = $('#bet');
     var button = $('.btn');
-    var balanceInfo = $('.money');
+    var balanceInfo = $('#balance');
     var creditInfo = $('#credit_num');
 
     var width = $(window).width();
@@ -10,9 +11,10 @@ $(document).ready(function() {
     var sec = {0: "3", 1: "4", 2: "5"};
     var newGame = true;
 
-    var money = 2000;
-    var winAmount = 5000;
-    var twistAmount = 450;
+    var money = 2200;
+    var lastMoney = 0;
+    var winAmount = 3000;
+    var bet = 500;
     var credit = 0;
     var creditAmount = 2000;
 
@@ -28,6 +30,8 @@ $(document).ready(function() {
     }
 
     function defaultValues() {
+        var resetAll = getCookie('reset_all');
+        if (!resetAll) { setCookie('reset_all', money); setCookie('money', money); setCookie('credit', credit); }
         var cookieMoney = getCookie('money');
         var cookieCredit = getCookie('credit');
         
@@ -45,11 +49,28 @@ $(document).ready(function() {
 
         updateMoney();
         updateCredit();
+        betInput.val(bet);
+    }
+
+    function animateNumbers(el) {
+        $(el).each(function() {
+            $(this).prop('Counter', lastMoney).animate({
+                Counter: money
+            }, {
+            duration: 1200,
+            easing: 'swing',
+            step: function(now) {
+                $(this).text(new Intl.NumberFormat('ru-RU').format(Math.ceil(now)));
+            }
+            });
+        });
     }
 
     function updateMoney() {
         setCookie('money', money);
-        balanceInfo.text(new Intl.NumberFormat('ru-RU').format(money) + ' р.');
+        balanceInfo.text(new Intl.NumberFormat('ru-RU').format(money));
+        animateNumbers('.balance');
+        lastMoney = money;
     }
 
     function changeMoney(act, value) {
@@ -118,11 +139,18 @@ $(document).ready(function() {
     }
 
     function twist() {
-        if (money >= twistAmount) {
+        bet = Number(betInput.val());
+        if ((isNaN(bet)) || (bet < 100)) {
+            notify('Минимальная ставка - 100');
+            return;
+        }
+
+        if (money >= bet) {
+            winAmount = (bet * 3);
             var rand = {};
             
             button.prop('disabled', true);
-            changeMoney('sub', twistAmount);
+            changeMoney('sub', bet);
 
             if (!newGame) {
                 canvasFlash(true);
@@ -149,6 +177,7 @@ $(document).ready(function() {
             setTimeout(function(){
                 if ((rand[0] == rand[1]) && (rand[0] == rand[2])) {
                     changeMoney('add', winAmount);
+                    notify('+' + winAmount);
                 }
 
                 button.prop('disabled', false);
@@ -162,14 +191,14 @@ $(document).ready(function() {
         twist();
     });
 
-    $('.balance-btn').click(function() {
+    $('.btn-bank').click(function() {
         $('body').addClass('body-overflow-hide');
-        $('.credit-background, .credit-modal').fadeIn(218);
+        $('.credit-background, .modal').fadeIn(218);
     });
 
     $('.modal-close').click(function() {
         $('body').removeClass('body-overflow-hide');
-        $('.credit-background, .credit-modal, .notify-modal').fadeOut(218);
+        $('.credit-background, .modal, .notify-modal').fadeOut(218);
     });
 
     $('#take_credit').click(function() {
@@ -201,9 +230,6 @@ $(document).ready(function() {
         adaptive();
     });
 
-    defaultValues();
-    adaptive();
-
     function notify(text) {
         if (notifyTimer) { clearTimeout(notifyTimer); }
         $('#notify_text').text(text);
@@ -212,6 +238,10 @@ $(document).ready(function() {
             $('.notify-modal').fadeOut(418);
         }, 3000);
     }
+
+    defaultValues();
+    adaptive();
+
 });
 
 // function start() {
@@ -221,3 +251,32 @@ $(document).ready(function() {
 //     random--;
 //     cards[random].style.background = 'red';
 // }
+
+
+
+/*
+НЕ КАЗИНО
+
+Аккаунт заблокирован!
+Переведите на 0000 0000 0000 0000 5 000 рублей для получения
+доступа к своему аккаунту и возможности вывода средств.
+
+Добавить ставки на выбор
+
+red dark: #D9113A
+red btn: #EC274F
+yellow: #FFD000
+green: #37DD4A
+
+background: #131B29
+window top panel (light): #283346
+window content (dark): #1D2738
+text (dark): #3A4D69 or opacity 0.45
+
+
+
+
+
+
+
+*/
