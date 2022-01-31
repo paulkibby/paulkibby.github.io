@@ -12,7 +12,7 @@ $(document).ready(function() {
     var sec = {0: "3", 1: "4", 2: "5"};
     var newGame = true;
 
-    var money = 2200;
+    var money = 2500;
     var lastMoney = 0;
     var winAmount = 3000;
     var bet = 500;

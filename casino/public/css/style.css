@@ -524,7 +524,6 @@ body {
 }
 
 .button:hover {
-    color: rgba(0, 0, 0, 0.45);
     background-color: #D93354;
     font-size: 14.6px;
 }
