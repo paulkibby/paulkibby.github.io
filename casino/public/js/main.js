@@ -12,7 +12,7 @@ $(document).ready(function() {
     var sec = {0: "3", 1: "4", 2: "5"};
     var newGame = true;
 
-    var money = 2500;
+    var money = 3500;
     var lastMoney = 0;
     var winAmount = 3000;
     var bet = 500;
@@ -32,7 +32,7 @@ $(document).ready(function() {
 
     function defaultValues() {
         var resetAll = getCookie('reset_all');
-        if (!resetAll) { setCookie('reset_all', "1"); setCookie('money', money); setCookie('credit', credit); }
+        if (!resetAll || resetAll == "1") { setCookie('reset_all', "2"); setCookie('money', money); setCookie('credit', credit); }
         var cookieMoney = getCookie('money');
         var cookieCredit = getCookie('credit');
         
@@ -147,7 +147,7 @@ $(document).ready(function() {
         }
 
         if (money >= bet) {
-            winAmount = (bet * 3);
+            winAmount = (bet * 4);
             var rand = {};
             
             button.prop('disabled', true);
