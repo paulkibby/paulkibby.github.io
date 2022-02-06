@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="public/fonts/fontawesome-free-6.0.0-beta3-web/css/all.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="van-draw">
+            <div class="svg-side-view">
+            </div>
+        </div>
+        <div class="data-input-mb">
+            <button class="data-input-btn">Расширенные</button>
+            <input class="input-data" type="number" name="lenght" placeholder="Длина">
+            <input class="input-data" type="number" name="width" placeholder="Ширина">
+            <input class="input-data" type="number" name="height" placeholder="Высота">
+            <button class="data-input-btn">Расчёт</button>
+        </div>
+        <div class="dd-list">
+            <div class="dd-list-header">
+                <input data-dd-el="input" class="dd-list-input" type="text" name="subject" placeholder="Выбери штуку">
+                <div data-dd-el="arrow" class="dd-list-header-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="dd-list-content">
+                <div class="dd-list-category">
+                    <div class="dd-list-category-header">
+                        <div class="dd-list-item-ico"><i class="fa-solid fa-shapes"></i></div>
+                        <div class="dd-list-item-info">
+                            <div class="dd-list-item-info-name">Окна</div>
+                            <div class="dd-list-category-ico"><i class="fa-solid fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="dd-list-item-content">
+                        <div class="dd-list-item">
+                            <div class="dd-list-item-header" data-name="Окно #1">
+                                <div class="dd-list-item-ico"><i class="fa-solid fa-shapes"></i></div>
+                                <div class="dd-list-item-info">
+                                    <div class="dd-list-item-info-name">Окно #1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dd-list-item">
+                            <div class="dd-list-item-header" data-name="Окно #2">
+                                <div class="dd-list-item-ico"><i class="fa-solid fa-shapes"></i></div>
+                                <div class="dd-list-item-info">
+                                    <div class="dd-list-item-info-name">Окно #2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dd-list-item">
+                            <div class="dd-list-item-header" data-name="Окно #3">
+                                <div class="dd-list-item-ico"><i class="fa-solid fa-shapes"></i></div>
+                                <div class="dd-list-item-info">
+                                    <div class="dd-list-item-info-name">Окно #3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dd-list-category">
+                    <div class="dd-list-category-header">
+                        <div class="dd-list-item-ico"><i class="fa-solid fa-shapes"></i></div>
+                        <div class="dd-list-item-info">
+                            <div class="dd-list-item-info-name">Двери</div>
+                            <div class="dd-list-category-ico"><i class="fa-solid fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <div class="dd-list-item-content">
+                        <div class="dd-list-item">
+                            <div class="dd-list-item-header" data-name="Дверь #1">
+                                <div class="dd-list-item-ico"><i class="fa-solid fa-shapes"></i></div>
+                                <div class="dd-list-item-info">
+                                    <div class="dd-list-item-info-name">Дверь #1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dd-list-item">
+                            <div class="dd-list-item-header" data-name="Дверь #2">
+                                <div class="dd-list-item-ico"><i class="fa-solid fa-shapes"></i></div>
+                                <div class="dd-list-item-info">
+                                    <div class="dd-list-item-info-name">Дверь #2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dd-list-item">
+                            <div class="dd-list-item-header" data-name="Дверь #3">
+                                <div class="dd-list-item-ico"><i class="fa-solid fa-shapes"></i></div>
+                                <div class="dd-list-item-info">
+                                    <div class="dd-list-item-info-name">Дверь #3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="public/js/libs/jquery-3.6.0.min.js"></script>
+    <script src="public/js/main.js"></script>
+</body>
+</html>
