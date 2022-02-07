@@ -21,23 +21,25 @@ $('.dd-list-item-header').click(function() {
 });
 
 // ---
-
-var svgItems = {"side": "", "above": "", "back": ""};
-var frameSideView = {"side": "", "above": "", "back": ""};
+var svgns = "http://www.w3.org/2000/svg";
+var svgItems = {"side": [], "above": [], "back": []};
 
 function drawLine(side, mX, mY, lX, lY) {
-    svgItems[side] += '<path fill="none" stroke="#000000" style="stroke-width: 2;" stroke-linecap="square" d="M '+mX+', '+mY+' L '+lX+', '+lY+'"></path>';
+    var shape = document.createElementNS(svgns, "path");
+    shape.setAttributeNS(null, "fill", 'none');
+    shape.setAttributeNS(null, "stroke", '#000000');
+    shape.setAttributeNS(null, "style", 'stroke-width: 1;');
+    shape.setAttributeNS(null, "d", 'M '+mX+', '+mY+' L '+lX+', '+lY+'');
+    
+    svgItems[side].push(shape);
 }
 
 function drawAll() {
-    frameSideView.side = '<div class="svg-side-block"><svg id="svg-side" width="600" height="300" viewBox="-1 -1 600 300">'+svgItems.side+'</svg>';
-    frameSideView.above = '<svg id="svg-above" width="600" height="300" viewBox="-1 -1 600 300">'+svgItems.above+'</svg></div>';
-    frameSideView.back = '<div class="svg-side-block"><svg id="svg-back" width="300" height="300" viewBox="-1 -1 300 300">'+svgItems.back+'</svg></div>';
-    
-    $('.svg-side-view').html(frameSideView.side + frameSideView.above + frameSideView.back);
+    $('#svg-side').html(svgItems.side);
+    $('#svg-above').html(svgItems.above);
+    $('#svg-back').html(svgItems.back);
 
-    svgItems = {"side": "", "above": "", "back": ""};
-    frameSideView = {"side": "", "above": "", "back": ""};
+    svgItems = {"side": [], "above": [], "back": []};
 }
 
 var vanLenght = 3000;
@@ -47,20 +49,20 @@ var vanLenghtPlus = vanLenght;
 var a, b;
 
 function drawFrame() {
-    drawLine('side', -1, 0, vanLenght-1, 0);
-    drawLine('side', 0, 0, 0, vanHeight-3);
-    drawLine('side', -1, vanHeight-2, vanLenght-1, vanHeight-2);
-    drawLine('side', vanLenght-2, 0, vanLenght-2, vanHeight-1);
+    drawLine('side', 0, 1, vanLenght, 1);
+    drawLine('side', 1, 0, 1, vanHeight);
+    drawLine('side', 0, vanHeight-1, vanLenght, vanHeight-1);
+    drawLine('side', vanLenght-1, 0, vanLenght-1, vanHeight);
 
-    drawLine('above', -1, 0, vanLenght-1, 0);
-    drawLine('above', 0, 0, 0, vanWidth-1);
-    drawLine('above',-1, vanWidth-2, vanLenght-1, vanWidth-2);
-    drawLine('above', vanLenght-2, 0, vanLenght-2, vanWidth-1);
+    drawLine('above', 0, 1, vanLenght, 1);
+    drawLine('above', 1, 0, 1, vanWidth);
+    drawLine('above', 0, vanWidth-1, vanLenght, vanWidth-1);
+    drawLine('above', vanLenght-1, 0, vanLenght-1, vanWidth);
 
-    drawLine('back', -1, 0, vanWidth-1, 0);
-    drawLine('back', 0, 0, 0, vanHeight-1);
-    drawLine('back', -1, vanHeight-2, vanWidth-1, vanHeight-2);
-    drawLine('back', vanWidth-2, 0, vanWidth-2, vanHeight-2);
+    drawLine('back', 0, 1, vanWidth, 1);
+    drawLine('back', 1, 0, 1, vanHeight);
+    drawLine('back', 0, vanHeight-1, vanWidth, vanHeight-1);
+    drawLine('back', vanWidth-1, 0, vanWidth-1, vanHeight);
 }
 
 function calcFrame() {
@@ -104,8 +106,5 @@ $('.input-data[name=lenght], .input-data[name=width], .input-data[name=height]')
 calcFrame();
 drawFrame();
 drawAll();
-
-
-
 
 
