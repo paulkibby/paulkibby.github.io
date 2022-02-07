@@ -28,7 +28,7 @@ function drawLine(side, mX, mY, lX, lY) {
     var shape = document.createElementNS(svgns, "path");
     shape.setAttributeNS(null, "fill", 'none');
     shape.setAttributeNS(null, "stroke", '#000000');
-    shape.setAttributeNS(null, "style", 'stroke-width: 1;');
+    shape.setAttributeNS(null, "style", 'stroke-width: 2;');
     shape.setAttributeNS(null, "d", 'M '+mX+', '+mY+' L '+lX+', '+lY+'');
     
     svgItems[side].push(shape);
