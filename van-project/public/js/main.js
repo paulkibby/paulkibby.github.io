@@ -50,14 +50,14 @@ var a, b;
 
 function drawFrame() {
     drawLine('side', 0, 1, vanLenght, 1);
-    drawLine('side', 1, 0, 1, vanHeight);
+    drawLine('side', 0, 0, 0, vanHeight);
     drawLine('side', 0, vanHeight-1, vanLenght, vanHeight-1);
-    drawLine('side', vanLenght-1, 0, vanLenght-1, vanHeight);
+    drawLine('side', vanLenght, 0, vanLenght, vanHeight);
 
     drawLine('above', 0, 1, vanLenght, 1);
-    drawLine('above', 1, 0, 1, vanWidth);
+    drawLine('above', 0, 0, 0, vanWidth);
     drawLine('above', 0, vanWidth-1, vanLenght, vanWidth-1);
-    drawLine('above', vanLenght-1, 0, vanLenght-1, vanWidth);
+    drawLine('above', vanLenght, 0, vanLenght, vanWidth);
 
     drawLine('back', 0, 1, vanWidth, 1);
     drawLine('back', 1, 0, 1, vanHeight);

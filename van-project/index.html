@@ -12,16 +12,18 @@
 <body>
     <div class="wrapper">
         <div class="van-draw">
-            <div class="svg-side-view">
-                <div class="svg-side-block">
-                    <svg id="svg-side" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg"></svg>
-                    <svg id="svg-above" width="600" height="300" viewBox="0 0 600 300"></svg>
+            <div class="van-draw__body">
+                <div class="van-draw__column">
+                    <svg id="svg-side" class="van-draw__frame" width="700" height="350" viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg"></svg>
+                    <svg id="svg-above" class="van-draw__frame" width="700" height="350" viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg"></svg>
                 </div>
-                <div class="svg-side-block">
-                    <svg id="svg-back" width="300" height="300" viewBox="0 0 300 300"></svg>
+                <div class="van-draw__column">
+                    <svg id="svg-back" class="van-draw__frame" width="350" height="350" viewBox="0 0 350 350" xmlns="http://www.w3.org/2000/svg"></svg>
                 </div>
             </div>
         </div>
+
+        <!-- ИЗМЕНИТЬ - БЭМ -->
         <div class="data-input-mb">
             <button class="data-input-btn">Расширенные</button>
             <input class="input-data" type="number" name="lenght" placeholder="Длина">
@@ -29,7 +31,16 @@
             <input class="input-data" type="number" name="height" placeholder="Высота">
             <button class="data-input-btn">Расчёт</button>
         </div>
-        <div class="dd-list">
+
+        <!-- ВРЕМЕННО -->
+        <div style="margin: 150px 0;">
+            <button class="button button_small button_accent">Text</button>
+            <button class="button button_small button_standart">Text</button>
+            <button class="button button_medium button_accent">Text</button>
+            <button class="button button_medium button_standart">Text</button>
+        </div>
+
+        <!-- <div class="dd-list">
             <div class="dd-list-header">
                 <input data-dd-el="input" class="dd-list-input" type="text" name="subject" placeholder="Выбери штуку">
                 <div data-dd-el="arrow" class="dd-list-header-arrow"><i class="fa-solid fa-chevron-down"></i></div>
@@ -106,7 +117,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <script src="public/js/libs/jquery-3.6.0.min.js"></script>
