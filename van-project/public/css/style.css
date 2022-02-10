@@ -158,6 +158,19 @@ body {
     transform: rotate(90deg);
 }
 
+.combo-box-cat__search-message-body {
+    display: none;
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+}
+
+.combo-box-cat__search-message {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 500;
+}
+
 /*  -----  */
 
 .body-block {
