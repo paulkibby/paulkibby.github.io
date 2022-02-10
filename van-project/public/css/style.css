@@ -16,115 +16,142 @@ body {
     margin: 0 auto;
 }
 
-.dd-list {
+.combo-box-cat {
+    position: relative;
     width: 284px;
 }
 
-.dd-list-header {
+.combo-box-cat__header {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
-.dd-list-input {
+.combo-box-cat__input {
     display: block;
-    width: calc(100% - 50px);
-    height: 50px;
-    padding: 0 15px;
-    font-size: 16px;
-    font-weight: 500;
-    border: 1px solid #CCCCCC;
+    width: 100%;
+    color: #303030;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.0778); /* 0.0578 */
+    border-radius: 4px;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.0778); /* 0.0578 */
     outline: none;
+    transition: color 0.267s cubic-bezier(0.55, 0.55, 0, 1),
+    background-color 0.267s cubic-bezier(0.55, 0.55, 0, 1),
+    border-color 0.267s cubic-bezier(0.55, 0.55, 0, 1),
+    border-radius 0.267s cubic-bezier(0.55, 0.55, 0, 1),
+    box-shadow 0.267s cubic-bezier(0.55, 0.55, 0, 1);
+
+    min-height: 40px;
+    padding: 0 40px 0 11px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
-.dd-list-header-arrow {
+.combo-box-cat__input:hover {
+    background-color: rgba(249, 249, 249, 0.5);
+}
+
+.combo-box-cat__input:disabled {
+    color: rgba(0, 0, 0, 0.3614);
+    background-color: rgba(249, 249, 249, 0.3);
+}
+
+.combo-box-cat__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    border-top: 1px solid #CCCCCC;
-    border-right: 1px solid #CCCCCC;
-    border-bottom: 1px solid #CCCCCC;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
 
-.dd-list-header-arrow i {
+.combo-box-cat__arrow i {
     color: #666666;
-    font-size: 16px;
+    font-size: 12px;
 }
 
-.dd-list-content {
+.combo-box-cat__body {
+    position: absolute;
+    left: 0;
+    top: 39px;
     display: none;
     width: 100%;
     max-height: 460px;
-    border-left: 1px solid #CCCCCC;
-    border-right: 1px solid #CCCCCC;
-    border-bottom: 1px solid #CCCCCC;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.0778); /* 0.0578 */
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.0778); /* 0.0578 */
     overflow-y: auto;
 }
 
-.dd-list-category {
+.combo-box-cat__category {
     width: 100%;
     /* height: 80px; */
 }
 
-.dd-list-category-header, .dd-list-item-header {
+.combo-box-cat__category-item, .combo-box-cat__item-header {
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 50px;
     cursor: pointer;
 }
 
-.dd-list-item-ico {
+.combo-box-cat__item-ico {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    height: 80px;
+    height: 50px;
     padding: 0 20px;
 }
-.dd-list-item-ico i {
+.combo-box-cat__item-ico i {
     color: rgba(0, 91, 255, 0.5);
-    font-size: 36px;
+    font-size: 24px;
 }
 
-.dd-list-item-info {
+.combo-box-cat__item-info {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 10px 0 0;
 }
 
-.dd-list-item-info-name {
-    font-size: 16px;
+.combo-box-cat__item-name {
+    font-size: 14px;
     font-weight: 500;
 }
 
-.dd-list-category-ico {
+.combo-box-cat__category-arrow {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
+    width: 20px;
 }
 
-.dd-list-category-ico i {
+.combo-box-cat__category-arrow i {
     color: #666666;
-    font-size: 16px;
+    font-size: 12px;
     transition: transform 0.218s ease;
 }
 
-.dd-list-item {
-    background-color: #eeeeee;
-}
-
-.dd-list-item-content {
+.combo-box-cat__item-body {
     display: none;
     width: 100%;
+}
+
+.combo-box-cat__item {
+    background-color: #F5F5F5;
 }
 
 .rotate-90 {
@@ -187,6 +214,7 @@ body {
     background-color 0.267s cubic-bezier(0.55, 0.55, 0, 1),
     border-color 0.267s cubic-bezier(0.55, 0.55, 0, 1);
     outline: none;
+    cursor: pointer;
 }
 
 .button_small {
