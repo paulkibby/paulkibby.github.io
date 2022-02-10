@@ -254,6 +254,59 @@ $(document).ready(function() {
     defaultValues();
     adaptive();
 
+    function particleDefaultPos(i, t) {
+        setTimeout(function() {
+            var pData = particleDown();
+
+            $('.particle').eq(i).attr('style', 'width: '+pData['w']+'px; height: '+pData['h']+'px; transform: rotate('+pData['rotate']+'deg) skew('+pData['skew']+'deg); bottom: -'+pData['bottom']+'px; left: '+pData['left']+'%;');
+            setTimeout(particleStart, 100, i);
+        }, ((t * 1000) + 100));
+    }
+
+    function particleStart(i) {
+        var l = Math.floor(Math.random() * (131 - 30) + 30);
+        var t = Math.floor(Math.random() * (48 - 12) + 12);
+        
+        $('.particle').eq(i).css({'transition': 'all '+t+'s linear', 'bottom':'105%', 'left':l+'%'});
+        particleDefaultPos(i, t);
+    }
+
+    function particleDown() {
+        var w = Math.floor(Math.random() * (71 - 12) + 12);
+        var h = Math.floor(Math.random() * (w+1 - 12) + 12);
+
+        var rotate = Math.floor(Math.random() * (180 - 0) + 0);
+        var skew = Math.floor(Math.random() * (31 - 0) + 0);
+        
+        var left = Math.floor(Math.random() * (61 - (-60)) + (-60));
+        var bottom = Math.floor(Math.random() * (1001 - 50) + 50);
+
+        return {"w": w, "h": h, "rotate": rotate, "skew": skew, "left": left, "bottom": bottom};
+    }
+
+    function particles(val) {
+        /* a -> b random pos */
+        for(i = 0; i < val; i++) {
+            var pData = particleDown();
+            $('.particles-background').append('<div class="particle" style="width: '+pData['w']+'px; height: '+pData['h']+'px; transform: rotate('+pData['rotate']+'deg) skew('+pData['skew']+'deg); bottom: -'+pData['bottom']+'px; left: '+pData['left']+'%;"></div>');
+            particleStart(i);
+        }
+
+        function st() {
+            // for(i = 0; i < val; i++) {
+            //     // var left = Math.floor(Math.random() * (131 - 30) + 30);
+            //     // var time = Math.floor(Math.random() * (48 - 12) + 12);
+            //     // $('.particle').eq(i).css({'transition': 'all '+time+'s linear', 'bottom':'105%', 'left':left+'%'});
+            //     // particleStart(i)
+            //     // particleDefaultPos(i, time);
+            // }
+        }
+
+        // setTimeout(st, 50);
+    }
+
+    particles(15);
+
 });
 
 // function start() {

@@ -545,6 +545,24 @@ body {
     margin-top: 20px;
 }
 
+.particles-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+    filter: blur(14px);
+}
+
+.particle {
+    position: absolute;
+    border-radius: 16px;
+    background-color: #D9113A;
+    box-shadow: 0 0 10px #D9113A, 0 0 30px #D9113A, 0 0 60px #D9113A;
+}
+
 @media screen and (max-width: 948px) {
     .header {
         padding: 50px;
