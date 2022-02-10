@@ -26,7 +26,7 @@ var searchList = $('.combo-box-cat__item');
 var isSearch = 0;
 
 $('.combo-box-cat__input').keyup(function() {
-    let userInput = $(this).val().trim();
+    let userInput = $(this).val().trim().toLowerCase();
     if (userInput != '') {
         $('.combo-box-cat__category-item').slideUp('fast');
         $('.combo-box-cat__item-body').slideDown('fast');
