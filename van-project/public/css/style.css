@@ -97,6 +97,17 @@ body {
     /* height: 80px; */
 }
 
+.combo-box-cat__category-item {
+    background-color: #FFFFFF;
+    transition: background-color 0.167s ease,
+    padding 0.167s ease;
+}
+
+.combo-box-cat__category-item:hover {
+    background-color: #FAFAFA;
+    padding-left: 4px;
+}
+
 .combo-box-cat__category-item, .combo-box-cat__item-header {
     display: flex;
     justify-content: flex-start;
@@ -142,7 +153,7 @@ body {
 .combo-box-cat__category-arrow i {
     color: #666666;
     font-size: 12px;
-    transition: transform 0.218s ease;
+    transition: transform 0.267s cubic-bezier(0.55, 0.55, 0, 1);
 }
 
 .combo-box-cat__item-body {
@@ -152,6 +163,13 @@ body {
 
 .combo-box-cat__item {
     background-color: #F5F5F5;
+    transition: background-color 0.167s ease,
+    padding 0.167s ease;
+}
+
+.combo-box-cat__item:hover {
+    background-color: #FAFAFA;
+    padding-left: 4px;
 }
 
 .rotate-90 {

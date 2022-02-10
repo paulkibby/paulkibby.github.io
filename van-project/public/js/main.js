@@ -46,6 +46,7 @@ $('.combo-box-cat__input').keyup(function() {
             isSearch = 0;
         } else {
             $('.combo-box-cat__search-message-body').slideUp();
+            isSearch = 1;
         }
 
     } else {
