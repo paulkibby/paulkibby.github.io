@@ -7,11 +7,11 @@
     <title>Document</title>
     <!-- <link href="public/fonts/fontawesome-free-6.0.0-beta3-web/css/all.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css?v=1">
 </head>
 <body>
     <div class="wrapper">
-        <div class="van-draw">
+        <div class="van-draw body-block">
             <div class="van-draw__body">
                 <div class="van-draw__column">
                     <svg id="svg-side" class="van-draw__frame" width="700" height="350" viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -24,21 +24,69 @@
         </div>
 
         <!-- ИЗМЕНИТЬ - БЭМ -->
-        <div class="data-input-mb">
-            <button class="data-input-btn">Расширенные</button>
-            <input class="input-data" type="number" name="lenght" placeholder="Длина">
-            <input class="input-data" type="number" name="width" placeholder="Ширина">
-            <input class="input-data" type="number" name="height" placeholder="Высота">
-            <button class="data-input-btn">Расчёт</button>
+        <div class="data-input body-block">
+            <button class="button button_medium button_standart data-input__input-body">Расширенные</button>
+            <div class="text-box data-input__input-body">
+                <div class="text-box_label-body">
+                    <span class="text-box_label">Длина</span>
+                </div>
+                <input class="text-box__input text-box__input_medium data-input__input" type="number" name="lenght">
+            </div>
+            <div class="text-box data-input__input-body">
+                <div class="text-box_label-body">
+                    <span class="text-box_label">Ширина</span>
+                </div>
+                <input class="text-box__input text-box__input_medium data-input__input" type="number" name="width">
+            </div>
+            <div class="text-box data-input__input-body">
+                <div class="text-box_label-body">
+                    <span class="text-box_label">Высота</span>
+                </div>
+                <input class="text-box__input text-box__input_medium data-input__input" type="number" name="height">
+            </div>
+            <button class="button button_medium button_accent data-input__input-body">Расчёт</button>
+        </div>
+
+        <div class="options body-block">
+
         </div>
 
         <!-- ВРЕМЕННО -->
-        <div style="margin: 150px 0;">
-            <button class="button button_small button_accent">Text</button>
-            <button class="button button_small button_standart">Text</button>
-            <button class="button button_medium button_accent">Text</button>
-            <button class="button button_medium button_standart">Text</button>
+        <div class="body-block">
+            <p style="margin-bottom: 50px; font-size: 18px; font-weight: 500;">Элементы (Временно). Цвета изменятся.</p>
+
+            <p style="margin-bottom: 20px; font-size: 14px; font-weight: 600;">Small</p>
+            <button class="button button_small button_accent">Button</button>
+            <button class="button button_small button_standart">Button</button>
+            <br><br>
+            <div class="text-box">
+                <div class="text-box_label-body">
+                    <span class="text-box_label">Ширина</span>
+                </div>
+                <input class="text-box__input text-box__input_small" type="text">
+            </div>
+            <br><br>
+            <div class="text-box">
+                <input class="text-box__input text-box__input_small" type="text">
+            </div>
+
+            <br><br><br>
+            <p style="margin-bottom: 20px; font-size: 14px; font-weight: 600;">Medium</p>
+            <button class="button button_medium button_accent">Button</button>
+            <button class="button button_medium button_standart">Button</button>
+            <br><br>
+            <div class="text-box">
+                <div class="text-box_label-body">
+                    <span class="text-box_label">Ширина</span>
+                </div>
+                <input class="text-box__input text-box__input_medium" type="text">
+            </div>
+            <br><br>
+            <div class="text-box">
+                <input class="text-box__input text-box__input_medium" type="text">
+            </div>
         </div>
+        <!-- ВРЕМЕННО -->
 
         <!-- <div class="dd-list">
             <div class="dd-list-header">
@@ -121,6 +169,6 @@
     </div>
 
     <script src="public/js/libs/jquery-3.6.0.min.js"></script>
-    <script src="public/js/main.js"></script>
+    <script src="public/js/main.js?v=1"></script>
 </body>
 </html>

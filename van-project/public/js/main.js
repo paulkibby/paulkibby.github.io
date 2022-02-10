@@ -93,10 +93,10 @@ function calcFrame() {
     }
 }
 
-$('.input-data[name=lenght], .input-data[name=width], .input-data[name=height]').keyup(function() {
-    vanLenght = (Number(vanLenght) != 0) ? Number($('.input-data[name=lenght]').val()) : 4;
-    vanWidth = (Number(vanWidth) != 0) ? Number($('.input-data[name=width]').val()) : 4;
-    vanHeight = (Number(vanHeight) != 0) ? Number($('.input-data[name=height]').val()) : 4;
+$('.data-input__input[name=lenght], .data-input__input[name=width], .data-input__input[name=height]').keyup(function() {
+    vanLenght = (Number(vanLenght) != 0) ? Number($('.data-input__input[name=lenght]').val()) : 4;
+    vanWidth = (Number(vanWidth) != 0) ? Number($('.data-input__input[name=width]').val()) : 4;
+    vanHeight = (Number(vanHeight) != 0) ? Number($('.data-input__input[name=height]').val()) : 4;
 
     calcFrame();
     drawFrame();
