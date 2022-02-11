@@ -28,29 +28,27 @@ var isSearch = 0;
 $('.combo-box-cat__input').keyup(function() {
     let userInput = $(this).val().trim().toLowerCase();
     if (userInput != '') {
-        $('.combo-box-cat__category-item').slideUp('fast');
-        $('.combo-box-cat__item-body').slideDown('fast');
+        $(this).parent().parent().find('.combo-box-cat__category-item').slideUp('fast');
 
         $(searchList).each(function() {
             if ($(this).attr('data-name').toLowerCase().search(userInput) == -1) {
                 $(this).slideUp('fast');
                 isSearch++;
             } else {
+                $(this).parent('.combo-box-cat__item-body').slideDown('fast');
                 $(this).slideDown('fast');
-                isSearch--;
+                isSearch = 0;
             }
         });
 
         if (($(searchList).length - isSearch) <= 0) {
             $('.combo-box-cat__search-message-body').slideDown();
-            isSearch = 0;
         } else {
             $('.combo-box-cat__search-message-body').slideUp();
-            isSearch = 1;
         }
 
     } else {
-        $('.combo-box-cat__category-item').slideDown('fast');
+        $(this).parent().parent().find('.combo-box-cat__category-item').slideDown('fast');
         $('.combo-box-cat__item-body').slideUp('fast');
         $(searchList).slideDown('fast');
         $('.combo-box-cat__search-message-body').slideUp();
