@@ -143,14 +143,14 @@ body {
     font-weight: 500;
 }
 
-.combo-box-cat__category-arrow {
+.combo-box-cat__category-arrow-body {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 20px;
 }
 
-.combo-box-cat__category-arrow i {
+.combo-box-cat__category-arrow {
     color: #666666;
     font-size: 12px;
     transition: transform 0.267s cubic-bezier(0.55, 0.55, 0, 1);
