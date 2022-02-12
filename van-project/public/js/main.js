@@ -20,13 +20,20 @@ $('.combo-box-cat__item').on('click', function() {
     $(this).parent().parent().parent().find('.fa-chevron-right').removeClass('rotate-90');
 });
 
-$(document).on('mouseup', function(e){ // событие клика по веб-документу
-    var el = $(".combo-box-cat");
-    if ( !el.is(e.target) && el.has(e.target).length === 0 ) {
-        $('.combo-box-cat__body').slideUp('fast');
-        $('.combo-box-cat__item-body').slideUp('fast');
+$(document).on('mouseup focus', function(e) {
+    let el = $(".combo-box-cat");
+    if (!el.is(e.target) && el.has(e.target).length === 0) {
+        $('.combo-box-cat__body, .combo-box-cat__item-body').slideUp('fast');
         $('.combo-box-cat__category-arrow').removeClass('rotate-90');
     }
+});
+
+$('.text-box__input').on('focus', function() {
+    $(this).parent('.text-box').addClass('text-box__input-line');
+});
+
+$('.text-box__input').on('blur', function() {
+    $(this).parent('.text-box').removeClass('text-box__input-line');
 });
 
 // --- SEARCH ---
@@ -34,7 +41,7 @@ $(document).on('mouseup', function(e){ // событие клика по веб-
 var searchList = $('.combo-box-cat__item');
 var isSearch = 0;
 
-$('.combo-box-cat__input').on('keyup', function(e) {
+$('.combo-box-cat__input').on('input', function(e) {
     $(this).parent().parent().find('.combo-box-cat__category-arrow').removeClass('rotate-90');
 
     let userInput = $(this).val().trim().toLowerCase();
@@ -66,7 +73,6 @@ $('.combo-box-cat__input').on('keyup', function(e) {
         isSearch = 0;
     }
 });
-
 
 // ---
 var svgns = "http://www.w3.org/2000/svg";
@@ -119,29 +125,29 @@ function calcFrame() {
     vanLenghtPlus = vanLenght;
 
     if (a > 2) {
-        vanLenght = 600;
-        vanHeight = 600 / a;
+        vanLenght = 700;
+        vanHeight = 700 / a;
     } else if (a > 1) {
-        vanHeight = 300 / a;
-        vanLenght = 600;
+        vanHeight = 350 / a;
+        vanLenght = 700;
     } else {
-        vanHeight = 300;
-        vanLenght = 300 * a;
+        vanHeight = 350;
+        vanLenght = 350 * a;
     }
     
     if (b > 2) {
-        vanLenghtPlus = 600;
-        vanWidth = 600 / b;
+        vanLenghtPlus = 700;
+        vanWidth = 700 / b;
     } else if (b > 1) {
-        vanWidth = 300 / b;
-        vanLenghtPlus = 600;
+        vanWidth = 350 / b;
+        vanLenghtPlus = 700;
     } else {
-        vanWidth = 300;
-        vanLenghtPlus = 300 * b;
+        vanWidth = 350;
+        vanLenghtPlus = 350 * b;
     }
 }
 
-$('.data-input__input[name=lenght], .data-input__input[name=width], .data-input__input[name=height]').on('keyup', function() {
+$('.data-input__input[name=lenght], .data-input__input[name=width], .data-input__input[name=height]').on('input', function() {
     vanLenght = (Number(vanLenght) != 0) ? Number($('.data-input__input[name=lenght]').val()) : 4;
     vanWidth = (Number(vanWidth) != 0) ? Number($('.data-input__input[name=width]').val()) : 4;
     vanHeight = (Number(vanHeight) != 0) ? Number($('.data-input__input[name=height]').val()) : 4;

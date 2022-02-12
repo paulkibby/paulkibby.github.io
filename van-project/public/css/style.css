@@ -312,19 +312,27 @@ body {
     width: fit-content;
 }
 
-/* .text-box::after {
+.text-box::after {
     content: "";
     display: block;
-    height: 2px;
+    visibility: hidden;
+    opacity: 0;
+    height: 3px;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     background-color: #005FB8;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     z-index: 1;
-} */
+    transition: opacity 0.5s ease;
+}
+
+.text-box__input-line::after {
+    visibility: visible;
+    opacity: 1;
+}
 
 .text-box__input {
     display: block;
@@ -364,7 +372,7 @@ body {
     /* border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; */
     border-bottom-color: #FFFFFF;
-    box-shadow: 0 2px #005FB8;
+    /* box-shadow: 0 2px #005FB8; */
 }
 
 .text-box__input:disabled {
