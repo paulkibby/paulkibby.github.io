@@ -76,6 +76,10 @@ body {
     margin-top: -200px;
 }
 
+.vpu {
+    margin-top: -50px;
+}
+
 .valentine-link {
     display: flex;
     justify-content: center;

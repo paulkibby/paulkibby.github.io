@@ -73,7 +73,7 @@ $('#check').on('change', function() {
             
             h = 0;
             myLoop();
-        }, 6000);
+        }, 8000);
     } else {
         $('body').off('mousemove');
         $('.heart1').fadeOut(450);
@@ -162,6 +162,11 @@ function text() {
                     duration: 370,   // по умолчанию «400» 
                     easing: "swing" // по умолчанию «swing» 
                 });
+
+                setTimeout(function() {
+                    $('.valentine__paper').addClass('vpu');
+                    setTimeout(function() { $('.valentine__paper').removeClass('vpu'); }, 400);
+                }, 1000);
             }, 1500);
         }, 1500);
     }, 1500);
