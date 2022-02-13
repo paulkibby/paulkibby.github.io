@@ -1,21 +1,18 @@
 setTimeout(function() {
     $('#base div').fadeOut(450);
+
+    setTimeout(function() {
+        $('#loving').fadeOut(450);
+
+        setTimeout(function() {
+            $('.loading').fadeOut(450);
+        }, 500);
+    }, 300);
 }, 2000);
 
-setTimeout(function() {
-    $('#loving').fadeOut(450);
-}, 2200);
+// $('.loading, #loving, #base div').fadeOut(450);
 
-setTimeout(function() {
-    $('.loading').fadeOut(450);
-}, 2800);
-
-$('html, body').animate({
-    scrollTop: $('#main').offset().top
-}, {
-    duration: 370,
-    easing: "swing"
-});
+scrollTo('#main');
 
 var topPos = Math.floor($('.heart').offset().top);
 var leftPos = Math.floor($('.heart').offset().left);
@@ -41,7 +38,7 @@ function appendHeart() {
 }
 
 function startHeart() {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
         appendHeart();
     }
 }
@@ -61,20 +58,14 @@ $('#check').on('change', function() {
     
         startHeart();
 
-        setTimeout(function() {
-            let href = '#i_like_you';
-
-            $('html, body').animate({
-                scrollTop: $(href).offset().top
-            }, {
-                duration: 370,   // по умолчанию «400» 
-                easing: "swing" // по умолчанию «swing» 
-            });
+        ilyTimer = setTimeout(function() {
+            scrollTo('#i_like_you');
             
             h = 0;
             myLoop();
         }, 8000);
     } else {
+        clearTimeout(ilyTimer);
         $('body').off('mousemove');
         $('.heart1').fadeOut(450);
         setTimeout(function() { $('.heart1').remove() }, 450);
@@ -82,12 +73,7 @@ $('#check').on('change', function() {
 });
 
 $('.valentine__up').on('click', function() {
-    $('html, body').animate({
-        scrollTop: $('#main').offset().top
-    }, {
-        duration: 370,   // по умолчанию «400» 
-        easing: "swing" // по умолчанию «swing» 
-    });
+    scrollTo('#main');
 
     setTimeout(function() {
         $('body').css({'overflow-y':'auto'});
@@ -147,29 +133,40 @@ var phrases = [
     "Ты мне нравишься"
 ];
 
-function text() {
+myWords = [
+    "Ой!!",
+    "ААААААААААААААААА!!!!!",
+    "Паша умер..."
+];
+
+function scrollTo(href) {
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 370,
+        easing: "swing"
+    });
+}
+
+var g = 0;
+function myWordsLoop() {
     setTimeout(function() {
-        $('.i-like-you__text').text('Ой!!');
+        $('.i-like-you__text').text(myWords[g]);
+        g++;
 
-        setTimeout(function() {
-            $('.i-like-you__text').text('ААААААААААААААААА!!!!!');
+        if (g < myWords.length) {
+            myWordsLoop();
+        } else {
             setTimeout(function() {
-                let href = '#valentine';
-
-                $('html, body').animate({
-                    scrollTop: $(href).offset().top
-                }, {
-                    duration: 370,   // по умолчанию «400» 
-                    easing: "swing" // по умолчанию «swing» 
-                });
+                scrollTo('#valentine');
 
                 setTimeout(function() {
-                    $('.valentine__paper').addClass('vpu');
-                    setTimeout(function() { $('.valentine__paper').removeClass('vpu'); }, 400);
-                }, 1000);
-            }, 1500);
-        }, 1500);
-    }, 1500);
+                    $('.envelope').addClass('envelope-scale');
+                    setTimeout(function() { $('.envelope').removeClass('envelope-scale'); }, 1000);
+                }, 800);
+            }, 2200);
+        }
+    }, 1800);
 }
 
 var h = 0;
@@ -177,28 +174,21 @@ function myLoop() {
     setTimeout(function() {
         $('.i-like-you__text').text(phrases[h]);
         h++;
+        
         if (h < 50) {
             myLoop();
         } else {
-            text();
+            myWordsLoop();
         }
     }, 1+(h*10));
 }
 
+$('.envelope').on('mouseover', function(e) {
+    $('.envelope__top').removeClass('envelope__top_close');
+    $('.paper').removeClass('paper_close');
+});
 
-
-// $('.scrollto a').on('click', function() {
-
-    
-
-//     return false;
-// });
-
-// $(window).resize(function() {
-//     topPos = Math.floor($('.heart').offset().top);
-//     leftPos = Math.floor($('.heart').offset().left);
-//     console.log(topPos+' '+leftPos);
-// });
-
-
-
+$('.envelope').on('mouseleave', function(e) {
+    $('.envelope__top').addClass('envelope__top_close');
+    $('.paper').addClass('paper_close');
+});

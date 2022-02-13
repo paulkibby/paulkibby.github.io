@@ -39,9 +39,75 @@ body {
     width: 100%;
     height: 100vh;
     background: #ffb3b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.envelope {
+    position: relative;
+    width: 200px;
+    height: 110px;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.7s ease;
 }
 
-.valentine__body {
+.envelope-scale {
+    transform: scale(1.1);
+}
+
+.envelope__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.2s;
+    transform: translateY(-100%);
+    transform-origin: bottom;
+}
+.envelope__body {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.paper {
+    background-color: #fff;
+    width: 140px;
+    height: 80px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -70px;
+    padding-top: 20px;
+    transform: translateY(-40px);
+    transition: 0.2s;
+    bottom: 0;
+    border-radius: 4px;
+}
+
+.envelope__top_close {
+    transform: translateY(-110%) rotateX(180deg);
+    z-index: 2;
+}
+
+.paper_close {
+    transform: translateY(-10%);
+    height: 40px;
+}
+
+.e-bcg {
+    width: 100%;
+    height: 100px;
+    margin-top: -5px;
+    background-color: #C64645;
+}
+
+/* .valentine__body {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -49,14 +115,14 @@ body {
     width: 760px;
     height: 380px;
     background-color: #FFFFFF;
-    z-index: 11;
+    z-index: 2;
 }
 
 .valentine__body::before {
     content: ''; 
-    position: absolute; /* Абсолютное позиционирование */
+    position: absolute;
     top: 0;
-    left: 0; /* Положение треугольника */
+    left: 0;
     right: 0;
     border: 190px solid transparent;
     border-left: 380px solid #eeeeee;
@@ -78,30 +144,30 @@ body {
 
 .vpu {
     margin-top: -50px;
-}
+} */
 
 .valentine-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: -83px;
+    left: 0;
+    bottom: 0;
+    display: block;
     width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #000000;
-    font-size: 24px;
-    font-weight: 800;
+    height: calc(100% + 84px);
     text-decoration: none;
+    z-index: 5;
 }
 
-.valentine-link span {
+/* .valentine-link span {
     display: block;
-}
+} */
 
 .valentine__up {
     width: 100%;
     text-align: center;
     position: absolute;
     bottom: 100px;
+    z-index: 5;
 }
 
 .valentine__up span {
@@ -124,6 +190,11 @@ body {
     transition: background-color 0.4s ease;
 }
 
+.heart {
+    position: relative;
+    z-index: 1;
+}
+
 input[type=checkbox] {
     display: none;
 }
@@ -141,6 +212,7 @@ input[type=checkbox] + svg + label {
     border-radius: 30px;
     position: relative;
     cursor: pointer;
+    z-index: 1;
 }
 input[type=checkbox] + svg + label:before {
     content: "";
@@ -329,29 +401,29 @@ input[type=checkbox]:checked + svg + label + div {
 }
 
 @keyframes c1 {
-    0% { background-color:#de1a00; }
-    15% { background-color:#de1a00; }
-    25% { background-color:#de1a00; }
-    30% { background-color:#33a93b; }
-    40% { background-color:#33a93b; }
-    50% { background-color:#33a93b; }
-    65% { background-color:#33a93b; }
-    75% { background-color:#33a93b; }
-    90% { background-color:#de1a00; }
-    100% { background-color:#de1a00; }
+    0% { background-color:#f44336; }
+    15% { background-color:#f44336; }
+    25% { background-color:#f44336; }
+    30% { background-color:#36F48B; }
+    40% { background-color:#36F48B; }
+    50% { background-color:#36F48B; }
+    65% { background-color:#36F48B; }
+    75% { background-color:#36F48B; }
+    90% { background-color:#f44336; }
+    100% { background-color:#f44336; }
 }
 
 @keyframes c2 {
-    0% { background-color:#ffcf00; }
-    15% { background-color:#ffcf00; }
-    25% { background-color:#ffcf00; }
-    30% { background-color:#ffcf00; }
-    40% { background-color:#ffcf00; }
-    50% { background-color:#194dc5; }
-    65% { background-color:#194dc5; }
-    75% { background-color:#194dc5; }
-    90% { background-color:#194dc5; }
-    100% { background-color:#de1a00; }
+    0% { background-color:#F4D436; }
+    15% { background-color:#F4D436; }
+    25% { background-color:#F4D436; }
+    30% { background-color:#F4D436; }
+    40% { background-color:#F4D436; }
+    50% { background-color:#C436F4; }
+    65% { background-color:#C436F4; }
+    75% { background-color:#C436F4; }
+    90% { background-color:#C436F4; }
+    100% { background-color:#f44336; }
 }
 
 .f12 {
@@ -432,7 +504,7 @@ input[type=checkbox]:checked + svg + label + div {
     position: fixed;
     top: 0;
     left: 0;
-    /* z-index: 0; */
+    z-index: 1;
     width: 50px;
     height: 50px;
 }
@@ -454,10 +526,26 @@ input[type=checkbox]:checked + svg + label + div {
     fill: url("#MyGradient");
 }
 
-
 @media screen and (max-width: 1079px) {
+    .i-like-you {
+        padding: 0 25px;
+    }
+
     .i-like-you__text {
         font-size: 54px;
     }
 }
+
+@media screen and (max-width: 800px) {
+    input[type=checkbox] + svg {
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    input[type=checkbox] + svg {
+        margin: 0 auto 80px auto;
+    }
+}
+
+
 

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="public/css/style.css?v=1">
+    <link rel="stylesheet" href="public/css/style.css?v=2">
 </head>
 <body>
+    <div class="heart-container"></div>
+    
     <div id="main" class="main">
-        <div class="heart-container"></div>
-
         <div class="center-el">
             <div class="holder">
                 <input id="check" type="checkbox"/>
@@ -30,9 +30,22 @@
     </div>
 
     <div id="valentine" class="valentine">
-        <div class="valentine__body">
+        <!-- <div class="valentine__body">
             <div class="valentine__paper">
                 <a href="https://vk.com/app6851096" target="__blank" class="valentine-link"><span>Открыть валентинку</span></a>
+            </div>
+        </div> -->
+        <div class="envelope">
+            <a href="https://vk.com/app6851096" target="__blank" class="valentine-link"></a>
+            <div class="e-bcg"></div>
+            <div class="envelope__top envelope__top_close">
+                <img src="public/img/envelope-top.svg" alt="">
+            </div>   
+
+            <div class="paper paper_close">Валентинка</div>
+
+            <div class="envelope__body">
+                <img src="public/img/envelope.svg" alt="">
             </div>
         </div>
         <div class="valentine__up"><span>Наверх</span></div>
@@ -50,6 +63,6 @@
 
     <script src="public/js/libs/jquery-3.6.0.min.js"></script>
     <script src="public/js/libs/gsap.min.js"></script>
-    <script src="public/js/main.js?v=1"></script>
+    <script src="public/js/main.js?v=2"></script>
 </body>
 </html>
