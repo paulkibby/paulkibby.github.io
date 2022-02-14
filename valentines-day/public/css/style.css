@@ -629,7 +629,7 @@ input[type=checkbox]:checked + svg + label + div {
 
 @media screen and (max-width: 1079px) {
     .i-like-you {
-        padding: 0 25px;
+        padding: 0 10px;
     }
 
     .i-like-you__text {
@@ -646,13 +646,31 @@ input[type=checkbox]:checked + svg + label + div {
     input[type=checkbox] + svg {
         margin: 0 auto 80px auto;
     }
+
+    .i-like-you__text {
+        font-size: 36px;
+    }
 }
 
-@media screen and (max-width: 420px) {
-    .i-like-you {
-        padding: 0 10px;
+@media screen and (max-width: 858px) {
+    .i-like-you__text {
+        font-size: 42px;
     }
+}
 
+@media screen and (max-width: 690px) {
+    .i-like-you__text {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .i-like-you__text {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 530px) {
     .i-like-you__text {
         font-size: 26px;
     }
