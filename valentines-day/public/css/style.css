@@ -555,7 +555,7 @@ input[type=checkbox]:checked + svg + label + div {
     }
 
     .i-like-you__text {
-        font-size: 34px;
+        font-size: 26px;
     }
 }
 
