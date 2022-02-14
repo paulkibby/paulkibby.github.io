@@ -164,12 +164,15 @@ function myWordsLoop() {
 
                 setTimeout(function() {
                     $('.envelope').addClass('envelope-scale');
-                    $('body').css({'overflow-y': 'auto'});
-                    setTimeout(function() { $('.envelope').removeClass('envelope-scale'); }, 1000);
+                    
+                    setTimeout(function() {
+                        $('.envelope').removeClass('envelope-scale');
+                        setTimeout(function() { $('body').css({'overflow-y': 'auto'}); }, 1000);
+                    }, 1000);
                 }, 800);
             }, 2200);
         }
-    }, 1200);
+    }, 1600);
 }
 
 var h = 0;
