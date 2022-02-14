@@ -17,6 +17,7 @@ body {
 }
 
 .i-like-you {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +28,7 @@ body {
 
 .i-like-you__text-body {
     text-align: center;
+    z-index: 1;
 }
 
 .i-like-you__text {
@@ -498,6 +500,97 @@ input[type=checkbox]:checked + svg + label + div {
     height: 60px;
     transform: rotate(45deg);
     animation: c2 3s infinite linear;
+}
+
+/* --- */
+
+.i-like-you__anim {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    opacity: 0.2;
+}
+
+.i-like-you__anim svg {
+    overflow: visible;
+    width: calc(100% + 60px);
+}
+
+.i-like-you__anim svg path#line {
+    fill: none;
+    stroke: #f44336;
+    stroke-width: 2;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-dasharray:none;
+    stroke-opacity: 1;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 6s linear infinite;
+}
+
+.i-like-you__anim svg path#heart {
+    transform-origin: 50% 50%;
+    animation: blink 4s linear infinite;
+}
+
+@keyframes dash {
+    0% {
+      stroke-dashoffset: 1;
+    }
+
+    70% {
+      stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -1;
+    }
+
+    /* 100% {
+      stroke-dashoffset: 0;
+    } */
+}
+
+@keyframes blink {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    60% {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    70% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    75% {
+      opacity: 1;
+      transform: scale(1.0);
+    }
+
+    80% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    85% {
+      opacity: 1;
+      transform: scale(1.0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(1.0);
+    }
 }
 
 /* --- */
