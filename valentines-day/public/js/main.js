@@ -25,8 +25,8 @@ function appendHeart() {
           <svg id="color" enable-background="new 0 0 34 34" height="512" viewBox="0 0 34 34" width="512" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="MyGradient">
-                <stop class="lg1" offset="10%" stop-color="#e74c3c" />
-                <stop class="lg2" offset="90%" stop-color="#FF3C30" />
+                <stop class="lg1" offset="10%" stop-color="#FE3F5E" />
+                <stop class="lg2" offset="90%" stop-color="#DB2349" />
               </linearGradient>
             </defs>
             <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
@@ -81,56 +81,56 @@ $('.valentine__up').on('click', function() {
 });
 
 var phrases = [
-    "<span style=\"color: #f44336;\">❤</span> Me pelqen ti <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Gustatzen zait <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Харесвам те <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> sviđaš mi se <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Rwy'n hoffi chi <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Kedvellek <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Gústasme <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Ik vind je leuk <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> μου αρέσεις <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Jeg kan lide dig <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> איך גלייך דיר <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Is maith liom thú <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Mér líkar við þig <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Me gustas <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Mi piaci <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> M'agrades tu <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Tu man patīc <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Tu man patinki <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Ми се допаѓаш <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Togħġobni <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Ich mag dich <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Jeg liker deg <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Lubię cię <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Gosto de você <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Îmi placi <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Свиђаш ми се <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Mám ťa rád <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Všeč si mi <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Pidän sinusta <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Je t'aime bien <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Sviđaš mi se <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Mám tě rád <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Jag gillar dig <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Sa meeldid mulle <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Ek hou van jou <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Ngiyakuthanda <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> I masịrị m <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Mo fẹran rẹ <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Kea u rata <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Waan ku jecelahay <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Nakupenda <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Ти мені подобаєшся <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Ina son ku <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Ты мне падабаешся <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Umandisangalatsa <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Mi ŝatas vin <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Mwen renmen ou <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> I like you <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> EGO amo te <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Кое-кто мне нравится <span style=\"color: #f44336;\">❤</span>"
+    "<span style=\"color: #FE3F5E;\">❤</span> Me pelqen ti <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Gustatzen zait <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Харесвам те <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> sviđaš mi se <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Rwy'n hoffi chi <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Kedvellek <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Gústasme <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Ik vind je leuk <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> μου αρέσεις <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Jeg kan lide dig <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> איך גלייך דיר <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Is maith liom thú <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Mér líkar við þig <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Me gustas <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Mi piaci <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> M'agrades tu <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Tu man patīc <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Tu man patinki <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Ми се допаѓаш <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Togħġobni <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Ich mag dich <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Jeg liker deg <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Lubię cię <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Gosto de você <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Îmi placi <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Свиђаш ми се <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Mám ťa rád <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Všeč si mi <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Pidän sinusta <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Je t'aime bien <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Sviđaš mi se <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Mám tě rád <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Jag gillar dig <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Sa meeldid mulle <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Ek hou van jou <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Ngiyakuthanda <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> I masịrị m <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Mo fẹran rẹ <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Kea u rata <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Waan ku jecelahay <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Nakupenda <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Ти мені подобаєшся <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Ina son ku <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Ты мне падабаешся <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Umandisangalatsa <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Mi ŝatas vin <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Mwen renmen ou <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> I like you <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> EGO amo te <span style=\"color: #FE3F5E;\">❤</span>",
+    "<span style=\"color: #FE3F5E;\">❤</span> Кое-кто мне нравится <span style=\"color: #FE3F5E;\">❤</span>"
 ];
 
 myWords = [
@@ -138,7 +138,7 @@ myWords = [
     "ААААААААААААААА!!!!!",
     "ПОКАЗАЛОСЬ!!",
     "ПО КА ЗА ЛО СЬ !!!",
-    "<span style=\"color: #f44336;\">❤</span>"
+    "<span style=\"color: #FE3F5E;\">❤</span>"
 ];
 
 function scrollTo(href) {
@@ -198,3 +198,11 @@ $('.envelope').on('mouseleave', function(e) {
     $('.envelope__top').addClass('envelope__top_close');
     $('.paper').addClass('paper_close');
 });
+
+// $('.valentine').on('mouseover', function(e) {
+//     $('.heart-container .heart1 svg').css({'fill': '#FFFFFF'});
+// });
+
+// $('.valentine').on('mouseleave', function(e) {
+//     $('.heart-container .heart1 svg').css({'fill': '#FE3F5E'});
+// });

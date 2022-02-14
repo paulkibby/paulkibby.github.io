@@ -40,7 +40,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #ff707b;
+    background-color: rgba(254, 63, 94, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,14 @@ body {
     height: 110px;
     cursor: pointer;
     z-index: 5;
-    transition: transform 0.7s ease;
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
+    box-shadow: 0 6px 34px 5px rgb(0, 0, 0, 0.12);
+}
+
+.envelope:hover {
+    transform: translate(0, -10px) scale(1.1);
+    /* transform: scale(1.1); */
+    box-shadow: 0 6px 34px 5px rgb(0, 0, 0, 0.22);
 }
 
 .envelope-scale {
@@ -75,8 +82,16 @@ body {
     width: 100%;
 }
 
+.envelope__body img {
+    display: block;
+}
+
+.envelope__top img {
+    /* display: block; */
+}
+
 .paper {
-    background-color: #f44336;
+    background-color: #FE3F5E;
     width: 140px;
     height: 80px;
     color: #FFFFFF;
@@ -108,7 +123,7 @@ body {
     width: 100%;
     height: 100px;
     margin-top: -5px;
-    background-color: #E1E1E1;
+    background-color: #D8D0C9;
 }
 
 /* .valentine__body {
@@ -264,18 +279,18 @@ input[type=checkbox] + svg + label span:last-child {
     transform: translate(100%, -50%);
 }
 input[type=checkbox]:checked + svg {
-    fill: #ff707b;
+    fill: #FE3F5E;
     animation: beating 1s infinite;
 }
 input[type=checkbox]:checked + svg + label {
-    background: #ff707b;
+    background: #FE3F5E;
 }
 input[type=checkbox]:checked + svg + label:before {
     animation: bounce 0.3s linear;
     left: calc(100% - 50px);
 }
 input[type=checkbox]:checked + svg + label + div {
-    background: #ffb3b3;
+    background-color: rgba(254, 63, 94, 0.4);
 }
 
 @keyframes beating {
@@ -412,29 +427,29 @@ input[type=checkbox]:checked + svg + label + div {
 }
 
 @keyframes c1 {
-    0% { background-color:#f44336; }
-    15% { background-color:#f44336; }
-    25% { background-color:#f44336; }
-    30% { background-color:#36F48B; }
-    40% { background-color:#36F48B; }
-    50% { background-color:#36F48B; }
-    65% { background-color:#36F48B; }
-    75% { background-color:#36F48B; }
-    90% { background-color:#f44336; }
-    100% { background-color:#f44336; }
+    0% { background-color:#FE3F5E; }
+    15% { background-color:#FE3F5E; }
+    25% { background-color:#FE3F5E; }
+    30% { background-color:#3ADEEA; }
+    40% { background-color:#3ADEEA; }
+    50% { background-color:#3ADEEA; }
+    65% { background-color:#3ADEEA; }
+    75% { background-color:#3ADEEA; }
+    90% { background-color:#FE3F5E; }
+    100% { background-color:#FE3F5E; }
 }
 
 @keyframes c2 {
-    0% { background-color:#F4D436; }
-    15% { background-color:#F4D436; }
-    25% { background-color:#F4D436; }
-    30% { background-color:#F4D436; }
-    40% { background-color:#F4D436; }
-    50% { background-color:#C436F4; }
-    65% { background-color:#C436F4; }
-    75% { background-color:#C436F4; }
-    90% { background-color:#C436F4; }
-    100% { background-color:#f44336; }
+    0% { background-color:#FED83F; }
+    15% { background-color:#FED83F; }
+    25% { background-color:#FED83F; }
+    30% { background-color:#FED83F; }
+    40% { background-color:#FED83F; }
+    50% { background-color:#CE3FFE; }
+    65% { background-color:#CE3FFE; }
+    75% { background-color:#CE3FFE; }
+    90% { background-color:#CE3FFE; }
+    100% { background-color:#FE3F5E; }
 }
 
 .f12 {
@@ -527,7 +542,7 @@ input[type=checkbox]:checked + svg + label + div {
 
 .i-like-you__anim svg path#line {
     fill: none;
-    stroke: #f44336;
+    stroke: #FE3F5E;
     stroke-width: 2;
     stroke-linecap: butt;
     stroke-linejoin: round;
@@ -623,7 +638,7 @@ input[type=checkbox]:checked + svg + label + div {
 }
 
 .heart-container .heart1 svg {
-    fill: #f44336;
+    fill: #FE3F5E;
     fill: url("#MyGradient");
 }
 
@@ -645,7 +660,7 @@ input[type=checkbox]:checked + svg + label + div {
 }
 
 .transition_color_pink {
-    fill: #ffb3b3!important;
+    fill: rgba(254, 63, 94, 0.4)!important;
 }
 
 @media screen and (max-width: 1220px) {
