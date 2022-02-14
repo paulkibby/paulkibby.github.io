@@ -621,6 +621,12 @@ input[type=checkbox]:checked + svg + label + div {
     fill: url("#MyGradient");
 }
 
+@media screen and (max-width: 1220px) {
+    .i-like-you__text {
+        font-size: 60px;
+    }
+}
+
 @media screen and (max-width: 1079px) {
     .i-like-you {
         padding: 0 25px;

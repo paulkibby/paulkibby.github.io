@@ -131,7 +131,7 @@ var phrases = [
     "<span style=\"color: #f44336;\">❤</span> Mwen renmen ou <span style=\"color: #f44336;\">❤</span>",
     "<span style=\"color: #f44336;\">❤</span> I like you <span style=\"color: #f44336;\">❤</span>",
     "<span style=\"color: #f44336;\">❤</span> EGO amo te <span style=\"color: #f44336;\">❤</span>",
-    "<span style=\"color: #f44336;\">❤</span> Ты мне нравишься <span style=\"color: #f44336;\">❤</span>"
+    "<span style=\"color: #f44336;\">❤</span> Кто-то мне нравится <span style=\"color: #f44336;\">❤</span>"
 ];
 
 myWords = [
