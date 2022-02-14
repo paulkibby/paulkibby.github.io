@@ -507,9 +507,8 @@ input[type=checkbox]:checked + svg + label + div {
 .i-like-you__anim {
     overflow: hidden;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    bottom: 0;
     width: 100%;
     opacity: 0.2;
 }
