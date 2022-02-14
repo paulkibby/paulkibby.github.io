@@ -45,6 +45,8 @@ function startHeart() {
 
 $('#check').on('change', function() {
     if ( $(this).prop('checked') ) {
+        $('.i-like-you__svg').addClass('transition_color_pink');
+
         topPos = Math.floor($('.heart').offset().top);
         leftPos = Math.floor($('.heart').offset().left);
 
@@ -67,6 +69,7 @@ $('#check').on('change', function() {
         }, 8000);
     } else {
         clearTimeout(ilyTimer);
+        $('.i-like-you__svg').removeClass('transition_color_pink');
         $('body').off('mousemove');
         $('.heart1').fadeOut(450);
         setTimeout(function() { $('.heart1').remove() }, 450);

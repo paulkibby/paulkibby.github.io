@@ -620,6 +620,27 @@ input[type=checkbox]:checked + svg + label + div {
     fill: url("#MyGradient");
 }
 
+.transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.transition__img {
+    display: block;
+    width: 100%;
+}
+
+.i-like-you__svg {
+    fill: #87d7d4;
+    transition: fill 0.4s ease;
+}
+
+.transition_color_pink {
+    fill: #ffb3b3!important;
+}
+
 @media screen and (max-width: 1220px) {
     .i-like-you__text {
         font-size: 60px;
