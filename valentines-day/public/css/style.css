@@ -535,6 +535,10 @@ input[type=checkbox]:checked + svg + label + div {
     opacity: 0.2;
 }
 
+.i-like-you__anim_hide {
+    display: none;
+}
+
 .i-like-you__anim svg {
     overflow: visible;
     width: calc(100% + 60px);
@@ -551,7 +555,7 @@ input[type=checkbox]:checked + svg + label + div {
     stroke-opacity: 1;
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
-    animation: dash 6s linear infinite;
+    animation: dash 4s linear infinite;
 }
 
 .i-like-you__anim svg path#heart {

@@ -66,7 +66,7 @@ $('#check').on('change', function() {
             g = 0;
             h = 0;
             myLoop();
-        }, 8000);
+        }, 6000);
     } else {
         clearTimeout(ilyTimer);
         $('.i-like-you__svg').removeClass('transition_color_pink');
@@ -159,10 +159,12 @@ function myWordsLoop() {
         if (g < myWords.length) {
             myWordsLoop();
         } else {
+            $('.i-like-you__anim').removeClass('i-like-you__anim_hide');
             setTimeout(function() {
                 scrollTo('#valentine');
 
                 setTimeout(function() {
+                    $('.i-like-you__anim').addClass('i-like-you__anim_hide');
                     $('.envelope').addClass('envelope-scale');
                     
                     setTimeout(function() {
@@ -170,7 +172,7 @@ function myWordsLoop() {
                         setTimeout(function() { $('body').css({'overflow-y': 'auto'}); }, 1000);
                     }, 1000);
                 }, 800);
-            }, 2200);
+            }, 4000);
         }
     }, 1600);
 }
@@ -186,7 +188,7 @@ function myLoop() {
         } else {
             myWordsLoop();
         }
-    }, 1+(h*10));
+    }, 10+(h*10));
 }
 
 $('.envelope').on('mouseover', function(e) {
