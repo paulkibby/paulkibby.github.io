@@ -25,8 +25,8 @@ function appendHeart() {
           <svg id="color" enable-background="new 0 0 34 34" height="512" viewBox="0 0 34 34" width="512" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="MyGradient">
-                <stop offset="10%" stop-color="#e74c3c" />
-                <stop offset="90%" stop-color="#FF3C30" />
+                <stop class="lg1" offset="10%" stop-color="#e74c3c" />
+                <stop class="lg2" offset="90%" stop-color="#FF3C30" />
               </linearGradient>
             </defs>
             <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
@@ -61,6 +61,7 @@ $('#check').on('change', function() {
         ilyTimer = setTimeout(function() {
             scrollTo('#i_like_you');
             
+            g = 0;
             h = 0;
             myLoop();
         }, 8000);
