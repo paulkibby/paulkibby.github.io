@@ -78,10 +78,6 @@ $('#check').on('change', function() {
 
 $('.valentine__up').on('click', function() {
     scrollTo('#main');
-
-    setTimeout(function() {
-        $('body').css({'overflow-y':'auto'});
-    }, 500);
 });
 
 var phrases = [
@@ -168,6 +164,7 @@ function myWordsLoop() {
 
                 setTimeout(function() {
                     $('.envelope').addClass('envelope-scale');
+                    $('body').css({'overflow-y': 'auto'});
                     setTimeout(function() { $('.envelope').removeClass('envelope-scale'); }, 1000);
                 }, 800);
             }, 2200);
