@@ -161,10 +161,10 @@ function myWordsLoop() {
         } else {
             $('.i-like-you__anim').removeClass('i-like-you__anim_hide');
             setTimeout(function() {
+                $('.i-like-you__anim').addClass('i-like-you__anim_hide');
                 scrollTo('#valentine');
 
                 setTimeout(function() {
-                    $('.i-like-you__anim').addClass('i-like-you__anim_hide');
                     $('.envelope').addClass('envelope-scale');
                     
                     setTimeout(function() {
