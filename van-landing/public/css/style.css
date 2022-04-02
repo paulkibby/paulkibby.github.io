@@ -340,7 +340,7 @@ html, body {
 .hg-i_1 {
     width: 522px;
     height: 701px;
-    background-image: url('public/img/n.jpg');
+    background-image: url('../img/n.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -348,7 +348,7 @@ html, body {
 .hg-i_2 {
     width: 419px;
     height: 333px;
-    background-image: url('public/img/n.jpg');
+    background-image: url('../img/n.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
