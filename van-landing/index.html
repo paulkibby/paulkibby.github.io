@@ -1,6 +1,7 @@
 <!-- 15:40 -->
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="public/css/style.css?v=0.2">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="public/css/style.css?v=0.0.6">
+    <link rel="stylesheet" type="text/css" href="public/fonts/fontawesome-free-5.15.4-web/css/all.css">
 </head>
+
 <body>
     <div class="wrapper">
         <div class="home">
@@ -22,7 +24,10 @@
                             <div class="title color_black">VAN-PROJECT</div>
                         </div>
                     </div>
-                    <div class="header__item">
+                    <div class="header__item header__menu__container">
+                        <div class="header__burger">
+                            <i class="fas fa-bars"></i>
+                        </div>
                         <div class="header__menu">
                             <a href="#" class="header__menu__link color_black">Главная</a>
                             <a href="#" class="header__menu__link color_black">О нас</a>
@@ -31,7 +36,7 @@
                             <a href="#" class="header__menu__link color_black">Контакты</a>
                         </div>
                     </div>
-                    <div class="header__item">
+                    <div class="header__item header__contacts__container">
                         <div class="header__contacts">
                             <div class="header__contacts__item">
                                 <i class="fas fa-phone"></i>
@@ -46,53 +51,112 @@
                 </div>
             </header>
             <div class="home__content">
-                <div class="block_flex block_flex_sb">
+                <div class="home__container block_flex block_flex_sb">
                     <div class="home__content_container">
-                        <div class="home__item">
+                        <div class="hc home__item">
                             <div class="home-categories">
-                                <!-- <div class="home-categories__arrow">
-                                    <i class="fas fa-chevron-up"></i>
-                                </div> -->
-                                <div class="home-categories__content">
-                                    <div class="home-categories__item">
-                                        <div class="home-categories__icon">
-                                            <i class="hci hci__main fas fa-caravan"></i>
-                                            <i class="hci hci__phantom fas fa-caravan"></i>
+                                <div class="home-categories__arrow">
+                                    <i class="fas fa-chevron-up" onclick="categoriesScroll('left')"></i>
+                                </div>
+                                <div class="home-categories__body dragscroll">
+                                    <div class="home-categories__content">
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
                                         </div>
-                                        <div class="home-categories__name">Короткие фургоны</div>
-                                    </div>
-                                    <div class="home-categories__item">
-                                        <div class="home-categories__icon">
-                                            <i class="hci hci__main fas fa-caravan"></i>
-                                            <i class="hci hci__phantom fas fa-caravan"></i>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
                                         </div>
-                                        <div class="home-categories__name">Короткие фургоны</div>
-                                    </div>
-                                    <div class="home-categories__item">
-                                        <div class="home-categories__icon">
-                                            <i class="hci hci__main fas fa-caravan"></i>
-                                            <i class="hci hci__phantom fas fa-caravan"></i>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
                                         </div>
-                                        <div class="home-categories__name">Короткие фургоны</div>
-                                    </div>
-                                    <div class="home-categories__item">
-                                        <div class="home-categories__icon">
-                                            <i class="hci hci__main fas fa-caravan"></i>
-                                            <i class="hci hci__phantom fas fa-caravan"></i>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
                                         </div>
-                                        <div class="home-categories__name">Короткие фургоны</div>
-                                    </div>
-                                    <div class="home-categories__item">
-                                        <div class="home-categories__icon">
-                                            <i class="hci hci__main fas fa-caravan"></i>
-                                            <i class="hci hci__phantom fas fa-caravan"></i>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
                                         </div>
-                                        <div class="home-categories__name">Короткие фургоны</div>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
+                                        </div>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
+                                        </div>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
+                                        </div>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
+                                        </div>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
+                                        </div>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
+                                        </div>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
+                                        </div>
+                                        <div class="home-categories__item">
+                                            <div class="home-categories__icon">
+                                                <i class="hci hci__main fas fa-caravan"></i>
+                                                <i class="hci hci__phantom fas fa-caravan"></i>
+                                            </div>
+                                            <div class="home-categories__name">Короткие фургоны</div>
+                                        </div>
+
                                     </div>
                                 </div>
-                                <!-- <div class="home-categories__arrow">
-                                    <i class="fas fa-chevron-down"></i>
-                                </div> -->
+                                <div class="home-categories__arrow">
+                                    <i class="fas fa-chevron-down" onclick="categoriesScroll('right')"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -106,7 +170,8 @@
                                     </div>
                                     <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
                                         <div>
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                            <span class="home-info__features__desc-text">Цена <span
+                                                    class="gray-text">(от)</span></span>
                                             <span class="home-info__features__main-text">60 000 ₽</span>
                                         </div>
                                         <div>
@@ -120,7 +185,8 @@
                                     </div>
                                     <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
                                         <div>
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                            <span class="home-info__features__desc-text">Цена <span
+                                                    class="gray-text">(от)</span></span>
                                             <span class="home-info__features__main-text">60 000 ₽</span>
                                         </div>
                                         <div>
@@ -134,7 +200,8 @@
                                     </div>
                                     <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
                                         <div>
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                            <span class="home-info__features__desc-text">Цена <span
+                                                    class="gray-text">(от)</span></span>
                                             <span class="home-info__features__main-text">60 000 ₽</span>
                                         </div>
                                         <div>
@@ -148,7 +215,8 @@
                                     </div>
                                     <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
                                         <div>
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                            <span class="home-info__features__desc-text">Цена <span
+                                                    class="gray-text">(от)</span></span>
                                             <span class="home-info__features__main-text">60 000 ₽</span>
                                         </div>
                                         <div>
@@ -162,7 +230,8 @@
                                     </div>
                                     <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
                                         <div>
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                            <span class="home-info__features__desc-text">Цена <span
+                                                    class="gray-text">(от)</span></span>
                                             <span class="home-info__features__main-text">60 000 ₽</span>
                                         </div>
                                         <div>
@@ -176,7 +245,8 @@
                                     </div>
                                     <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
                                         <div>
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                            <span class="home-info__features__desc-text">Цена <span
+                                                    class="gray-text">(от)</span></span>
                                             <span class="home-info__features__main-text">60 000 ₽</span>
                                         </div>
                                         <div>
@@ -188,29 +258,37 @@
                             <div class="hhm"></div>
                         </div>
 
-                        <div class="block_flex block_flex_sb">
+                        <div class="hg block_flex block_flex_sb">
                             <div class="home__item">
                                 <div class="home-info">
-                                    <div class="home-info__title anim_show">
-                                        <h2 class="home-info__title__text anim_show">Изотермический фургон</h2>
+                                    <div class="home-info__title block_flex block_flex_align-center anim_show_w_right">
+                                        <h2 class="home-info__title__text anim_show_w_right">Изотермический фургон</h2>
                                     </div>
                                     <div class="home-info__features anim_show_up">
                                         <div class="home-info__features__item">
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
-                                            <span class="home-info__features__main-text">60 000 ₽</span>
+                                            <span class="home-info__features__desc-text">Цена <span
+                                                    class="gray-text">(от)</span></span>
+                                            <span class="home-info__features__main-text"><span
+                                                    class="hifmt_price">60000</span> ₽</span>
                                         </div>
                                         <div class="home-info__features__item-flex">
                                             <div class="home-info__features__i">
                                                 <span class="home-info__features__desc-text">Ширина</span>
-                                                <span class="home-info__features__main-text2">15<span class="desc-text_small">мм</span></span>
+                                                <span class="home-info__features__main-text2"><span
+                                                        class="hifmt_width">15</span><span
+                                                        class="desc-text_small">мм</span></span>
                                             </div>
                                             <div class="home-info__features__i">
                                                 <span class="home-info__features__desc-text">Длина</span>
-                                                <span class="home-info__features__main-text2">35<span class="desc-text_small">мм</span></span>
+                                                <span class="home-info__features__main-text2"><span
+                                                        class="hifmt_lenght">35</span><span
+                                                        class="desc-text_small">мм</span></span>
                                             </div>
                                             <div class="home-info__features__i">
                                                 <span class="home-info__features__desc-text">Высота</span>
-                                                <span class="home-info__features__main-text2">5<span class="desc-text_small">мм</span></span>
+                                                <span class="home-info__features__main-text2"><span
+                                                        class="hifmt_height">5</span><span
+                                                        class="desc-text_small">мм</span></span>
                                             </div>
                                         </div>
                                     </div>
@@ -220,6 +298,37 @@
                                 </div>
                             </div>
                             <div class="home__item">
+                                <div class="home-gallery_mobile">
+                                    <div class="block__container">
+                                        <div class="work__gallery">
+                                            <div
+                                                class="gallery__arrows block_flex block_flex_sb block_flex_align-center">
+                                                <button class="gallery__arrow kb_1_btn"
+                                                    onclick="previousSlide('kb_1')"><i
+                                                        class="fas fa-chevron-left"></i></button>
+                                                <button class="gallery__arrow kb_1_btn" onclick="nextSlide('kb_1')"><i
+                                                        class="fas fa-chevron-right"></i></button>
+                                            </div>
+                                            <div id="kb_1"
+                                                class="work__gallery__container block_flex block_flex_sb block_flex_align-center kb-gallery">
+                                                <div class="work__img__container"><img class="work__img"
+                                                        src="public/img/n.jpg" alt="..."></div>
+                                                <div class="work__img__container"><img class="work__img"
+                                                        src="public/img/n.jpg" alt="..."></div>
+                                                <div class="work__img__container"><img class="work__img"
+                                                        src="public/img/n.jpg" alt="..."></div>
+                                                <div class="work__img__container"><img class="work__img"
+                                                        src="public/img/n.jpg" alt="..."></div>
+                                                <div class="work__img__container"><img class="work__img"
+                                                        src="public/img/n.jpg" alt="..."></div>
+                                                <div class="work__img__container"><img class="work__img"
+                                                        src="public/img/n.jpg" alt="..."></div>
+                                                <div class="work__img__container"><img class="work__img"
+                                                        src="public/img/n.jpg" alt="..."></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="home-gallery">
                                     <div class="home-gallery__item hg_1">
                                         <div class="home-gallery__img hg-i_1 anim_show_border_50"></div>
@@ -233,7 +342,8 @@
                         </div>
                         <div class="home__line">
                             <div class="home__line__item"><span class="home__line__item__text">Назад</span></div>
-                            <div class="home__line__item"><span class="home__line__item__text">1<span class="gray-text">/10</span></span></div>
+                            <div class="home__line__item"><span class="home__line__item__text">1<span
+                                        class="gray-text">/10</span></span></div>
                             <div class="home__line__item"><span class="home__line__item__text">Вперёд</span></div>
                         </div>
                     </div>
@@ -250,10 +360,17 @@
                 <div class="about__container block_flex block_flex_sb block_flex_align-center">
                     <div class="about__text__container">
                         <p class="about_text">
-                            Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не совсем так.<br><br>
-                            Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, “consectetur”, и занялся его поисками в классической латинской литературе.<br><br>
-                            В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги “de Finibus Bonorum et Malorum” (“О пределах добра и зла”), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения.<br><br>
-                            Первая строка Lorem Ipsum, “Lorem ipsum dolor sit amet..”, происходит от одной из строк в разделе 1.10.32
+                            Многие думают, что Lorem Ipsum — взятый с потолка псевдо-латинский набор слов, но это не
+                            совсем так.<br><br>
+                            Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
+                            тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат
+                            Вирджиния, взял одно из самых странных слов в Lorem Ipsum, “consectetur”, и занялся его
+                            поисками в классической латинской литературе.<br><br>
+                            В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33
+                            книги “de Finibus Bonorum et Malorum” (“О пределах добра и зла”), написанной Цицероном в 45
+                            году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения.<br><br>
+                            Первая строка Lorem Ipsum, “Lorem ipsum dolor sit amet..”, происходит от одной из строк в
+                            разделе 1.10.32
                         </p>
                     </div>
                     <div class="about__img__container">
@@ -262,27 +379,31 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="about-num block block_flex block_flex_c block_flex_align-center block_blue">
-            <div class="about-num__item">
-                <span class="about-num__number">10</span>
-                <span class="about-num__description">Лет опыта</span>
+            <div class="about-num__item__content">
+                <div class="about-num__item">
+                    <span class="about-num__number">10</span>
+                    <span class="about-num__description">Лет опыта</span>
+                </div>
+                <div class="about-num__item">
+                    <span class="about-num__number">500+</span>
+                    <span class="about-num__description">Фургонов изготовлено</span>
+                </div>
             </div>
-            <div class="about-num__item">
-                <span class="about-num__number">500+</span>
-                <span class="about-num__description">Фургонов изготовлено</span>
-            </div>
-            <div class="about-num__item">
-                <span class="about-num__number">100+</span>
-                <span class="about-num__description">Довольных клиентов</span>
-            </div>
-            <div class="about-num__item">
-                <span class="about-num__number">100+</span>
-                <span class="about-num__description">Чего-то там ещё</span>
+            <div class="about-num__item__content">
+                <div class="about-num__item">
+                    <span class="about-num__number">100+</span>
+                    <span class="about-num__description">Довольных клиентов</span>
+                </div>
+                <div class="about-num__item">
+                    <span class="about-num__number">100+</span>
+                    <span class="about-num__description">Чего-то там ещё</span>
+                </div>
             </div>
         </div>
 
-        <div class="block block_height block_white">
+        <div class="advantages block block_height block_white">
             <div class="advantages__content">
                 <div class="block__name block_padding_down">
                     <h2 class="block__title">Наши преимущества</h2>
@@ -338,7 +459,7 @@
             </div>
         </div>
 
-        <div class="block block_height block_blue">
+        <div class="work block block_height block_blue">
             <div class="block__content block_padding">
                 <div class="block__name block_padding_down">
                     <h2 class="block__title">Наши работы</h2>
@@ -346,43 +467,53 @@
                 </div>
                 <div class="block__container">
                     <div class="work__gallery">
-                        <div class="work__gallery__container block_flex block_flex_sb block_flex_align-center">
-                            <div class="work__img__container"><img class="work__img anim_show_border_75" src="public/img/n.jpg" alt="..."></div>
-                            <div class="work__img__container"><img class="work__img anim_show_border_75" src="public/img/n.jpg" alt="..."></div>
-                            <div class="work__img__container"><img class="work__img anim_show_border_75" src="public/img/n.jpg" alt="..."></div>
-                            <div class="work__img__container"><img class="work__img anim_show_border_75" src="public/img/n.jpg" alt="..."></div>
-                            <div class="work__img__container"><img class="work__img anim_show_border_75" src="public/img/n.jpg" alt="..."></div>
-                            <div class="work__img__container"><img class="work__img anim_show_border_75" src="public/img/n.jpg" alt="..."></div>
-                            <div class="work__img__container"><img class="work__img anim_show_border_75" src="public/img/n.jpg" alt="..."></div>
+                        <div id="kb_2"
+                            class="work__gallery__container block_flex block_flex_sb block_flex_align-center kb-gallery">
+                            <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="...">
+                            </div>
+                            <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="...">
+                            </div>
+                            <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="...">
+                            </div>
+                            <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="...">
+                            </div>
+                            <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="...">
+                            </div>
+                            <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="...">
+                            </div>
+                            <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="...">
+                            </div>
                         </div>
                     </div>
                     <div class="work__line">
-                        <div class="home__line__item"><button class="home__line__item__text home__line__item_btn" onclick="previousSlide()">Назад</button></div>
-                        <div class="home__line__item"><span class="home__line__item__text"><span class="wlg_page">1</span><span class="wlg_len gray-text">/10</span></span></div>
-                        <div class="home__line__item"><button class="home__line__item__text home__line__item_btn"  onclick="nextSlide()">Вперёд</button></div>
+                        <div class="home__line__item"><button class="home__line__item__text home__line__item_btn kb_2_btn"
+                                onclick="previousSlide('kb_2')">Назад</button></div>
+                        <div class="home__line__item"><span class="home__line__item__text"><span
+                                    id="kb_2_page">1</span><span id="kb_2_len" class="wlg_len gray-text">/10</span></span>
+                        </div>
+                        <div class="home__line__item"><button class="home__line__item__text home__line__item_btn kb_2_btn"
+                                onclick="nextSlide('kb_2')">Вперёд</button></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="block block_height block_white">
+        <div class="contacts block block_height block_white">
             <div class="block__content block_padding">
                 <div class="block__name block_padding_down">
                     <h2 class="block__title">Контакты</h2>
                     <h4 class="block__description">Многие думают, что Lorem Ipsum — взятый с потолка ...</h4>
                 </div>
-                <div class="block__container block_flex block_flex_sb">
-                    <div class="block__item">
-                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.8965325143777!2d49.426312316352984!3d53.50604367043757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687f3100077781%3A0x57e90939984f14a2!2z0JTQtdGC0YHQutC40Lkg0YHQsNC0IOKEliA1NCAi0JDQu9C10L3QutCwIg!5e0!3m2!1sru!2sru!4v1648919057130!5m2!1sru!2sru" width="1168" height="860" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="block__item block_flex block_flex_align-center">
+                <div class="contacts__container block__container block_flex block_flex_sb block_flex_row_reverse">
+                    <div class="contacts__data__body block__item block_flex block_flex_align-center">
                         <div class="contacts__data__conatainer">
                             <div class="contacts__data">
                                 <div class="contacts__data__item block_flex block_flex_fs">
                                     <div class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
                                         <i class="fas fa-map-marker-alt"></i>
                                     </div>
-                                    <div class="advantages__features__text block_flex block_flex_fs block_flex_align-center">
+                                    <div
+                                        class="advantages__features__text block_flex block_flex_fs block_flex_align-center">
                                         <span class="contacts__data__title">Ул. Ленина, 37</span>
                                     </div>
                                 </div>
@@ -390,7 +521,8 @@
                                     <div class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
                                         <i class="fas fa-phone"></i>
                                     </div>
-                                    <div class="advantages__features__text block_flex block_flex_fs block_flex_align-center">
+                                    <div
+                                        class="advantages__features__text block_flex block_flex_fs block_flex_align-center">
                                         <span class="contacts__data__title">+7 987 654 32 10</span>
                                     </div>
                                 </div>
@@ -398,41 +530,55 @@
                                     <div class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
                                         <i class="fas fa-envelope"></i>
                                     </div>
-                                    <div class="advantages__features__text block_flex block_flex_fs block_flex_align-center">
+                                    <div
+                                        class="advantages__features__text block_flex block_flex_fs block_flex_align-center">
                                         <span class="contacts__data__title">contact@paliac.ru</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="contacts__social block_padding_top_50 block_flex block_flex_fs">
-                                <div class="contacts__social__item">
-                                    <div class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
-                                        <i class="fab fa-twitter"></i>
+                            <div class="contacts__social__container">
+                                <div class="contacts__social block_padding_top_50 block_flex block_flex_fs">
+                                    <div class="contacts__social__item">
+                                        <div
+                                            class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__social__item">
+                                        <div
+                                            class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                    <div class="contacts__social__item">
+                                        <div
+                                            class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="contacts__social__item">
-                                    <div class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
-                                        <i class="fab fa-twitter"></i>
+                                <div class="contacts__social block_padding_top_50 block_flex block_flex_fs">
+                                    <div class="contacts__social__item">
+                                        <div
+                                            class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="contacts__social__item">
-                                    <div class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
-                                        <i class="fab fa-twitter"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="contacts__social block_padding_top_50 block_flex block_flex_fs">
-                                <div class="contacts__social__item">
-                                    <div class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
-                                        <i class="fab fa-twitter"></i>
-                                    </div>
-                                </div>
-                                <div class="contacts__social__item">
-                                    <div class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
-                                        <i class="fab fa-twitter"></i>
+                                    <div class="contacts__social__item">
+                                        <div
+                                            class="advantages__features__icon block_flex block_flex_c block_flex_align-center">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="block__item">
+                        <iframe class="map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.8965325143777!2d49.426312316352984!3d53.50604367043757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687f3100077781%3A0x57e90939984f14a2!2z0JTQtdGC0YHQutC40Lkg0YHQsNC0IOKEliA1NCAi0JDQu9C10L3QutCwIg!5e0!3m2!1sru!2sru!4v1648919057130!5m2!1sru!2sru"
+                            width="1168" height="860" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -440,7 +586,7 @@
 
         <div class="footer block block_padding block_black">
             <div class="block__content">
-                <div class="block__container block_flex block_flex_sb block_flex_align-center">
+                <div class="footer__container block__container block_flex block_flex_sb block_flex_align-center">
                     <div class="header__item">
                         <div class="header__logo">
                             <div class="logo"></div>
@@ -468,8 +614,9 @@
         </div>
     </div>
 
+
     <script src="public/js/libs/jquery-3.6.0.min.js"></script>
     <script src="public/js/libs/dragscroll.js"></script>
-    <script src="public/js/main.js?v=0.2"></script>
+    <script src="public/js/main.js?v=0.0.6"></script>
 </body>
 </html>
