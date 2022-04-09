@@ -93,9 +93,8 @@ $('.home__line__item_btn').on('click', function(){
     }, 1000);
 });
 
-kbGalleryInit('kb_1', 1, 1);
-kbGalleryInit('kb_2', 1, 2);
-console.log(kbGallery);
+// kbGalleryInit('kb_1', 1, 1);
+// kbGalleryInit('kb_2', 1, 3);
 
 function animateNumbers(el, time, start, end) {
     $(el).each(function() {
@@ -151,6 +150,9 @@ $('.header__burger').on('click', function() {
     }
 });
 
+// windowSize3 = false;
+// windowSize2 = false;
+// windowSize1 = false;
 function start() {
     if (window.screen.width <= 1370) {
         if (!menuStatus) {
@@ -161,8 +163,39 @@ function start() {
     } else {
         $('.header__menu').css({'display':'flex'});
     }
+
+    
+    // if (window.screen.width <= 1000) {
+    //     if (!windowSize1) {
+    //         kbGallery['kb_2']['pageNum'] = 1;
+    //         slide('kb_2');
+    //         windowSize3 = false;
+    //         windowSize2 = false;
+    //         windowSize1 = true;
+    //         console.log('1000');
+    //     }
+    // } else if (window.screen.width <= 1600) {
+    //     if (!windowSize2) {
+    //         kbGallery['kb_2']['pageNum'] = 2;
+    //         slide('kb_2');
+    //         windowSize3 = false;
+    //         windowSize2 = true;
+    //         windowSize1 = false;
+    //         console.log('1600');
+    //     }
+    // } else {
+    //     if (!windowSize3) {
+    //         kbGallery['kb_2']['pageNum'] = 3;
+    //         slide('kb_2');
+    //         windowSize3 = true;
+    //         windowSize2 = false;
+    //         windowSize1 = false;
+    //         console.log('> 1600');
+    //     }
+    // }
 }
 
+start();
 window.addEventListener('resize', start);
 
 
@@ -180,6 +213,43 @@ window.addEventListener('resize', start);
 
 
 
+// $('.work__gallery').owlCarousel({
+//     loop:true,
+//     margin:10,
+//     nav:true,
+    
+// });
 
+$('.work__gallery').owlCarousel({
+    items: 3,
+    lazyLoad: true,
+    loop: true,
+    margin: 50,
+    responsive: {
+        0: {
+            items: 1,
+            margin: 20
+        },
 
+        600: {
+            items: 2,
+            margin: 20
+        },
+
+        900: {
+            margin: 20
+        },
+
+        1000: {
+            items: 3,
+        }
+    }
+});
+
+$('.work__gallery2').owlCarousel({
+    items: 1,
+    lazyLoad: true,
+    loop: true,
+    margin: 20
+});
 
