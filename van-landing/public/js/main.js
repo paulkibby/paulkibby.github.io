@@ -1,3 +1,4 @@
+
 $('.home-categories__item').on('click', function() {
     $('.home-categories__item').find('.text-gradient').addClass('hci__main').removeClass('text-gradient');
     $('.home-categories__item').find('.hci__phantom_hide').removeClass('hci__phantom_hide');
@@ -5,8 +6,17 @@ $('.home-categories__item').on('click', function() {
     $(this).find('.hci__main').addClass('text-gradient').removeClass('hci__main');
     $(this).find('.hci__phantom').addClass('hci__phantom_hide');
 
-    $('.home__models').fadeIn(218);
+    $('.home__models, .home__models__close').fadeIn(218);
 });
+
+$('.home__models__close').on('click', function() {
+    $('.home-categories__item').find('.text-gradient').addClass('hci__main').removeClass('text-gradient');
+    $('.home-categories__item').find('.hci__phantom_hide').removeClass('hci__phantom_hide');
+    
+    $('.home__models, .home__models__close').fadeOut(218);
+});
+
+
 
 // var galleryItems = Math.ceil($('.work__img').length / 3);
 
