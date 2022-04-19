@@ -39,7 +39,7 @@ function kbGalleryInit(name, pageIndex = 1, pageNum = 3) {
             $('#' + name + '_len').text('/' + maxPages);
         }
         
-        slide(name);
+        slide(name, true);
     }
 }
 
@@ -65,9 +65,15 @@ function previousSlide(name) {
     }
 }
 
-function slide(name) {
+function slide(name, first = false) {
     if (kbGallery.hasOwnProperty(name)) {
         lockSlideButton(name);
+
+        if (first) {
+            timeTO = 0;
+        } else {
+            timeTO = 500;
+        }
 
         var pageC = pageConvert(kbGallery[name]['pageIndex'], kbGallery[name]['pageNum']);
 
@@ -77,7 +83,7 @@ function slide(name) {
             for (let i = pageC-kbGallery[name]['pageNum']; i < pageC; i++) {
                 $(kbGallery[name]['images'][i]).fadeIn(500).children().removeClass('anim_hide_w_right').addClass('anim_show_border_75');
             }
-        }, 500);
+        }, timeTO);
 
         if ($('#' + name + '_page').length > 0) {
             $('#' + name + '_page').text(kbGallery[name]['pageIndex']);
@@ -105,6 +111,7 @@ $('.home__line__item_btn').on('click', function(){
 
 // kbGalleryInit('kb_1', 1, 1);
 // kbGalleryInit('kb_2', 1, 3);
+kbGalleryInit('kb_3', 1, 1);
 
 function animateNumbers(el, time, start, end) {
     $(el).each(function() {
@@ -153,6 +160,7 @@ var menuStatus = false;
 $('.header__burger').on('click', function() {
     if (menuStatus) {
         $('.header__menu').slideUp();
+        
         menuStatus = false;
     } else {
         $('.header__menu').slideDown();
