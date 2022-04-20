@@ -65,6 +65,16 @@ function previousSlide(name) {
     }
 }
 
+function nextSlideAnim(name) {
+    nextSlide(name);
+    animate(kbGallery[name]['pageIndex']);
+}
+
+function previousSlideAnim(name) {
+    previousSlide(name);
+    animate(kbGallery[name]['pageIndex']);
+}
+
 function slide(name, first = false) {
     if (kbGallery.hasOwnProperty(name)) {
         lockSlideButton(name);
@@ -76,12 +86,20 @@ function slide(name, first = false) {
         }
 
         var pageC = pageConvert(kbGallery[name]['pageIndex'], kbGallery[name]['pageNum']);
-
-        $(kbGallery[name]['images']).fadeOut(500).children().removeClass('anim_show_border_75').addClass('anim_hide_w_right');
+        
+        if (window.screen.width <= 742) {
+            $(kbGallery[name]['images']).fadeOut(500).children().removeClass('anim_show_border_75');
+        } else {
+            $(kbGallery[name]['images']).fadeOut(500).children().removeClass('anim_show_border_75').addClass('anim_hide_w_right');
+        }
 
         setTimeout(function() {
             for (let i = pageC-kbGallery[name]['pageNum']; i < pageC; i++) {
-                $(kbGallery[name]['images'][i]).fadeIn(500).children().removeClass('anim_hide_w_right').addClass('anim_show_border_75');
+                if (window.screen.width <= 742) {
+                    $(kbGallery[name]['images'][i]).fadeIn(500).children().removeClass('anim_hide_w_right');
+                } else {
+                    $(kbGallery[name]['images'][i]).fadeIn(500).children().removeClass('anim_hide_w_right').addClass('anim_show_border_75');
+                }
             }
         }, timeTO);
 
@@ -127,17 +145,23 @@ function animateNumbers(el, time, start, end) {
     });
 }
 
-var animValues = {
-    "price": Number($('.hifmt_price').text()),
-    "width": Number($('.hifmt_width').text()),
-    "lenght": Number($('.hifmt_lenght').text()),
-    "height": Number($('.hifmt_height').text()),
-};
+function animate(num) {
+    num = String(num);
+    
+    var animValues = {
+        "price": Number($('.hifmt_price_' + num).attr('data-value')),
+        "width": Number($('.hifmt_width_' + num).attr('data-value')),
+        "lenght": Number($('.hifmt_lenght_' + num).attr('data-value')),
+        "height": Number($('.hifmt_height_' + num).attr('data-value')),
+    };
+    
+    animateNumbers('.hifmt_price_' + num, 2000, (animValues['price']-10), animValues['price']);
+    animateNumbers('.hifmt_width_' + num, 1250, (animValues['width']-10), animValues['width']);
+    animateNumbers('.hifmt_lenght_' + num, 1500, (animValues['lenght']-10), animValues['lenght']);
+    animateNumbers('.hifmt_height_' + num, 1000, (animValues['height']-5), animValues['height']);
+}
 
-animateNumbers('.hifmt_price', 2000, (animValues['price']-10), animValues['price']);
-animateNumbers('.hifmt_width', 1250, (animValues['width']-10), animValues['width']);
-animateNumbers('.hifmt_lenght', 1500, (animValues['lenght']-10), animValues['lenght']);
-animateNumbers('.hifmt_height', 1000, (animValues['height']-5), animValues['height']);
+// animate(1);
 
 function categoriesScroll(direction) {
 
