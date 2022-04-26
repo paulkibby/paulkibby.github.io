@@ -25,10 +25,28 @@ html, body {
     margin: 0 auto;
 }
 
+.home2 {
+    /* height: 100vh; */
+    max-height: none!important;
+    padding: 0!important;
+    margin: 0 auto!important;
+    background-color: #000000;
+}
+
 .header {
+    position: relative;
     max-width: 1900px;
     margin: 0 auto;
     padding: 50px 100px 0 100px;
+    z-index: 3;
+}
+
+.header_2 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .header__burger {
@@ -44,6 +62,17 @@ html, body {
     position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+.header__content_video {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 35px;
+    border-radius: 50px;
+    transition: background-color 0.218s ease;
+}
+
+.header__content_video:hover {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .header__item {
@@ -134,6 +163,32 @@ html, body {
     max-width: 1900px;
     margin: 0 auto;
     padding: 70px 100px 0 85px;
+}
+
+.home__content_video {
+    position: relative;
+    width: 100%;
+    height: 360vh;
+    z-index: 2;
+    margin: 0 0 20vh 0;
+    /* overflow-x: hidden; */
+}
+
+.video_full {
+    /* left: 50%; */
+    /* transform: translate(-50%, 0); */
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.air-vid {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    z-index: 3;
 }
 
 .home__item {
@@ -834,10 +889,6 @@ html, body {
 
 
 
-
-
-
-
 .anim_show_w_right {
     animation-name: anim_show_w_right;
     animation-duration: 1s;
@@ -1104,6 +1155,10 @@ html, body {
     min-height: 1080px;
 }
 
+.block_full_height {
+    height: 100vh;
+}
+
 .block_white {
     background-color: #FFFFFF;
 }
@@ -1131,6 +1186,11 @@ html, body {
 
 .block_padding_top_50 {
     padding-top: 50px;
+}
+
+.block_sticky {
+    position: sticky;
+    top: 0;
 }
 
 
@@ -1179,6 +1239,10 @@ html, body {
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: linear-gradient(90deg, #72B4FF, #006CE9);
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 1900px) {
