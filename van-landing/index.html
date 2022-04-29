@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="public/js/libs/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="public/js/libs/owlcarousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="public/css/style.css?v=0.1.1">
+    <link rel="stylesheet" href="public/css/style.css?v=0.1.2">
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="home">
+        <div id="home-anchor" class="home">
             <header class="header">
                 <div class="header__content">
                     <div class="header__item">
@@ -32,11 +32,11 @@
                             <i class="fas fa-bars"></i>
                         </div>
                         <div class="header__menu">
-                            <a href="#" class="header__menu__link color_black">Главная</a>
-                            <a href="#" class="header__menu__link color_black">О нас</a>
-                            <a href="#" class="header__menu__link color_black">Наши преимущества</a>
-                            <a href="#" class="header__menu__link color_black">Наши работы</a>
-                            <a href="#" class="header__menu__link color_black">Контакты</a>
+                            <a href="#home-anchor" class="header__menu__link color_black">Главная</a>
+                            <a href="#about-anchor" class="header__menu__link color_black">О нас</a>
+                            <a href="#advantages-anchor" class="header__menu__link color_black">Наши преимущества</a>
+                            <a href="#work-anchor" class="header__menu__link color_black">Наши работы</a>
+                            <a href="#contacts-anchor" class="header__menu__link color_black">Контакты</a>
                         </div>
                     </div>
                     <div class="header__item header__contacts__container">
@@ -397,16 +397,16 @@
                             </div>
                         </div>
                         <div class="home__line">
-                            <div class="home__line__item"><button class="home__line__item__text home__line__item_btn kb_3_btn" onclick="previousSlideAnim('kb_3')">Назад</button></div>
+                            <div class="home__line__item"><button class="home__line__item__text home__line__item_btn kb_3_btn scroll-to" data-href="#kb_3" onclick="previousSlideAnim('kb_3')">Назад</button></div>
                             <div class="home__line__item"><span class="home__line__item__text"><span id="kb_3_page">1</span><span id="kb_3_len" class="gray-text">/10</span></span></div>
-                            <div class="home__line__item"><button class="home__line__item__text home__line__item_btn kb_3_btn" onclick="nextSlideAnim('kb_3')">Вперёд</button></div>
+                            <div class="home__line__item"><button class="home__line__item__text home__line__item_btn kb_3_btn scroll-to" data-href="#kb_3" onclick="nextSlideAnim('kb_3')">Вперёд</button></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="about block block_height block_white">
+        <div id="about-anchor" class="about block block_height block_white">
             <div class="about__content block__content block_padding">
                 <div class="block__name">
                     <h2 class="block__title">О нас</h2>
@@ -458,7 +458,7 @@
             </div>
         </div>
 
-        <div class="advantages block block_height block_white">
+        <div id="advantages-anchor" class="advantages block block_height block_white">
             <div class="advantages__content">
                 <div class="block__name block_padding_down">
                     <h2 class="block__title">Наши преимущества</h2>
@@ -514,7 +514,7 @@
             </div>
         </div>
 
-        <div class="work block block_height block_blue">
+        <div id="work-anchor" class="work block block_height block_blue">
             <div class="work__content block__content block_padding">
                 <div class="block__name block_padding_down">
                     <h2 class="block__title">Наши работы</h2>
@@ -557,7 +557,7 @@
             </div>
         </div>
 
-        <div class="contacts block block_height block_white">
+        <div id="contacts-anchor" class="contacts block block_height block_white">
             <div class="contacts__content block__content block_padding">
                 <div class="contacts__name block__name block_padding_down">
                     <h2 class="block__title">Контакты</h2>
@@ -644,15 +644,15 @@
                     <div class="footer__menu header__item">
                         <div class="footer__menu block_flex block_flex_sb">
                             <div class="footer__menu__item">
-                                <a href="#" class="footer__menu__link color_white">Главная</a>
-                                <a href="#" class="footer__menu__link color_white">О нас</a>
+                                <a href="#home-anchor" class="footer__menu__link color_white">Главная</a>
+                                <a href="#about-anchor" class="footer__menu__link color_white">О нас</a>
                             </div>
                             <div class="footer__menu__item">
-                                <a href="#" class="footer__menu__link color_white">Наши преимущества</a>
-                                <a href="#" class="footer__menu__link color_white">Наши работы</a>
+                                <a href="#advantages-anchor" class="footer__menu__link color_white">Наши преимущества</a>
+                                <a href="#work-anchor" class="footer__menu__link color_white">Наши работы</a>
                             </div>
                             <div class="footer__menu__item">
-                                <a href="#" class="footer__menu__link color_white">Контакты</a>
+                                <a href="#contacts-anchor" class="footer__menu__link color_white">Контакты</a>
                             </div>
                         </div>
                     </div>
@@ -666,6 +666,6 @@
     <script src="public/js/libs/jquery-3.6.0.min.js"></script>
     <script src="public/js/libs/owlcarousel/owl.carousel.min.js"></script>
     <script src="public/js/libs/dragscroll.js"></script>
-    <script src="public/js/main.js?v=0.1.1"></script>
+    <script src="public/js/main.js?v=0.1.2"></script>
 </body>
 </html>
