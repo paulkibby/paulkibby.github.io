@@ -237,7 +237,6 @@ function start() {
     // }
 }
 
-start();
 window.addEventListener('resize', start);
 
 var scroll;
@@ -282,8 +281,6 @@ $(window).scroll(function() {
     //     $('.transition-vid').fadeOut(318);
     // }
 });
-
-scrollLogic();
 
 $('.home__content__video__arrow__container').on('click', function() {
     if (scroll < 20) {
@@ -389,3 +386,17 @@ $(function(){
         });
     });
 });
+
+start();
+scrollLogic();
+
+// "Буферизация" (неполная) видео
+// $('.air-vid_video')[0].addEventListener('loadeddata', function() {
+//     var e = this;
+//     var int = setInterval(function() {
+//         if(e.duration == e.buffered.end(0)){
+//             console.log('Загрузилось :)');
+//             clearInterval(int);
+//         };
+//     }, 100);
+// });
