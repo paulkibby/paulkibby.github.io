@@ -286,13 +286,12 @@ $(window).scroll(function() {
 scrollLogic();
 
 $('.home__content__video__arrow__container').on('click', function() {
-    
-    if (scroll >= 20 && scroll < $('.transition-vid').height()/2) {
-        anchorScroll('.air-vid');
-    } else if ((scroll < $('.transition-vid').height()/2)) {
+    if (scroll < 20) {
         $('html, body').stop().animate({
             scrollTop: 190
         }, 200);
+    } else {
+        anchorScroll('.air-vid');
     }
 });
 
