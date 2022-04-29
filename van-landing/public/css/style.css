@@ -1252,7 +1252,115 @@ video {
     line-height: 30px;
 }
 
+.configurator {
 
+}
+
+.configurator__container {
+    width: 100%;
+    position: relative;
+}
+
+.configurator__visualizer {
+    position: relative;
+    width: calc(100% - 570px - 50px);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #006CE9;
+    overflow: hidden;
+}
+
+.configurator__visualizer__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.configurator__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 570px;
+    height: auto;
+}
+
+.configurator__search {
+    position: relative;
+    width: 100%;
+    margin: 0 0 50px 0;
+}
+
+.cit_search_ico {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    font-size: 21px;
+    background: -webkit-linear-gradient(0deg, #72B4FF, #006CE9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.configurator__input__text {
+    width: 100%;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 15px;
+    color: #2E2E2E;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 2px 20px 0 66px;
+    outline: none;
+    transition: border-color .218s ease;
+}
+
+.configurator__input__text:focus {
+    border-color: #CED2D6;
+}
+
+.configurator__options {
+    width: 100%;
+}
+
+.configurator__category {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.configurator__category__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.configurator__category__top i {
+    color: #9D9FA9;
+    font-size: 14px;
+}
+
+.configurator__category__title {
+    display: block;
+    padding-top: 2px;
+    color: #2E2E2E;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.configurator__category__body {
+    width: 100%;
+}
 
 
 
