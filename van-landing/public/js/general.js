@@ -39,6 +39,7 @@ $('a, button').on("click", function(e){
 });
 
 // Adaptive
+// FIXME: Иногда возникает некорректное отображение меню (его появления)
 function start() {
     if (window.screen.width <= 1370) {
         if (!menuStatus) {
