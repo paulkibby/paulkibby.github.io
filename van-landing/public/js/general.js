@@ -21,12 +21,11 @@ function anchorScroll(anchor) {
     }, 800);
 }
 
-// TODO: использовать не только <a> 
-$("a").on("click", function(e){
+$('a, button').on("click", function(e){
     e.preventDefault();
     var tag = $(this).prop("tagName");
 
-    if (!$(this).prop('disabled')) {
+    if (!$(this).is('disabled')) {
         if (tag == 'A') {
             var anchor = $(this).attr('href');
             if ($(this).attr('href') != '' && $(this).attr('href') != '#') {

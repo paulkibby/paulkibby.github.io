@@ -1,5 +1,4 @@
 
-var hciPos = { };
 $('.home-categories__item').on('click', function() {
     $('.home-categories__item').find('.text-gradient').addClass('hci__main').removeClass('text-gradient');
     $('.home-categories__item').find('.hci__phantom_hide').removeClass('hci__phantom_hide');
@@ -7,7 +6,6 @@ $('.home-categories__item').on('click', function() {
     $(this).find('.hci__main').addClass('text-gradient').removeClass('hci__main');
     $(this).find('.hci__phantom').addClass('hci__phantom_hide');
 
-    $('.home__models__close').offset({top: $(this).offset().top + 15, left: $(this).offset().left + 93});
     $('.home__models, .home__models__close').fadeIn(218);
 });
 
