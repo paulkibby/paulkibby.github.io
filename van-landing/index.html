@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no"> -->
     <title>Document</title>
 
     <!-- <link rel="stylesheet" type="text/css" href="public/fonts/fontawesome-free-5.15.4-web/css/all.css"> -->
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="public/js/libs/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="public/js/libs/owlcarousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="public/css/style.css?v=0.1.4">
+    <link rel="stylesheet" href="public/css/style.css?v=0.1.5">
 </head>
 
 <body>
@@ -30,7 +31,6 @@
                     <div class="header__item header__menu__container">
                         <div class="header__burger">
                             <div class="header__burger__container">
-                                <!-- <i class="fas fa-bars"></i> -->
                                 <div class="header__burger__item"></div>
                                 <div class="header__burger__item"></div>
                                 <div class="header__burger__item"></div>
@@ -48,11 +48,11 @@
                         <div class="header__contacts">
                             <div class="header__contacts__item">
                                 <i class="fas fa-phone"></i>
-                                <span>+7 996 720 48 10</span>
+                                <a class="cia" href="tel:+79967204810">+7 996 720 48 10</a>
                             </div>
                             <div class="header__contacts__item">
                                 <i class="fas fa-envelope"></i>
-                                <span>michmax2015@gmail.com</span>
+                                <a class="cia" href="mailto:michmax2015@gmail.com">michmax2015@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -64,67 +64,67 @@
                         <div class="hc home__item">
                             <div class="home-categories">
                                 <div class="home-categories__arrow">
-                                    <i class="fas fa-chevron-up" onclick="categoriesScroll('left')"></i>
+                                    <i class="fas fa-chevron-up hca_1" onclick="categoriesScroll('left')"></i>
                                 </div>
                                 <div class="home-categories__body dragscroll">
                                     <div class="home-categories__content">
-                                        <div class="home-categories__item">
+                                        <div class="home-categories__item"  onclick="showModels('hm_1')">
                                             <div class="home-categories__icon">
                                                 <i class="hci hci__main fas fa-caravan"></i>
                                                 <i class="hci hci__phantom fas fa-caravan"></i>
                                             </div>
                                             <div class="home-categories__name">Изотермические фургоны</div>
                                         </div>
-                                        <div class="home-categories__item">
+                                        <div class="home-categories__item" onclick="showModels('hm_2')">
                                             <div class="home-categories__icon">
                                                 <i class="hci hci__main fas fa-caravan"></i>
                                                 <i class="hci hci__phantom fas fa-caravan"></i>
                                             </div>
                                             <div class="home-categories__name">Гидроборты</div>
                                         </div>
-                                        <div class="home-categories__item">
+                                        <div class="home-categories__item" onclick="showModels('hm_3')">
                                             <div class="home-categories__icon">
                                                 <i class="hci hci__main fas fa-caravan"></i>
                                                 <i class="hci hci__phantom fas fa-caravan"></i>
                                             </div>
                                             <div class="home-categories__name">Специализированные кузова</div>
                                         </div>
-                                        <div class="home-categories__item">
+                                        <div class="home-categories__item" onclick="showModels('hm_4')">
                                             <div class="home-categories__icon">
                                                 <i class="hci hci__main fas fa-caravan"></i>
                                                 <i class="hci hci__phantom fas fa-caravan"></i>
                                             </div>
                                             <div class="home-categories__name">Отопители</div>
                                         </div>
-                                        <div class="home-categories__item">
+                                        <div class="home-categories__item" onclick="showModels('hm_5')">
                                             <div class="home-categories__icon">
                                                 <i class="hci hci__main fas fa-caravan"></i>
                                                 <i class="hci hci__phantom fas fa-caravan"></i>
                                             </div>
                                             <div class="home-categories__name">Ремонт</div>
                                         </div>
-                                        <div class="home-categories__item">
+                                        <div class="home-categories__item" onclick="showModels('hm_6')">
                                             <div class="home-categories__icon">
                                                 <i class="hci hci__main fas fa-caravan"></i>
                                                 <i class="hci hci__phantom fas fa-caravan"></i>
                                             </div>
                                             <div class="home-categories__name">Рефрижераторы</div>
                                         </div>
-                                        <div class="home-categories__item">
+                                        <div class="home-categories__item" onclick="showModels('hm_7')">
                                             <div class="home-categories__icon">
                                                 <i class="hci hci__main fas fa-caravan"></i>
                                                 <i class="hci hci__phantom fas fa-caravan"></i>
                                             </div>
                                             <div class="home-categories__name">Кемпинг</div>
                                         </div>
-                                        <div class="home-categories__item">
+                                        <div class="home-categories__item" onclick="showModels('hm_8')">
                                             <div class="home-categories__icon">
                                                 <i class="hci hci__main fas fa-caravan"></i>
                                                 <i class="hci hci__phantom fas fa-caravan"></i>
                                             </div>
                                             <div class="home-categories__name">ВИС</div>
                                         </div>
-                                        <div class="home-categories__item">
+                                        <div class="home-categories__item" onclick="showModels('hm_9')">
                                             <div class="home-categories__icon">
                                                 <i class="hci hci__main fas fa-caravan"></i>
                                                 <i class="hci hci__phantom fas fa-caravan"></i>
@@ -134,7 +134,7 @@
                                     </div>
                                 </div>
                                 <div class="home-categories__arrow">
-                                    <i class="fas fa-chevron-down" onclick="categoriesScroll('right')"></i>
+                                    <i class="fas fa-chevron-down hca_2" onclick="categoriesScroll('right')"></i>
                                 </div>
                                 <div class="home__models__close">
                                     <div class="hmc block_flex block_flex_c block_flex_align-center"><i class="fas fa-times"></i></div>
@@ -143,92 +143,477 @@
                         </div>
                     </div>
                     <div class="home__content_container hcc2">
-                        <!-- <div class="home__models__close">
-                            <div class="hmc block_flex block_flex_c block_flex_align-center"><i class="fas fa-times"></i></div>
-                        </div> -->
-                        <div class="home__models">
-                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_wrap">
+                        <div id="hm_1" class="home__models block_blue">
+                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
                                 <div class="home__models__item">
-                                    <div class="home__models__img__container">
-                                        <div class="home__models__img"></div>
-                                    </div>
-                                    <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
-                                        <div class="home__models__info__info">
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
-                                            <span class="home-info__features__main-text">60 000 ₽</span>
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/2.png');"></div>
                                         </div>
-                                        <div>
-                                            <button class="btn home__models__btn">Подробнее</button>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="home__models__item">
-                                    <div class="home__models__img__container">
-                                        <div class="home__models__img"></div>
-                                    </div>
-                                    <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
-                                        <div class="home__models__info__info">
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
-                                            <span class="home-info__features__main-text">60 000 ₽</span>
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/1.png');"></div>
                                         </div>
-                                        <div>
-                                            <button class="btn home__models__btn">Подробнее</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="home__models__item">
-                                    <div class="home__models__img__container">
-                                        <div class="home__models__img"></div>
-                                    </div>
-                                    <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
-                                        <div class="home__models__info__info">
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
-                                            <span class="home-info__features__main-text">60 000 ₽</span>
-                                        </div>
-                                        <div>
-                                            <button class="btn home__models__btn">Подробнее</button>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="home__models__item">
-                                    <div class="home__models__img__container">
-                                        <div class="home__models__img"></div>
-                                    </div>
-                                    <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
-                                        <div class="home__models__info__info">
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
-                                            <span class="home-info__features__main-text">60 000 ₽</span>
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
                                         </div>
-                                        <div>
-                                            <button class="btn home__models__btn">Подробнее</button>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hhm"></div>
+                        </div>
+                        <div id="hm_2" class="home__models block_blue">
+                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="home__models__item">
-                                    <div class="home__models__img__container">
-                                        <div class="home__models__img"></div>
-                                    </div>
-                                    <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
-                                        <div class="home__models__info__info">
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
-                                            <span class="home-info__features__main-text">60 000 ₽</span>
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
                                         </div>
-                                        <div>
-                                            <button class="btn home__models__btn">Подробнее</button>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="home__models__item">
-                                    <div class="home__models__img__container">
-                                        <div class="home__models__img"></div>
-                                    </div>
-                                    <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
-                                        <div class="home__models__info__info">
-                                            <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
-                                            <span class="home-info__features__main-text">60 000 ₽</span>
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
                                         </div>
-                                        <div>
-                                            <button class="btn home__models__btn">Подробнее</button>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hhm"></div>
+                        </div>
+                        <div id="hm_3" class="home__models block_blue">
+                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hhm"></div>
+                        </div>
+                        <div id="hm_4" class="home__models block_blue">
+                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hhm"></div>
+                        </div>
+                        <div id="hm_5" class="home__models block_blue">
+                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hhm"></div>
+                        </div>
+                        <div id="hm_6" class="home__models block_blue">
+                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hhm"></div>
+                        </div>
+                        <div id="hm_7" class="home__models block_blue">
+                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hhm"></div>
+                        </div>
+                        <div id="hm_8" class="home__models block_blue">
+                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hhm"></div>
+                        </div>
+                        <div id="hm_9" class="home__models block_blue">
+                            <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div class="home__models__img" style="background-image: url('public/img/3.png');"></div>
+                                        </div>
+                                        <div class="home__models__info block_flex block_flex_sb block_flex_align-center">
+                                            <div class="home__models__info__info">
+                                                <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                <span class="home-info__features__main-text">60 000 ₽</span>
+                                            </div>
+                                            <div>
+                                                <button class="btn home__models__btn">Подробнее</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -374,11 +759,83 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="hi">
+                                <div class="hg block_flex block_flex_sb">
+                                    <div class="home__item">
+                                        <div class="home-info">
+                                            <div class="home-info__title block_flex block_flex_align-center anim_show_w_right">
+                                                <h2 class="home-info__title__text anim_show_w_right">Изотермический фургон</h2>
+                                            </div>
+                                            <div class="home-info__features anim_show_up">
+                                                <div class="home-info__features__item">
+                                                    <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                    <span class="home-info__features__main-text"><span class="hifmt_price_2" data-value="60000">60 000</span> ₽</span>
+                                                </div>
+                                                <div class="home-info__features__item-flex">
+                                                    <div class="home-info__features__i">
+                                                        <span class="home-info__features__desc-text">Ширина</span>
+                                                        <span class="home-info__features__main-text2"><span class="hifmt_width_2" data-value="15">15</span><span class="desc-text_small">мм</span></span>
+                                                    </div>
+                                                    <div class="home-info__features__i">
+                                                        <span class="home-info__features__desc-text">Длина</span>
+                                                        <span class="home-info__features__main-text2"><span class="hifmt_lenght_2" data-value="35">35</span><span class="desc-text_small">мм</span></span>
+                                                    </div>
+                                                    <div class="home-info__features__i">
+                                                        <span class="home-info__features__desc-text">Высота</span>
+                                                        <span class="home-info__features__main-text2"><span class="hifmt_height_2" data-value="5">5</span><span class="desc-text_small">мм</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="home-info__other">
+                                                <button class="btn anim_show_up">Подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="home__item">
+                                        <div class="home-gallery_mobile">
+                                            <div class="block__container">
+                                                <div class="work__gallery2 owl-carousel owl-theme">
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                    <!-- <div class="gallery__arrows block_flex block_flex_sb block_flex_align-center">
+                                                        <button class="gallery__arrow kb_1_btn" onclick="previousSlide('kb_1')"><i class="fas fa-chevron-left"></i></button>
+                                                        <button class="gallery__arrow kb_1_btn" onclick="nextSlide('kb_1')"><i class="fas fa-chevron-right"></i></button>
+                                                    </div> -->
+                                                    <!-- <div id="kb_1"
+                                                        class="work__gallery__container block_flex block_flex_sb block_flex_align-center kb-gallery">
+                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
+                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
+                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
+                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
+                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
+                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
+                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
+                                                    </div> -->
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="home-gallery">
+                                            <div class="home-gallery__item hg_1">
+                                                <div class="home-gallery__img hg-i_1 anim_show_border_50"></div>
+                                            </div>
+                                            <div class="home-gallery__item hg_2">
+                                                <div class="home-gallery__img hg-i_2 anim_show_border_50"></div>
+                                                <div class="home-gallery__img hg-i_2 anim_show_border_50"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="home__line">
                             <div class="home__line__item"><button class="home__line__item__text home__line__item_btn kb_3_btn scroll-to" data-href="#kb_3" onclick="previousSlideAnim('kb_3')">Назад</button></div>
                             <div class="home__line__item"><span class="home__line__item__text"><span id="kb_3_page">1</span><span id="kb_3_len" class="gray-text">/10</span></span></div>
                             <div class="home__line__item"><button class="home__line__item__text home__line__item_btn kb_3_btn scroll-to" data-href="#kb_3" onclick="nextSlideAnim('kb_3')">Вперёд</button></div>
+                            <div class="home__line__timer"></div>
                         </div>
                     </div>
                 </div>
@@ -500,7 +957,7 @@
                     <h4 class="block__description">Многие думают, что Lorem Ipsum — взятый с потолка ...</h4>
                 </div>
                 <div class="block__container">
-                    <div class="work__gallery owl-carousel owl-theme">
+                    <div class="work__gallery wg owl-carousel owl-theme">
                         <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
                         <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
                         <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
@@ -536,7 +993,7 @@
                                         <i class="fas fa-phone"></i>
                                     </div>
                                     <div class="contacts__data__text block_flex block_flex_fs block_flex_align-center">
-                                        <span class="contacts__data__title">+7 996 720 48 10</span>
+                                        <a class="contacts__data__title cia" href="tel:+79967204810">+7 996 720 48 10</a>
                                     </div>
                                 </div>
                                 <div class="contacts__data__item block_flex block_flex_fs">
@@ -544,7 +1001,7 @@
                                         <i class="fas fa-envelope"></i>
                                     </div>
                                     <div class="contacts__data__text block_flex block_flex_fs block_flex_align-center">
-                                        <span class="contacts__data__title">michmax2015@gmail.com</span>
+                                        <a class="contacts__data__title cia" href="mailto:michmax2015@gmail.com">michmax2015@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -622,7 +1079,7 @@
     <script src="public/js/libs/jquery-3.6.0.min.js"></script>
     <script src="public/js/libs/owlcarousel/owl.carousel.min.js"></script>
     <script src="public/js/libs/dragscroll.js"></script>
-    <script src="public/js/general.js?v=0.1.4"></script>
-    <script src="public/js/main.js?v=0.1.4"></script>
+    <script src="public/js/general.js?v=0.1.5"></script>
+    <script src="public/js/main.js?v=0.1.5"></script>
 </body>
 </html>

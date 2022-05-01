@@ -1,17 +1,21 @@
 
 
 // Burger menu
-// TODO: Сделать как у яндекса с анимацией и из отдельных блоков
 var menuStatus = false;
 $('.header__burger').on('click', function() {
     if (menuStatus) {
+        $('.header__content').removeClass('hb_active');
+        $('.header__menu').removeClass('hm_active');
         $('.header__menu').hide();
-        
         menuStatus = false;
     } else {
+        $('.header__content').addClass('hb_active');
+        $('.header__menu').addClass('hm_active');
         $('.header__menu').show();
         menuStatus = true
     }
+
+    start();
 });
 
 // Anchor
@@ -28,31 +32,14 @@ $('a, button').on("click", function(e){
     if (!$(this).is('disabled')) {
         if (tag == 'A') {
             var anchor = $(this).attr('href');
-            if ($(this).attr('href') != '' && $(this).attr('href') != '#') {
+            if (anchor != '' && anchor != '#') {
                 anchorScroll(anchor);
             }    
         } else {
             var anchor = $(this).attr('data-href');
-            anchorScroll(anchor);
+            if (anchor != '') {
+                anchorScroll(anchor);
+            }
         }
     }
 });
-
-// Adaptive
-// FIXME: Иногда возникает некорректное отображение меню (его появления)
-function start() {
-    if (window.screen.width <= 1370) {
-        if (!menuStatus) {
-            $('.header__menu').css({'display':'none'});
-        } else {
-            $('.header__menu').css({'display':'block'});
-        }
-    } else {
-        $('.header__menu').css({'display':'flex'});
-    }
-}
-
-window.addEventListener('resize', start);
-
-
-start();

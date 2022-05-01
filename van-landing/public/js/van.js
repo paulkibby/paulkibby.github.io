@@ -57,3 +57,20 @@ $(function() {
 
 
 scrollLogic();
+
+// Adaptive
+function start() {
+    if (window.innerWidth <= 1370) {
+        if (!menuStatus) {
+            $('.header__menu').css({'display':'none'});
+        } else {
+            $('.header__menu').css({'display':'block'});
+        }
+
+    } else {
+        $('.header__menu').css({'display':'flex'});
+    }
+}
+
+window.addEventListener('resize', start);
+start();
