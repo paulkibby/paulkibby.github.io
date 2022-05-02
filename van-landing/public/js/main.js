@@ -5,15 +5,19 @@ $('.home-categories__item').on('click', function() {
     
     $(this).find('.hci__main').addClass('text-gradient').removeClass('hci__main');
     $(this).find('.hci__phantom').addClass('hci__phantom_hide');
+
+    $('.home__content__exp').fadeIn(218);
 });
 
 var modelsIsShow = false;
 function showModels(id) {
-    $('.home__models').fadeOut(218);
+    
 
     if (modelsIsShow) {
+        $('.home__models').hide();
         $('#'+id+', .home__models__close').show();
     } else {
+        $('.home__models').fadeOut(218);
         $('#'+id+', .home__models__close').fadeIn(118);
     }
 
@@ -26,7 +30,7 @@ $('.home__models__close').on('click', function() {
     $('.home-categories__item').find('.text-gradient').addClass('hci__main').removeClass('text-gradient');
     $('.home-categories__item').find('.hci__phantom_hide').removeClass('hci__phantom_hide');
     
-    $('.home__models, .home__models__close').fadeOut(218);
+    $('.home__models, .home__models__close, .home__content__exp').fadeOut(218);
 });
 
 var kbGallery = new Object();
@@ -50,7 +54,6 @@ function pageConvert(page, pageNum) {
     return page * pageNum;
 }
 
-// FIXME: Если открыт последний слайд, не анимировать числа по нажатию на кнопку "далее"
 function nextSlide(name) {
     if (kbGallery.hasOwnProperty(name)) {
         if (kbGallery[name]['pageIndex'] < Math.ceil($(kbGallery[name]['images']).length / kbGallery[name]['pageNum'])) {
@@ -275,6 +278,45 @@ $('.work__gallery2').owlCarousel({
     margin: 20
 });
 
+// $('.home__models__t2__img').owlCarousel({
+//     items: 1,
+//     lazyLoad: true,
+//     loop: true,
+//     margin: 20
+// });
+
+var swiper = new Swiper(".home__models__t2__img_swipe", {
+    spaceBetween: 30,
+    grabCursor: true,
+    lazy: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+});
+
+var swiper2 = new Swiper("#hmis_1, #hmis_2, #hmis_3, #hmis_4, #hmis_5, #hmis_6", {
+    spaceBetween: 35,
+    lazy: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+});
+
+
 // Adaptive
 function start() {
     if (window.innerWidth <= 1370) {
@@ -303,6 +345,7 @@ function start() {
 }
 
 window.addEventListener('resize', start);
+
 start();
 animate(1);
 

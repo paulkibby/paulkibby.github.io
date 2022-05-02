@@ -25,7 +25,7 @@ function anchorScroll(anchor) {
     }, 800);
 }
 
-$('a, button').on("click", function(e){
+$('.scroll-to').on("click", function(e){
     e.preventDefault();
     var tag = $(this).prop("tagName");
 

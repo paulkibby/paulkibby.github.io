@@ -8,11 +8,14 @@ function scrollLogic() {
     if (scroll >= 20 && scroll < $('.transition-vid').height()/2) {
         $('.transition-vid').fadeIn(318);
         $('.main-vid').fadeOut(318);
+        $('.header_2').css({'position': 'fixed'});
     } else if ((scroll < $('.transition-vid').height()/2)) {
         $('.main-vid').fadeIn(318);
         $('.transition-vid').fadeOut(318);
+        $('.header_2').css({'position': 'fixed'});
     } else if ((scroll > $('.transition-vid').height()/2)) {
         $('.transition-vid').show();
+        $('.header_2').css({'position': 'absolute'});
     }
 
     if (scroll >= offset) {
