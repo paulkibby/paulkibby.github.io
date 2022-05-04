@@ -15,10 +15,21 @@
     <link rel="stylesheet" href="public/js/libs/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="public/js/libs/owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="public/js/libs/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="public/js/libs/hystModal-0.5/hystmodal.min.css"/>
     <link rel="stylesheet" href="public/css/style.css?v=0.1.5">
 </head>
 
 <body>
+    <div class="hystmodal" id="myModal" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div class="hystmodal__styled">
+                    Hello, World!
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="wrapper">
         <div id="home-anchor" class="home">
             <header class="header">
@@ -140,12 +151,12 @@
                     </div>
                     <div class="home__content_container hcc2">
                         <div class="home__content__exp gray-text">* Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                        <div id="hm_1" class="home__models block_blue">
+                        <div id="hm_1" class="home__models block_blue scrollbar">
                             <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
                                         <div class="home__models__img__container">
-                                            <div id="hmis_1" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper home__models__img_swipe">
+                                            <div id="hmis_1" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <img data-src="public/img/1.png" class="swiper-lazy" />
@@ -182,7 +193,7 @@
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
                                         <div class="home__models__img__container">
-                                            <div id="hmis_2" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper home__models__img_swipe">
+                                            <div id="hmis_2" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <img data-src="public/img/1.png" class="swiper-lazy" />
@@ -219,7 +230,303 @@
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
                                         <div class="home__models__img__container">
-                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper home__models__img_swipe">
+                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/1.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                        <div class="home__models__info">
+                                            <div class="home__models__info__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                            <div class="home__models__info__container block_flex block_flex_sb block_flex_align-center">
+                                                <div class="home__models__info__info">
+                                                    <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                    <span class="home-info__features__main-text">60 000 ₽</span>
+                                                </div>
+                                                <div>
+                                                    <a class="btn-link btn-main home__models__btn" href="1-1.html"><span>Подробнее</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/1.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                        <div class="home__models__info">
+                                            <div class="home__models__info__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                            <div class="home__models__info__container block_flex block_flex_sb block_flex_align-center">
+                                                <div class="home__models__info__info">
+                                                    <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                    <span class="home-info__features__main-text">60 000 ₽</span>
+                                                </div>
+                                                <div>
+                                                    <a class="btn-link btn-main home__models__btn" href="1-1.html"><span>Подробнее</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/1.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                        <div class="home__models__info">
+                                            <div class="home__models__info__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                            <div class="home__models__info__container block_flex block_flex_sb block_flex_align-center">
+                                                <div class="home__models__info__info">
+                                                    <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                    <span class="home-info__features__main-text">60 000 ₽</span>
+                                                </div>
+                                                <div>
+                                                    <a class="btn-link btn-main home__models__btn" href="1-1.html"><span>Подробнее</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/1.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                        <div class="home__models__info">
+                                            <div class="home__models__info__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                            <div class="home__models__info__container block_flex block_flex_sb block_flex_align-center">
+                                                <div class="home__models__info__info">
+                                                    <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                    <span class="home-info__features__main-text">60 000 ₽</span>
+                                                </div>
+                                                <div>
+                                                    <a class="btn-link btn-main home__models__btn" href="1-1.html"><span>Подробнее</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/1.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                        <div class="home__models__info">
+                                            <div class="home__models__info__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                            <div class="home__models__info__container block_flex block_flex_sb block_flex_align-center">
+                                                <div class="home__models__info__info">
+                                                    <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                    <span class="home-info__features__main-text">60 000 ₽</span>
+                                                </div>
+                                                <div>
+                                                    <a class="btn-link btn-main home__models__btn" href="1-1.html"><span>Подробнее</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/1.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                        <div class="home__models__info">
+                                            <div class="home__models__info__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                            <div class="home__models__info__container block_flex block_flex_sb block_flex_align-center">
+                                                <div class="home__models__info__info">
+                                                    <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                    <span class="home-info__features__main-text">60 000 ₽</span>
+                                                </div>
+                                                <div>
+                                                    <a class="btn-link btn-main home__models__btn" href="1-1.html"><span>Подробнее</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/1.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                        <div class="home__models__info">
+                                            <div class="home__models__info__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                            <div class="home__models__info__container block_flex block_flex_sb block_flex_align-center">
+                                                <div class="home__models__info__info">
+                                                    <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                    <span class="home-info__features__main-text">60 000 ₽</span>
+                                                </div>
+                                                <div>
+                                                    <a class="btn-link btn-main home__models__btn" href="1-1.html"><span>Подробнее</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/1.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                        <div class="home__models__info">
+                                            <div class="home__models__info__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+                                            <div class="home__models__info__container block_flex block_flex_sb block_flex_align-center">
+                                                <div class="home__models__info__info">
+                                                    <span class="home-info__features__desc-text">Цена <span class="gray-text">(от)</span></span>
+                                                    <span class="home-info__features__main-text">60 000 ₽</span>
+                                                </div>
+                                                <div>
+                                                    <a class="btn-link btn-main home__models__btn" href="1-1.html"><span>Подробнее</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home__models__item">
+                                    <div class="home__models__item__container">
+                                        <div class="home__models__img__container">
+                                            <div id="hmis_3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <img data-src="public/img/1.png" class="swiper-lazy" />
@@ -256,7 +563,7 @@
                             </div>
                             <div class="hhm"></div>
                         </div>
-                        <div id="hm_2" class="home__models block_blue">
+                        <div id="hm_2" class="home__models block_blue scrollbar">
                             <div class="home__models__t2__container block block_flex block_flex_sb block_flex_align-center">
                                 <div class="home__models__t2__item">
                                     <div class="home__models__t2__title block_blue">
@@ -264,10 +571,11 @@
                                     </div>
                                     <p class="home__models__t2__description">Гидравлические подъемные устройства предназначены для проведения погрузочно-разгрузочных работ и транспортировки груза, выполняя роль дополнительной площадки. С грузоподъемностью от 450-3000 кг.  У данной техники есть ряд преимуществ:<br><br>Компактность - в неиспользуемом положении гидроборт складывается и поднимается к задней стенке кузова, уменьшая габариты транспортного средства;<br><br>Удобство - конструкция подъемных устройств максимально упрощает и ускоряет проведение погрузочно-разгрузочных мероприятий;</p>
                                     <div class="home__models__t2__comp__container block block_flex block_flex_sb">
-                                        <div class="home__models__t2__comp__item block_flex block_flex_c block_flex_align-center"><span>Фигня #1</span></div>
-                                        <div class="home__models__t2__comp__item block_flex block_flex_c block_flex_align-center"><span>Фигня #2</span></div>
-                                        <div class="home__models__t2__comp__item block_flex block_flex_c block_flex_align-center"><span>Фигня #3</span></div>
-                                        <div class="home__models__t2__comp__item block_flex block_flex_c block_flex_align-center"><span>Фигня #4</span></div>
+                                        <div class="home__models__t2__comp__item block_flex block_flex_c block_flex_align-center"><span>BAR</span></div>
+                                        <div class="home__models__t2__comp__item block_flex block_flex_c block_flex_align-center"><span>DHOLLANDIA</span></div>
+                                        <div class="home__models__t2__comp__item block_flex block_flex_c block_flex_align-center"><span>PALFINGER</span></div>
+                                        <div class="home__models__t2__comp__item block_flex block_flex_c block_flex_align-center"><span>ZEPRO</span></div>
+                                        <div class="home__models__t2__comp__item block_flex block_flex_c block_flex_align-center"><span>DAUTEL</span></div>
                                     </div>
                                     <div class="home__models__t2__btns block block_flex block_flex_fs">
                                         <a class="btn-link home__models__btn btn-accent" href="1-1.html"><span>Ремонт</span></a>
@@ -282,12 +590,12 @@
                             </div>
                             <div class="hhm"></div>
                         </div>
-                        <div id="hm_3" class="home__models block_blue">
+                        <div id="hm_3" class="home__models block_blue scrollbar">
                             <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
                                         <div class="home__models__img__container">
-                                            <div id="hmis_4" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper home__models__img_swipe">
+                                            <div id="hmis_4" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <img data-src="public/img/1.png" class="swiper-lazy" />
@@ -324,7 +632,7 @@
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
                                         <div class="home__models__img__container">
-                                            <div id="hmis_5" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper home__models__img_swipe">
+                                            <div id="hmis_5" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <img data-src="public/img/r1.jpg" class="swiper-lazy" />
@@ -361,7 +669,7 @@
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
                                         <div class="home__models__img__container">
-                                            <div id="hmis_6" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper home__models__img_swipe">
+                                            <div id="hmis_6" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <img data-src="public/img/r2.jpg" class="swiper-lazy" />
@@ -398,7 +706,7 @@
                             </div>
                             <div class="hhm"></div>
                         </div>
-                        <div id="hm_4" class="home__models block_blue">
+                        <div id="hm_4" class="home__models block_blue scrollbar">
                             <div class="home__models__t2__container block block_flex block_flex_sb block_flex_align-center">
                                 <div class="home__models__t2__item">
                                     <div class="home__models__t2__overflow block_overflow_y scrollbar">
@@ -423,63 +731,55 @@
                                 </div>
                                 <div class="home__models__t2__item">
                                     <div class="home__models__t2__item__img__container block_flex block_flex_fe">
-                                        <!-- <div class="home__models__t2__img" style="background-image: url(public/img/n.jpg);"></div> -->
-
-                                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper home__models__t2__img_swipe">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img data-src="public/img/van1.jpg" class="swiper-lazy" />
-                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper home__models__t2__img_swipe">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img data-src="public/img/van1.jpg" class="swiper-lazy" />
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img data-src="public/img/van2.jpg" class="swiper-lazy" />
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img data-src="public/img/van3.jpg" class="swiper-lazy" />
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img data-src="public/img/van4.jpg" class="swiper-lazy" />
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img data-src="public/img/van5.jpg" class="swiper-lazy" />
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img data-src="public/img/van1.jpg" class="swiper-lazy" />
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img data-src="public/img/van2.jpg" class="swiper-lazy" />
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img data-src="public/img/van3.jpg" class="swiper-lazy" />
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img data-src="public/img/van4.jpg" class="swiper-lazy" />
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                </div>
                                             </div>
-                                            <div class="swiper-slide">
-                                                <img data-src="public/img/van2.jpg" class="swiper-lazy" />
-                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img data-src="public/img/van3.jpg" class="swiper-lazy" />
-                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img data-src="public/img/van4.jpg" class="swiper-lazy" />
-                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img data-src="public/img/van5.jpg" class="swiper-lazy" />
-                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img data-src="public/img/van1.jpg" class="swiper-lazy" />
-                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img data-src="public/img/van2.jpg" class="swiper-lazy" />
-                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img data-src="public/img/van3.jpg" class="swiper-lazy" />
-                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img data-src="public/img/van4.jpg" class="swiper-lazy" />
-                                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-pagination"></div>
                                         </div>
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                        <div class="swiper-pagination"></div>
-                                    </div>
-
-                                        <!-- <div class="home__models__t2__img home__models__t2__img_gallery owl-carousel owl-theme">
-                                            <img class="work__img owl-lazy" data-src="public/img/van1.jpg" alt="..."/>
-                                            <img class="work__img owl-lazy" data-src="public/img/van2.jpg" alt="..."/>
-                                            <img class="work__img owl-lazy" data-src="public/img/van1.jpg" alt="..."/>
-                                        </div> -->
                                     </div>
                                 </div>
                             </div>
                             <div class="hhm"></div>
                         </div>
-                        <div id="hm_5" class="home__models block_blue">
+                        <div id="hm_5" class="home__models block_blue scrollbar">
                             <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
@@ -532,7 +832,7 @@
                             </div>
                             <div class="hhm"></div>
                         </div>
-                        <div id="hm_6" class="home__models block_blue">
+                        <div id="hm_6" class="home__models block_blue scrollbar">
                             <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
@@ -585,7 +885,7 @@
                             </div>
                             <div class="hhm"></div>
                         </div>
-                        <div id="hm_7" class="home__models block_blue">
+                        <div id="hm_7" class="home__models block_blue scrollbar">
                             <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
@@ -638,7 +938,7 @@
                             </div>
                             <div class="hhm"></div>
                         </div>
-                        <div id="hm_8" class="home__models block_blue">
+                        <div id="hm_8" class="home__models block_blue scrollbar">
                             <div class="home__models__container block_blue block_flex block_flex_sb block_flex_align-center block_flex_wrap">
                                 <div class="home__models__item">
                                     <div class="home__models__item__container">
@@ -720,31 +1020,37 @@
                                                 </div>
                                             </div>
                                             <div class="home-info__other">
-                                                <button class="btn anim_show_up">Подробнее</button>
+                                                <button class="btn anim_show_up" data-hystmodal="#myModal">Подробнее</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="home__item">
                                         <div class="home-gallery_mobile">
                                             <div class="block__container">
-                                                <div class="work__gallery2 owl-carousel owl-theme">
-                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                                                    <!-- <div class="gallery__arrows block_flex block_flex_sb block_flex_align-center">
-                                                        <button class="gallery__arrow kb_1_btn" onclick="previousSlide('kb_1')"><i class="fas fa-chevron-left"></i></button>
-                                                        <button class="gallery__arrow kb_1_btn" onclick="nextSlide('kb_1')"><i class="fas fa-chevron-right"></i></button>
-                                                    </div> -->
-                                                    <!-- <div id="kb_1" class="work__gallery__container block_flex block_flex_sb block_flex_align-center kb-gallery">
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                    </div> -->
+                                                <div id="sw_t1" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img data-src="public/img/r1.jpg" class="swiper-lazy" />
+                                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-pagination"></div>
                                                 </div>
+                                                <!-- <div class="work__gallery2 owl-carousel owl-theme">
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                </div> -->
                                             </div>
                                         </div>
                                         <div class="home-gallery">
@@ -795,27 +1101,30 @@
                                     <div class="home__item">
                                         <div class="home-gallery_mobile">
                                             <div class="block__container">
-                                                <div class="work__gallery2 owl-carousel owl-theme">
-                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                                                    <!-- <div class="gallery__arrows block_flex block_flex_sb block_flex_align-center">
-                                                        <button class="gallery__arrow kb_1_btn" onclick="previousSlide('kb_1')"><i class="fas fa-chevron-left"></i></button>
-                                                        <button class="gallery__arrow kb_1_btn" onclick="nextSlide('kb_1')"><i class="fas fa-chevron-right"></i></button>
-                                                    </div> -->
-                                                    <!-- <div id="kb_1"
-                                                        class="work__gallery__container block_flex block_flex_sb block_flex_align-center kb-gallery">
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                    </div> -->
-
-                                                    
+                                                <div id="sw_t2" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img data-src="public/img/r2.jpg" class="swiper-lazy" />
+                                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-pagination"></div>
                                                 </div>
+                                                <!-- <div class="work__gallery2 owl-carousel owl-theme">
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                </div> -->
                                             </div>
                                         </div>
                                         <div class="home-gallery">
@@ -866,27 +1175,30 @@
                                     <div class="home__item">
                                         <div class="home-gallery_mobile">
                                             <div class="block__container">
-                                                <div class="work__gallery2 owl-carousel owl-theme">
-                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                                                    <!-- <div class="gallery__arrows block_flex block_flex_sb block_flex_align-center">
-                                                        <button class="gallery__arrow kb_1_btn" onclick="previousSlide('kb_1')"><i class="fas fa-chevron-left"></i></button>
-                                                        <button class="gallery__arrow kb_1_btn" onclick="nextSlide('kb_1')"><i class="fas fa-chevron-right"></i></button>
-                                                    </div> -->
-                                                    <!-- <div id="kb_1"
-                                                        class="work__gallery__container block_flex block_flex_sb block_flex_align-center kb-gallery">
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                        <div class="work__img__container"><img class="work__img" src="public/img/n.jpg" alt="..."></div>
-                                                    </div> -->
-
-                                                    
+                                                <div id="sw_t3" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_t home__models__img_swipe">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <img data-src="public/img/r2.jpg" class="swiper-lazy" />
+                                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img data-src="public/img/2.png" class="swiper-lazy" />
+                                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <img data-src="public/img/3.png" class="swiper-lazy" />
+                                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-pagination"></div>
                                                 </div>
+                                                <!-- <div class="work__gallery2 owl-carousel owl-theme">
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                    <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                                                </div> -->
                                             </div>
                                         </div>
                                         <div class="home-gallery">
@@ -1021,22 +1333,42 @@
             </div>
         </div>
 
-        <div id="work-anchor" class="work block block_height block_blue">
+        <div id="work-anchor" class="work block block_blue">
             <div class="work__content block__content block_padding">
                 <div class="block__name block_padding_down">
                     <h2 class="block__title">Наши работы</h2>
                     <h4 class="block__description">Многие думают, что Lorem Ipsum — взятый с потолка ...</h4>
                 </div>
                 <div class="block__container">
-                    <div class="work__gallery wg owl-carousel owl-theme">
-                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
-                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;" class="swiper swiper_m work__gallery wg">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img data-src="public/img/r1.jpg" class="swiper-lazy" />
+                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img data-src="public/img/2.png" class="swiper-lazy" />
+                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img data-src="public/img/3.png" class="swiper-lazy" />
+                                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
+
+                    <!-- <div class="work__gallery wg owl-carousel owl-theme">
+                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                        <img class="work__img owl-lazy" data-src="public/img/n.jpg" alt="..."/>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -1150,6 +1482,7 @@
     <script src="public/js/libs/jquery-3.6.0.min.js"></script>
     <script src="public/js/libs/owlcarousel/owl.carousel.min.js"></script>
     <script src="public/js/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="public/js/libs/hystModal-0.5/hystmodal.min.js"></script>
     <script src="public/js/libs/dragscroll.js"></script>
     <script src="public/js/general.js?v=0.1.5"></script>
     <script src="public/js/main.js?v=0.1.5"></script>

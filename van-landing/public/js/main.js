@@ -7,12 +7,14 @@ $('.home-categories__item').on('click', function() {
     $(this).find('.hci__phantom').addClass('hci__phantom_hide');
 
     $('.home__content__exp').fadeIn(218);
+
+    if (window.innerWidth <= 1370) {
+        anchorScroll('.home-categories');
+    }
 });
 
 var modelsIsShow = false;
 function showModels(id) {
-    
-
     if (modelsIsShow) {
         $('.home__models').hide();
         $('#'+id+', .home__models__close').show();
@@ -73,7 +75,7 @@ function previousSlide(name) {
 }
 
 function nextSlideAnim(name) {
-    $('#kb_3').css({'height': $('#kb_3').height() + 'px'});
+    $('#kb_3').css({'min-height': $('#kb_3').height() + 'px'});
     
     nextSlide(name);
     setTimeout(function() {
@@ -82,7 +84,7 @@ function nextSlideAnim(name) {
 }
 
 function previousSlideAnim(name) {
-    $('#kb_3').css({'height': $('#kb_3').height() + 'px'});
+    $('#kb_3').css({'min-height': $('#kb_3').height() + 'px'});
 
     previousSlide(name);
     setTimeout(function() {
@@ -245,38 +247,38 @@ function categoriesScroll(direction) {
 }
 
 // Galleries init
-$('.work__gallery').owlCarousel({
-    items: 3,
-    lazyLoad: true,
-    loop: true,
-    margin: 50,
-    responsive: {
-        0: {
-            items: 1,
-            margin: 20
-        },
+// $('.work__gallery').owlCarousel({
+//     items: 3,
+//     lazyLoad: true,
+//     loop: true,
+//     margin: 50,
+//     responsive: {
+//         0: {
+//             items: 1,
+//             margin: 20
+//         },
 
-        600: {
-            items: 2,
-            margin: 20
-        },
+//         600: {
+//             items: 2,
+//             margin: 20
+//         },
 
-        900: {
-            margin: 20
-        },
+//         900: {
+//             margin: 20
+//         },
 
-        1000: {
-            items: 3,
-        }
-    }
-});
+//         1000: {
+//             items: 3,
+//         }
+//     }
+// });
 
-$('.work__gallery2').owlCarousel({
-    items: 1,
-    lazyLoad: true,
-    loop: true,
-    margin: 20
-});
+// $('.work__gallery2').owlCarousel({
+//     items: 1,
+//     lazyLoad: true,
+//     loop: true,
+//     margin: 20
+// });
 
 // $('.home__models__t2__img').owlCarousel({
 //     items: 1,
@@ -301,9 +303,33 @@ var swiper = new Swiper(".home__models__t2__img_swipe", {
     },
 });
 
-var swiper2 = new Swiper("#hmis_1, #hmis_2, #hmis_3, #hmis_4, #hmis_5, #hmis_6", {
+var swiper2 = new Swiper(".swiper_t", {
     spaceBetween: 35,
     lazy: true,
+    loop: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+});
+
+var swiper3 = new Swiper(".swiper_m", {
+    spaceBetween: 35,
+    slidesPerView: 3,
+    preloadImages: false,
+    
+    lazy: {
+        loadOnTransitionStart: false,
+        loadPrevNext: false,
+    },
     loop: true,
     pagination: {
       el: ".swiper-pagination",
@@ -313,6 +339,37 @@ var swiper2 = new Swiper("#hmis_1, #hmis_2, #hmis_3, #hmis_4, #hmis_5, #hmis_6",
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        1366: {
+          slidesPerView: 3,
+          spaceBetween: 35
+        },
+      }
+});
+
+
+const myModal = new HystModal({
+    linkAttributeName: 'data-hystmodal',
+    catchFocus: true,
+    waitTransitions: true,
+    closeOnEsc: true,
+    beforeOpen: function(modal){
+        console.log('Message before opening the modal');
+        console.log(modal); //modal window object
+    },
+    afterClose: function(modal){
+        console.log('Message after modal has closed');
+        console.log(modal); //modal window object
     },
 });
 
@@ -341,7 +398,7 @@ function start() {
         $('.kb_3_btn').attr('data-href', '');
     }
     
-    $('#kb_3').css({'height': ''});
+    $('#kb_3').css({'min-height': ''});
 }
 
 window.addEventListener('resize', start);
