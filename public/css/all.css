@@ -162,6 +162,7 @@ img {
 }
 
 .item-1 {
+    position: relative;
     width: 360px;
     background-color: rgba(255, 255, 255, 3%);
     border-radius: 25px;
@@ -226,10 +227,6 @@ img {
     transition: top 0.218s ease;
 }
 
-.project-img:hover .pswp-i-link {
-    top: 85px;
-}
-
 .pswp-i-img {
     display: block;
     width: 100%;
@@ -243,7 +240,8 @@ img {
     top: -100px;
     left: 0;
     margin-bottom: 70px;
-    transition: width .218s ease, left .218s ease, top .218s ease;
+    transition: width .218s ease, left .218s ease;
+    transition-delay: .1s;
     z-index: 2;
 }
 
@@ -275,6 +273,7 @@ img {
 }
 
 .btn {
+    position: relative;
     display: block;
     width: calc(100% - (35px + 35px));
     margin: 35px auto 0 auto;
@@ -287,11 +286,39 @@ img {
     background-color: #4F5CED;
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.06);
-    transition: background-color .15s ease;
+    transition: all 0.6s cubic-bezier(0, 0.5, 0.35, 1);
 }
 
 .btn:hover {
+    border-color: transparent;
     background-color: #404EED;
+}
+
+svg {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+}
+
+rect {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.4);
+    stroke-width: 1;
+    stroke-dasharray: 0, 100;
+    stroke-dashoffset: 50;
+    transition: all 0.6s cubic-bezier(0, 0.5, 0.35, 1);
+}
+
+.btn:hover rect {
+    stroke-dasharray: 100, 0;
+    stroke-dashoffset: 0;
+}
+
+.btn:active rect {
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 2;
 }
 
 @keyframes heart1 {
