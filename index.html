@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#18191E">
-    <meta property="og:image" content="public/img/other/webdeb.png"/>
+    <meta property="og:image" content="/public/img/other/webdeb.png"/>
     <title>i'm Pavel - Web Developer / Coding with love</title>
-    <link rel="shortcut icon" href="public/img/icons/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="/public/img/icons/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="public/js/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="public/css/all.css?v=0.0.2">
+    <link rel="stylesheet" href="/public/js/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="/public/css/all.css?v=0.0.2">
     <script>
         const r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRppedaX = '??????? ?? ??? ????????? ???? ?';
 
@@ -51,7 +51,7 @@
     <div class="root">
         <section class="section mt-100">
             <div>
-                <img class="avatar" src="public/img/other/avatar.webp" alt="Avatar">
+                <img class="avatar" src="/public/img/other/avatar.webp" alt="Avatar">
             </div>
             <div class="mt-50">
                 <h1 class="text-center fs-40 fw-400 color-white">Hello, i'm Pavel!</h1>
@@ -64,7 +64,7 @@
                     <a class="non-decor" href="https://t.me/Kibby" target="_blank">
                         <div class="p-35 flex justify-start">
                             <div class="flex align-center">
-                                <img class="item-ico" src="public/img/icons/telegram.svg" alt="Telegram">
+                                <img class="item-ico" src="/public/img/icons/telegram.svg" alt="Telegram">
                             </div>
                             <div class="ml-25">
                                 <h4 class="item-title fs-20 fw-500">Telegram</h4>
@@ -77,7 +77,7 @@
                     <a class="non-decor" href="https://vk.com/kibby" target="_blank">
                         <div class="p-35 flex justify-start">
                             <div class="flex align-center">
-                                <img class="item-ico" src="public/img/icons/vk.svg" alt="VK">
+                                <img class="item-ico" src="/public/img/icons/vk.svg" alt="VK">
                             </div>
                             <div class="ml-25">
                                 <h4 class="item-title fs-20 fw-500">VK</h4>
@@ -90,7 +90,7 @@
                     <a class="non-decor" href="mailto:kibby.dev@gmail.com" target="_blank">
                         <div class="p-35 flex justify-start">
                             <div class="flex align-center">
-                                <img class="item-ico" src="public/img/icons/email.svg" alt="Email">
+                                <img class="item-ico" src="/public/img/icons/email.svg" alt="Email">
                             </div>
                             <div class="ml-25">
                                 <h4 class="item-title fs-20 fw-500">Email</h4>
@@ -103,7 +103,7 @@
                     <a class="non-decor" href="https://github.com/Paul-Kibby" target="_blank">
                         <div class="p-35 flex justify-start">
                             <div class="flex align-center">
-                                <img class="item-ico" src="public/img/icons/github.svg" alt="GitHub">
+                                <img class="item-ico" src="/public/img/icons/github.svg" alt="GitHub">
                             </div>
                             <div class="ml-25">
                                 <h4 class="item-title fs-20 fw-500">GitHub</h4>
@@ -144,8 +144,8 @@
                     <div class="item-1 shadow project relative">
                         <div class="project-p p-35">
                             <div class="project-img pswp-gallery pswp-gallery--single-column">
-                                <a class="pswp-i-link" href="public/img/projects/project_1.webp" target="_blank">
-                                  <img class="pswp-i-img" src="public/img/projects/project_1.webp" alt="project">
+                                <a class="pswp-i-link" href="/public/img/projects/project_1.webp" target="_blank">
+                                  <img class="pswp-i-img" src="/public/img/projects/project_1.webp" alt="project">
                                 </a>
                             </div>
                             <div class="project-info">
@@ -160,8 +160,8 @@
                     <div class="item-1 shadow project relative">
                         <div class="project-p p-35">
                             <div class="project-img pswp-gallery pswp-gallery--single-column">
-                                <a class="pswp-i-link" href="public/img/projects/project_1.webp" target="_blank">
-                                  <img class="pswp-i-img" src="public/img/projects/project_1.webp" alt="project">
+                                <a class="pswp-i-link" href="/public/img/projects/project_1.webp" target="_blank">
+                                  <img class="pswp-i-img" src="/public/img/projects/project_1.webp" alt="project">
                                 </a>
                             </div>
                             <div class="project-info">
@@ -181,6 +181,23 @@
         </section>
     </div>
 
+    <script>
+        function imgSizes(element, src) {
+            let img = new Image();
+            img.onload = function() {
+                element.parentElement.setAttribute('data-pswp-width', this.width)
+                element.parentElement.setAttribute('data-pswp-height', this.height)
+            };
+
+            img.src = src;
+        }
+
+        let imgs = document.querySelectorAll('.pswp-i-img');
+        imgs.forEach(function(element) {
+            imgSizes(element, element.src);
+        });
+    </script>
+    
     <script type="module">
         import PhotoSwipeLightbox from '/public/js/photoswipe/photoswipe-lightbox.esm.min.js';
 
@@ -188,12 +205,6 @@
             gallery: '.pswp-gallery',
             children: 'a',
             pswpModule: () => import('/public/js/photoswipe/photoswipe.esm.min.js')
-        });
-
-        let imgs = document.querySelectorAll('.pswp-i-img');
-        imgs.forEach(function(element) {
-            element.parentElement.setAttribute('data-pswp-width', element.naturalWidth)
-            element.parentElement.setAttribute('data-pswp-height', element.naturalHeight)
         });
 
         lightbox.init();
