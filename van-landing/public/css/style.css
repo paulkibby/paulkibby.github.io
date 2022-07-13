@@ -562,7 +562,7 @@ video {
     position: relative;
     width: 185px;
     height: 55px;
-    border: 0;
+    border: 1px solid #72B4FF;
     border-radius: 16px;
     background: linear-gradient(90deg, #72B4FF, #006CE9);
     color: #FFFFFF;
@@ -592,7 +592,7 @@ video {
     right: 0;
     bottom: 0;
     border-radius: 16px;
-    background: linear-gradient(-90deg, #72B4FF, #006CE9);
+    background-color: #3794FF;
     opacity: 0;
     transition: opacity 0.218s ease;
     z-index: -1;
@@ -600,25 +600,42 @@ video {
 
 .btn:hover::before {
     opacity: 1;
-    background: linear-gradient(-90deg, #72B4FF, #006CE9);
 }
 
 .btn-main {
     color: #FFFFFF;
     background: linear-gradient(90deg, #72B4FF, #006CE9);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
-    border: 0;
+    border: 1px solid #72B4FF;
+}
+
+.btn-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    background-color: #3794FF;
+    opacity: 0;
+    transition: opacity 0.218s ease;
+    z-index: -1;
+}
+
+.btn-main:hover::before {
+    opacity: 1;
 }
 
 .btn-accent {
     color: #2E2E2E;
     background-color: transparent;
-    border: 1px solid #006CE9;
+    border: 1px solid #72B4FF;
 }
 
 .btn-accent:hover {
     color: #FFFFFF;
-    border: 0;
+    /* border: 0; */
 }
 
 .btn-link {
@@ -635,34 +652,16 @@ video {
     text-transform: uppercase;
     cursor: pointer;
     z-index: 1;
-    transition: all 0.218s ease;
+    transition: all .12s ease-out;
 }
 
 .btn-link:hover {
     box-shadow: none;
+    background-color: #3794FF;
 }
 
 .btn-link:active {
     transform: scale(.97);
-}
-
-.btn-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 16px;
-    background: linear-gradient(-90deg, #72B4FF, #006CE9);
-    opacity: 0;
-    transition: opacity 0.218s ease;
-    z-index: -1;
-}
-
-.btn-link:hover::before {
-    opacity: 1;
-    background: linear-gradient(-90deg, #72B4FF, #006CE9);
 }
 
 .btn-link span {
@@ -909,7 +908,7 @@ video {
 
 .home__models__t2__description {
     color: #2E2E2E;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     line-height: 24px;
     text-align: left;
@@ -922,7 +921,7 @@ video {
 .home__models__t2__comp__item {
     width: 185px;
     height: 75px;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     border-radius: 20px;
 }
 
@@ -1188,6 +1187,11 @@ video {
     background: -webkit-linear-gradient(0deg, #72B4FF, #006CE9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.advantages__features__icon img {
+    display: block;
+    width: 50%;
 }
 
 .contacts__data__item__icon {
