@@ -52,6 +52,10 @@ img {
     margin-top: 150px;
 }
 
+.mt-115 {
+    margin-top: 115px;
+}
+
 .mt-100 {
     margin-top: 100px;
 }
@@ -200,7 +204,7 @@ img {
 }
 
 .project, .project-p {
-    max-height: 460px;
+    max-height: 550px;
 }
 
 .project-img:hover {
@@ -208,7 +212,18 @@ img {
     left: -35px;
 }
 
+.pswp-i-link {
+    position: relative;
+    top: 0;
+    transition: top 0.218s ease;
+}
+
+.project-img:hover .pswp-i-link {
+    top: 85px;
+}
+
 .pswp-i-img {
+    display: block;
     width: 100%;
     border-radius: 25px;
     cursor: zoom-in;
@@ -219,7 +234,8 @@ img {
     position: relative;
     top: -100px;
     left: 0;
-    transition: width .218s ease, left .218s ease;
+    margin-bottom: 70px;
+    transition: width .218s ease, left .218s ease, top .218s ease;
     z-index: 2;
 }
 
@@ -250,6 +266,26 @@ img {
     animation-name: heart1;
 }
 
+.btn {
+    display: block;
+    width: calc(100% - (35px + 35px));
+    margin: 35px auto 0 auto;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #4F5CED;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background-color .15s ease;
+}
+
+.btn:hover {
+    background-color: #404EED;
+}
+
 @keyframes heart1 {
     0%   { transform: scale(1); }
     100% { transform: scale(1.15); }
@@ -278,16 +314,12 @@ img {
     }
 
     .project {
-        max-height: 649px;
-        margin-bottom: 150px!important;
+        max-height: 719px;
+        margin-bottom: 115px!important;
     }
     
     .project-p {
-        max-height: 649px;
-    }
-
-    .project-img {
-        top: -75px;
+        max-height: 719px;
     }
 }
 
@@ -308,6 +340,10 @@ img {
     .project-img {
         left: -35px;
         width: calc(100% + (35px + 35px));
+    }
+
+    .project-img:hover .pswp-i-link {
+        top: unset;
     }
 }
 
