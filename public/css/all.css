@@ -76,6 +76,10 @@ img {
     margin-bottom: 100px;
 }
 
+.mb-50 {
+    margin-bottom: 50px;
+}
+
 .p-35 {
     padding: 35px;
 }
@@ -196,13 +200,18 @@ img {
 }
 
 .project, .project-p {
-    max-height: 480px;
+    max-height: 460px;
 }
 
-.project:hover .project-img {
+.project-img:hover {
     width: calc(100% + (35px + 35px));
     left: -35px;
-    top: -50px;
+}
+
+.pswp-i-img {
+    width: 100%;
+    border-radius: 25px;
+    cursor: zoom-in;
 }
 
 .project-img {
@@ -210,8 +219,7 @@ img {
     position: relative;
     top: -100px;
     left: 0;
-    border-radius: 25px;
-    transition: width .218s ease, left .218s ease, top .218s ease;
+    transition: width .218s ease, left .218s ease;
     z-index: 2;
 }
 
@@ -277,6 +285,10 @@ img {
     .project-p {
         max-height: 649px;
     }
+
+    .project-img {
+        top: -75px;
+    }
 }
 
 @media screen and (max-width: 555px) {
@@ -296,10 +308,6 @@ img {
     .project-img {
         left: -35px;
         width: calc(100% + (35px + 35px));
-    }
-
-    .project:hover .project-img {
-        top: -100px;
     }
 }
 

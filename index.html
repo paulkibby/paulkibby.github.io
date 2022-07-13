@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/js/photoswipe/photoswipe.css">
     <link rel="stylesheet" href="public/css/all.css">
 </head>
 <body>
@@ -107,28 +108,58 @@
                 <div class="flex flex-wrap justify-between">
                     <div class="item-1 shadow project relative">
                         <div class="project-p p-35">
-                            <img class="project-img" src="public/img/project_1.webp" alt="project">
+                            <div class="project-img pswp-gallery pswp-gallery--single-column">
+                                <a class="pswp-i-link" href="public/img/project_1.webp" target="_blank">
+                                  <img class="pswp-i-img" src="public/img/project_1.webp" alt="project">
+                                </a>
+                            </div>
                             <div class="project-info">
-                                <h4 class="item-title fs-20 fw-500 text-center">MCPK Education</h4>
-                                <span class="item-desc mt-10 fs-16 fw-400 color-white-transparent text-center">July 6, 2022</span>
+                                <a class="non-decor" href="#">
+                                    <h4 class="item-title fs-20 fw-500 text-center">MCPK Education</h4>
+                                    <span class="item-desc mt-10 fs-16 fw-400 color-white-transparent text-center">July 6, 2022</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="item-1 shadow project relative">
                         <div class="project-p p-35">
-                            <img class="project-img" src="public/img/project_1.webp" alt="project">
+                            <div class="project-img pswp-gallery pswp-gallery--single-column">
+                                <a class="pswp-i-link" href="public/img/project_1.webp" target="_blank">
+                                  <img class="pswp-i-img" src="public/img/project_1.webp" alt="project">
+                                </a>
+                            </div>
                             <div class="project-info">
-                                <h4 class="item-title fs-20 fw-500 text-center">MCPK Education</h4>
-                                <span class="item-desc mt-10 fs-16 fw-400 color-white-transparent text-center">July 6, 2022</span>
+                                <a class="non-decor" href="#">
+                                    <h4 class="item-title fs-20 fw-500 text-center">MCPK Education</h4>
+                                    <span class="item-desc mt-10 fs-16 fw-400 color-white-transparent text-center">July 6, 2022</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </section>
-        <section class="section mt-100 mb-100">
+        <section class="section mt-100 mb-50">
             <div class="footer shadow p-35 color-white fs-18 fw-400 text-center">Made with <span class="heart">❤️</span></div>
         </section>
     </div>
+
+    <script type="module">
+        import PhotoSwipeLightbox from '/public/js/photoswipe/photoswipe-lightbox.esm.min.js';
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '.pswp-gallery',
+            children: 'a',
+            pswpModule: () => import('/public/js/photoswipe/photoswipe.esm.min.js')
+        });
+
+        let imgs = document.querySelectorAll('.pswp-i-img');
+        imgs.forEach(function(element) {
+            element.parentElement.setAttribute('data-pswp-width', element.naturalWidth)
+            element.parentElement.setAttribute('data-pswp-height', element.naturalHeight)
+        });
+
+        lightbox.init();
+    </script>
 </body>
 </html>
