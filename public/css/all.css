@@ -322,8 +322,9 @@ rect {
 }
 
 @keyframes heart1 {
-    0%   { transform: scale(1); }
-    100% { transform: scale(1.15); }
+    0% { transform: scale(1); }
+    90% { transform: scale(1.17); }
+    100% { transform: scale(1);}
 }
 
 
