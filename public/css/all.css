@@ -44,6 +44,10 @@ img {
     color: rgba(255, 255, 255, 45%);
 }
 
+.color-black {
+    color: #18191E;
+}
+
 .mt-200 {
     margin-top: 200px;
 }
@@ -126,6 +130,10 @@ img {
 
 .non-decor {
     text-decoration: none;
+}
+
+.non-user-select {
+    user-select: none;
 }
 
 .flex {

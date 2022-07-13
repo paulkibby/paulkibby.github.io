@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/js/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="/public/css/all.css?v=0.0.2">
+    <link rel="stylesheet" href="/public/css/all.css?v=0.0.3">
+    <link rel="stylesheet" href="/public/js/hystModal-0.5/hystmodal.min.css">
     <script>
         const r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRppedaX = '??????? ?? ??? ????????? ???? ?';
 
@@ -153,7 +154,7 @@
                                     <h4 class="item-title fs-20 fw-500 text-center">MCPK Education</h4>
                                     <span class="item-desc mt-10 fs-16 fw-400 color-white-transparent text-center">July 6, 2022</span>
                                 </a>
-                                <a class="btn" href="#">Перейти</a>
+                                <a class="btn" href="#" data-hystmodal="#unavailable">Перейти</a>
                             </div>
                         </div>
                     </div>
@@ -169,7 +170,7 @@
                                     <h4 class="item-title fs-20 fw-500 text-center">MCPK Education</h4>
                                     <span class="item-desc mt-10 fs-16 fw-400 color-white-transparent text-center">July 6, 2022</span>
                                 </a>
-                                <a class="btn" href="#">Перейти</a>
+                                <a class="btn" href="#" data-hystmodal="#unavailable">Перейти</a>
                             </div>
                         </div>
                     </div>
@@ -177,8 +178,19 @@
             </section>
         </section>
         <section class="section mt-50 mb-50">
-            <div class="footer shadow p-35 color-white fs-18 fw-400 text-center">Made with <span class="heart">❤️</span></div>
+            <div class="footer non-user-select shadow p-35 color-white fs-18 fw-400 text-center">Made with <span class="heart">❤️</span></div>
         </section>
+    </div>
+
+    <div class="hystmodal" id="unavailable" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" style="border-radius: 16px;" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div class="p-35">
+                    <span class="color-black fs-18 fw-400">Временно недоступно.</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -197,7 +209,7 @@
             imgSizes(element, element.src);
         });
     </script>
-    
+
     <script type="module">
         import PhotoSwipeLightbox from '/public/js/photoswipe/photoswipe-lightbox.esm.min.js';
 
@@ -208,6 +220,15 @@
         });
 
         lightbox.init();
+    </script>
+
+    <script src="/public/js/hystModal-0.5/hystmodal.min.js"></script>
+    <script>
+        const myModal = new HystModal({
+            linkAttributeName: "data-hystmodal",
+            waitTransitions: true,
+            catchFocus: false
+        });
     </script>
 </body>
 </html>
