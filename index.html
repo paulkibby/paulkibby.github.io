@@ -52,11 +52,11 @@
     <div class="root">
         <section class="section mt-100">
             <div>
-                <img class="avatar" src="/public/img/other/avatar.webp" alt="Avatar">
+                <img class="avatar kba kba-t" src="/public/img/other/avatar.webp" alt="Avatar">
             </div>
             <div class="mt-50">
-                <h1 class="text-center fs-40 fw-400 color-white">Hello, i'm Pavel!</h1>
-                <h2 class="mt-15 text-center fs-24 fw-400 color-white-transparent">Web Developer // Coding with love</h2>
+                <h1 class="text-center fs-40 fw-400 color-white kba kba-t">Hello, i'm Pavel!</h1>
+                <h2 class="mt-15 text-center fs-24 fw-400 color-white-transparent kba kba-t">Web Developer // Coding with love</h2>
             </div>
         </section>
         <section class="section mt-100">
@@ -116,7 +116,7 @@
             </div>
         </section>
         <section class="section mt-100">
-            <h2 class="color-white fs-32 fw-400 text-center">My Skills</h2>
+            <h2 class="color-white fs-32 fw-400 text-center kba kba-t">My Skills</h2>
             <div class="flex flex-wrap justify-between mt-50">
                 <div class="item-2 shadow kba kba-ltr">
                     <div class="p-35">
@@ -139,7 +139,7 @@
             </div>
         </section>
         <section class="section mt-100">
-            <h2 class="color-white fs-32 fw-400 text-center">My Projects</h2>
+            <h2 class="color-white fs-32 fw-400 text-center kba kba-t">My Projects</h2>
             <section class="section mt-115">
                 <div class="flex flex-wrap justify-between">
                     <div class="item-1 shadow project relative kba kba-t">
@@ -278,6 +278,34 @@
                 clearInterval(interval);
             }
         }, 100);
+
+        // function onEntry(entry) {
+        //     entry.forEach(change => {
+        //         if (change.isIntersecting) {
+        //             change.target.classList.add('kba-rb');
+        //         }
+        //     });
+
+        //     let it = document.querySelectorAll('.kba-rb');
+        //     let len = it.length;
+        //     let i = 0;
+        //     let interval = setInterval(() => {
+        //         if (i < len) {
+        //             it[i].classList.add('kba-r');
+        //             i++;
+        //         } else {
+        //             clearInterval(interval);
+        //         }
+        //     }, 100);
+        // }
+
+        // let options = { threshold: [0] };
+        // let observer = new IntersectionObserver(onEntry, options);
+        // var elements = document.querySelectorAll('.kba');
+
+        // for (let elm of elements) {
+        //     observer.observe(elm);
+        // }
     </script>
 </body>
 </html>
