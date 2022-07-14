@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/js/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="/public/css/all.css?v=0.0.7">
+    <link rel="stylesheet" href="/public/css/all.css?v=0.0.8">
     <link rel="stylesheet" href="/public/js/hystModal-0.5/hystmodal.min.css">
     <script>
         const r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRppedaX = '??????? ?? ??? ????????? ???? ?';
@@ -263,6 +263,21 @@
             waitTransitions: true,
             catchFocus: false
         });
+    </script>
+
+    <script>
+        const it = document.querySelectorAll('.kba');
+
+        let len = it.length;
+        let i = 0;
+        let interval = setInterval(() => {
+            if (i < len) {
+                it[i].classList.add('kba-r');
+                i++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 100);
     </script>
 </body>
 </html>

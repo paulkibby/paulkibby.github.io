@@ -167,7 +167,6 @@ img {
     background-color: rgba(255, 255, 255, 3%);
     border-radius: 25px;
     margin-bottom: 35px;
-
 }
 
 .kba {
@@ -176,16 +175,23 @@ img {
     animation-timing-function: ease;
 }
 
+.kba-r {
+    animation-play-state: running!important;
+}
+
 .kba-t {
     animation-name: t;
+    animation-play-state: paused;
 }
 
 .kba-ltr {
     animation-name: ltr;
+    animation-play-state: paused;
 }
 
 .kba-rtr {
     animation-name: rtr;
+    animation-play-state: paused;
 }
 
 @keyframes t {
