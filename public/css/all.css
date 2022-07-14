@@ -167,6 +167,65 @@ img {
     background-color: rgba(255, 255, 255, 3%);
     border-radius: 25px;
     margin-bottom: 35px;
+
+}
+
+.kba {
+    position: relative;
+    animation-duration: 1.2s;
+    animation-timing-function: ease;
+}
+
+.kba-t {
+    animation-name: t;
+}
+
+.kba-ltr {
+    animation-name: ltr;
+}
+
+.kba-rtr {
+    animation-name: rtr;
+}
+
+@keyframes t {
+    0%, 20% {
+        opacity: 0;
+        top: 35px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes ltr {
+    0%, 20% {
+        transform: rotate(3deg);
+        opacity: 0;
+        top: 35px;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes rtr {
+    0%, 20% {
+        transform: rotate(-3deg);
+        opacity: 0;
+        top: 35px;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+        top: 0;
+    }
 }
 
 .item-1:nth-last-child(1) {
