@@ -212,6 +212,10 @@ img {
     display: block;
 }
 
+.project {
+    margin-bottom: 115px;
+}
+
 .project, .project-p {
     max-height: 550px;
 }
@@ -292,6 +296,15 @@ img {
 .btn:hover {
     border-color: transparent;
     background-color: #404EED;
+}
+
+.btn-disabled {
+    background-color: rgba(79, 92, 237, .3)!important;
+    cursor: default!important;
+}
+
+.btn-disabled:hover {
+    background-color: rgba(79, 92, 237, .1)!important;
 }
 
 svg {
