@@ -7,7 +7,20 @@
 }
 
 body {
-    background-color: #18191E;
+    /* background-color: #18191E; */
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+
+    animation-duration: .1s;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-name: body-background;
+}
+
+@keyframes body-background {
+    0% { background-color: #FFFFFF; }
+    100% { background-color: #18191E; }
 }
 
 img {
@@ -15,6 +28,11 @@ img {
 }
 
 .root {
+    width: 100%;
+    overflow: hidden;
+}
+
+.wrapper {
     max-width: 755px;
     margin: 0 auto;
 }
@@ -30,6 +48,46 @@ img {
     margin: 0 auto;
     border-radius: 50%;
     box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px, rgb(0 0 0 / 10%) 0px 2px 4px -2px;
+    transform: scale(1);
+}
+
+.ajv {
+    animation-duration: .8s!important;
+    animation-delay: 0.2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-name: avatar-jump;
+}
+
+@keyframes avatar-jump {
+    0% { transform: scale(1); }
+    60% { transform: scale(1.3); }
+    80% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.background-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    background-color: #18191E;
+    border-radius: 50%;
+    z-index: -1;
+
+    animation-duration: 2.5s;
+    animation-delay: 1.8s;
+    animation-timing-function: ease;
+    animation-name: background-circle;
+}
+
+@keyframes background-circle {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+    1% { opacity: 1; }
+    80% { transform: translate(-50%, -50%) scale(100); opacity: 1; }
 }
 
 .relative {
@@ -66,6 +124,10 @@ img {
 
 .mt-50 {
     margin-top: 50px;
+}
+
+.mt-35 {
+    margin-top: 35px;
 }
 
 .mt-15 {
