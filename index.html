@@ -15,14 +15,25 @@
     <link rel="stylesheet" href="/public/css/all.css?v=0.0.8">
     <link rel="stylesheet" href="/public/js/hystModal-0.5/hystmodal.min.css">
     <script>
-        const r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRppedaX = '??????? ?? ??? ????????? ???? ?';
+        // const r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRppedaX = '??????? ?? ??? ????????? ???? ?';
+        function r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRpped() {
+            const stop = document.querySelector('.stop');
+            stop.classList.remove('stop-hidden');
+
+            setTimeout(() => {
+                stop.classList.add('stop-hidden');
+            }, 5000);
+
+            console.log('%c13. STOP IT.','font-size: 64px; color: #F62A31;');
+            return '                              .                              ';
+        }
 
         console.log(
         `%c
                    ┬┴┬┴┤(･_├┬┴┬┴                  
         
 %c                                                  
-%c   r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRppedaX   
+%c   r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRpped()   
 %c    _  ___ _     _                                
    | |/ (_) |__ | |__  _   _                      
    | ' /| | '_ \\| '_ \\| | | |                     
@@ -30,7 +41,7 @@
    |_|\\_\\_|_.__/|_.__/ \\__, |                     
                        |___/                      
                                                   
-%c   r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRppedaX   
+%c   r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRpped()   
                                                   
    ---                                      ---   
 %c   Hello.                                         
@@ -205,6 +216,7 @@
             <div class="footer non-user-select shadow p-35 text-center"><h6 class="color-white fs-18 fw-400">Made with <span class="heart">❤️</span></h6></div>
         </section>
     </div>
+    <div class="stop stop-hidden"><span>STOP IT.</span></div>
 
     <div class="hystmodal" id="unavailable" aria-hidden="true">
         <div class="hystmodal__wrap">
