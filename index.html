@@ -287,6 +287,12 @@
             document.querySelector('.avatar').classList.add('ajv');
         }, 1500);
 
+        setTimeout(() => {
+            let styleEl = document.createElement('style');
+            styleEl.innerHTML = "* { color-scheme: dark; }";
+            document.querySelector('head').append(styleEl);
+        }, 2600);
+
         const it = document.querySelectorAll('.kba');
 
         let len = it.length;
