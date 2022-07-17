@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/js/photoswipe/photoswipe.css">
-    <link rel="stylesheet" href="/public/css/all.css?v=0.1.0">
+    <link rel="stylesheet" href="/public/css/all.css?v=0.1.1">
     <link rel="stylesheet" href="/public/js/hystModal-0.5/hystmodal.min.css">
     <script>
         // const r9KrDvvJirQhTMLwR6uRwtPQiH106sVC31CpzRppedaX = '??????? ?? ??? ????????? ???? ?';
@@ -64,7 +64,7 @@
         <div class="wrapper">
             <section class="section mt-100">
                 <div class="relative">
-                    <img class="avatar kba kba-t kba-r" src="/public/img/other/avatar.webp" alt="Avatar">
+                    <img class="avatar aba" src="/public/img/other/avatar.webp" alt="Avatar">
                     <div class="background-circle"></div>
                 </div>
                 <div class="mt-50">
@@ -282,16 +282,16 @@
     </script>
 
     <script>
-        setTimeout(() => {
-            document.querySelector('.avatar').classList.remove('kba-t');
-            document.querySelector('.avatar').classList.add('ajv');
-        }, 1500);
+        // setTimeout(() => {
+        //     document.querySelector('.avatar').classList.remove('kba-t');
+        //     document.querySelector('.avatar').classList.add('ajv');
+        // }, 500);
 
         setTimeout(() => {
             let styleEl = document.createElement('style');
             styleEl.innerHTML = "* { color-scheme: dark; }";
             document.querySelector('head').append(styleEl);
-        }, 2600);
+        }, 1100);
 
         const it = document.querySelectorAll('.kba');
 
@@ -307,7 +307,7 @@
                     clearInterval(interval);
                 }
             }, 100);
-        }, 2200);
+        }, 600);
         
 
         // function onEntry(entry) {
