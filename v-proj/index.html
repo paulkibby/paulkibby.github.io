@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-PROJ</title>
+    <link rel="stylesheet" href="public/js/libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="public/js/libs/hystModal-0.5/hystmodal.min.css">
+    <link rel="stylesheet" href="public/css/all.css">
+</head>
+<body>
+    <main class="root">
+        <header>
+            <div class="logo hcc color-black fs-20 fw-600">V-PROJ</div>
+            <div class="category-menu">
+                <div class="category-menu-nav dragscroll">
+                    <ol class="category-menu-items">
+                        <li><a class="category-menu-item-link hcc fs-15 fw-500 color-black text-dec-none" href="#" onclick="openHomeCatalog('#catalog_1', this)">Изотермические фургоны</a></li>
+                        <li><a class="category-menu-item-link hcc fs-15 fw-500 color-black text-dec-none" href="#" onclick="openHomeCatalog('#catalog_2', this)">Гидроборты</a></li>
+                        <li><a class="category-menu-item-link hcc fs-15 fw-500 color-black text-dec-none" href="#" onclick="openHomeCatalog('#catalog_3', this)">Специализированные кузова</a></li>
+                        <li><a class="category-menu-item-link hcc fs-15 fw-500 color-black text-dec-none" href="#" onclick="openHomeCatalog('#catalog_4', this)">Ремонт</a></li>
+                        <li><a class="category-menu-item-link hcc fs-15 fw-500 color-black text-dec-none" href="#" onclick="openHomeCatalog('#catalog_5', this)">Рефрижераторы</a></li>
+                        <li><a class="category-menu-item-link hcc fs-15 fw-500 color-black text-dec-none" href="#" onclick="openHomeCatalog('#catalog_6', this)">Кемпинг</a></li>
+                    </ol>
+                </div>
+                <div class="category-menu__button-prev"><img src="public/img/icons/arrow_left.svg" alt="prev"></div>
+                <div class="category-menu__button-next"><img src="public/img/icons/arrow_right.svg" alt="next"></div>
+            </div>
+            <div>
+                <ol class="category-menu-items">
+                    <li><a class="category-menu-item-link hcc fs-15 fw-500 color-black text-dec-none" href="#" onclick="openMenu()">Меню</a></li>
+                </ol>
+            </div>
+        </header>
+
+        <section class="home">
+            <div class="menu">
+                <div class="menu__background" onclick="closeMenu()"></div>
+                <div class="menu__container">
+                    <div class="menu__control flex flex-end">
+                        <button class="button-ico btn-ico-black menu__btn-close" onclick="closeMenu()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48" width="48"><path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z" fill="#171A20"/></svg>
+                        </button>
+                    </div>
+                    <ol>
+                        <li><a class="category-menu-item-link menu__link fs-15 fw-500 color-black text-dec-none" href="#">Главная</a></li>
+                        <li><a class="category-menu-item-link menu__link fs-15 fw-500 color-black text-dec-none" href="#">О нас</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="swiper home-slide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-h-title="Model Q" data-h-subtitle="Изотермический фургон" data-h-price="60000" data-h-length="2500" data-h-width="1250" data-h-height="1250">
+                        <div class="home-item" style="background-image: url('/public/img/images/home_slide1.png');"></div>
+                    </div>
+                    <div class="swiper-slide" data-h-title="Model A" data-h-subtitle="Изотермический фургон" data-h-price="70000" data-h-length="2500" data-h-width="1250" data-h-height="1250">
+                        <div class="home-item" style="background-image: url('/public/img/images/home_slide2.png');"></div>
+                    </div>
+                    <div class="swiper-slide" data-h-title="Model W" data-h-subtitle="Изотермический фургон" data-h-price="80000" data-h-length="2500" data-h-width="1250" data-h-height="1250">
+                        <div class="home-item" style="background-image: url('/public/img/images/home_slide3.png');"></div>
+                    </div>
+                    <div class="swiper-slide" data-h-title="Model E" data-h-subtitle="Изотермический фургон" data-h-price="90000" data-h-length="2500" data-h-width="1250" data-h-height="1250">
+                        <div class="home-item" style="background-image: url('/public/img/images/home_slide4.png');"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-title-block">
+                <h2 class="home-title text-center fs-40 fw-500 color-black anim-show-hide">Model Q</h2>
+                <h3 class="home-subtitle text-center fs-18 fw-400 color-black anim-show-hide">Изотермический фургон</h3>
+            </div>
+
+            <div class="home-end">
+                <div class="home-info flex flex-sb flex-a-center">
+                    <div class="home-info-item anim-show-hide">
+                        <p class="fs-28 fw-600 color-white"><span class="home-price">60 000</span> <span class="fs-20">₽</span></p>
+                        <p class="fs-16 fw-500 color-white-transparent mt-8">Цена (от)</p>
+                    </div>
+                    <div class="home-info-item anim-show-hide">
+                        <p class="fs-28 fw-600 color-white"><span class="home-length">2 500</span> <span class="fs-20">мм</span></p>
+                        <p class="fs-16 fw-500 color-white-transparent mt-8">Длина</p>
+                    </div>
+                    <div class="home-info-item anim-show-hide">
+                        <p class="fs-28 fw-600 color-white"><span class="home-width">1 250</span> <span class="fs-20">мм</span></p>
+                        <p class="fs-16 fw-500 color-white-transparent mt-8">Ширина</p>
+                    </div>
+                    <div class="home-info-item anim-show-hide">
+                        <p class="fs-28 fw-600 color-white"><span class="home-height">1 250</span> <span class="fs-20">мм</span></p>
+                        <p class="fs-16 fw-500 color-white-transparent mt-8">Высота</p>
+                    </div>
+                    <div class="home-info-item anim-show-hide">
+                        <a class="btn btn-white btn-home-info" href="#"><span>Подробнее</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-nav flex flex-a-center">
+                <div class="home-nav__dots">
+
+                </div>
+                <div class="home-nav__button-prev"><img src="public/img/icons/arrow_left_white.svg" alt="prev"></div>
+                <div class="home-nav__button-next"><img src="public/img/icons/arrow_right_white.svg" alt="next"></div>
+            </div>
+
+            <div class="home-catalog">
+                <div class="home-catalog__container flex flex-a-center">
+                    <div id="catalog_1" class="home-catalog__body">
+                        <div class="home-catalog__content flex flex-sb flex-a-center">
+                            <div class="home-catalog__control">
+                                <button class="button-ico btn-ico-white home-catalog__btn-close" onclick="closeHomeCatalog()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48" width="48"><path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z" fill="#FFFFFF"/></svg></button>
+                            </div>
+                            <div class="home-catalog__illustration">
+                                <img src="public/img/images/isothermal.png" alt="Изотермический фургон">
+                            </div>
+                            <div class="home-catalog__info">
+                                <div>
+                                    <div class="home-catalog__top">
+                                        <h3 class="home-catalog__title fs-28 fw-500 color-white">Изотермические фургоны</h3>
+                                        <p class="home-catalog__description fs-18 fw-500 color-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi tenetur praesentium ea perspiciatis.</p>
+                                    </div>
+                                    <div class="home-catalog__isotherm__content flex flex-sb">
+                                        <div>
+                                            <h3 class="home-catalog__isothermal__list-title fs-24 fw-500 color-white">0°</h3>
+                                            <ul class="list-item home-catalog__isothermal__list">
+                                                <li>
+                                                    <p class="list-item__title color-white">Здоровье ничера</p>
+                                                    <p class="list-item__text color-white-transparent">2 hp</p>
+                                                </li>
+                                                <li>
+                                                    <p class="list-item__title color-white">Скорость ничера</p>
+                                                    <p class="list-item__text color-white-transparent">200 км/ч</p>
+                                                </li>
+                                                <li>
+                                                    <p class="list-item__title color-white">Сопротивление ничера</p>
+                                                    <p class="list-item__text color-white-transparent">50%</p>
+                                                </li>
+                                                <li>
+                                                    <p class="list-item__title color-white">Имя ничера</p>
+                                                    <p class="list-item__text color-white-transparent">Jorik</p>
+                                                </li>
+                                            </ul>
+                                            <a class="btn btn-white home-catalog__isotherm__btn" href="#"><span>Подробнее</span></a>
+                                        </div>
+                                        <div>
+                                            <h3 class="home-catalog__isothermal__list-title fs-24 fw-500 color-white">35°</h3>
+                                            <ul class="list-item home-catalog__isothermal__list">
+                                                <li>
+                                                    <p class="list-item__title color-white">Здоровье ничера</p>
+                                                    <p class="list-item__text color-white-transparent">2 hp</p>
+                                                </li>
+                                                <li>
+                                                    <p class="list-item__title color-white">Скорость ничера</p>
+                                                    <p class="list-item__text color-white-transparent">200 км/ч</p>
+                                                </li>
+                                                <li>
+                                                    <p class="list-item__title color-white">Сопротивление ничера</p>
+                                                    <p class="list-item__text color-white-transparent">50%</p>
+                                                </li>
+                                                <li>
+                                                    <p class="list-item__title color-white">Имя ничера</p>
+                                                    <p class="list-item__text color-white-transparent">Jorik</p>
+                                                </li>
+                                            </ul>
+                                            <a class="btn btn-white home-catalog__isotherm__btn" href="#"><span>Подробнее</span></a>
+                                        </div>
+                                        <div>
+                                            <h3 class="home-catalog__isothermal__list-title fs-24 fw-500 color-white">45°</h3>
+                                            <ul class="list-item home-catalog__isothermal__list">
+                                                <li>
+                                                    <p class="list-item__title color-white">Здоровье ничера</p>
+                                                    <p class="list-item__text color-white-transparent">2 hp</p>
+                                                </li>
+                                                <li>
+                                                    <p class="list-item__title color-white">Скорость ничера</p>
+                                                    <p class="list-item__text color-white-transparent">200 км/ч</p>
+                                                </li>
+                                                <li>
+                                                    <p class="list-item__title color-white">Сопротивление ничера</p>
+                                                    <p class="list-item__text color-white-transparent">50%</p>
+                                                </li>
+                                                <li>
+                                                    <p class="list-item__title color-white">Имя ничера</p>
+                                                    <p class="list-item__text color-white-transparent">Jorik</p>
+                                                </li>
+                                            </ul>
+                                            <a class="btn btn-white home-catalog__isotherm__btn" href="#"><span>Подробнее</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="home-catalog__clarification">
+                                        <p class="fs-15 fw-400 color-white-transparent">* Все данные неправдивы, мы обманываем своих клиентов ради маркетинга.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="catalog_2" class="home-catalog__body">
+                        <div class="home-catalog__content flex flex-sb flex-a-center">
+                            <div class="home-catalog__control">
+                                <button class="button-ico btn-ico-white home-catalog__btn-close" onclick="closeHomeCatalog()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48" width="48"><path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z" fill="#FFFFFF"/></svg></button>
+                            </div>
+                            <div class="home-catalog__illustration">
+                                <img src="public/img/images/gidro.png" alt="Гидроборт">
+                            </div>
+                            <div class="home-catalog__info">
+                                <div>
+                                    <h3 class="home-catalog__title fs-28 fw-500 color-white">Гидравлические борты</h3>
+                                    <p class="home-catalog__text fs-18 fw-400 color-white">Гидравлические подъемные устройства предназначены для проведения погрузочно-разгрузочных работ и транспортировки груза, выполняя роль дополнительной площадки. С грузоподъемностью от 450-3000 кг. У данной техники есть ряд преимуществ:</p>
+                                    <p class="home-catalog__text fs-18 fw-400 color-white">Компактность - в неиспользуемом положении гидроборт складывается и поднимается к задней стенке кузова, уменьшая габариты транспортного средства</p>
+                                    <p class="home-catalog__text fs-18 fw-400 color-white">Удобство - конструкция подъемных устройств максимально упрощает и ускоряет проведение погрузочно-разгрузочных мероприятий</p>
+                                </div>
+                                <div class="home-catalog__companies flex flex-sb flex-wrap">
+                                    <div class="home-catalog__companies__item flex flex-a-center"><span class="fs-18 fw-500 color-white">BAR</span><button class="button-ico btn-ico-white home-catalog__companies__item__btn" data-hystmodal="#bar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48" width="48"><path d="M24.2 35.65q.8 0 1.35-.55t.55-1.35q0-.8-.55-1.35t-1.35-.55q-.8 0-1.35.55t-.55 1.35q0 .8.55 1.35t1.35.55Zm-1.75-7.3h2.95q0-1.3.325-2.375T27.75 23.5q1.55-1.3 2.2-2.55.65-1.25.65-2.75 0-2.65-1.725-4.25t-4.575-1.6q-2.45 0-4.325 1.225T17.25 16.95l2.65 1q.55-1.4 1.65-2.175 1.1-.775 2.6-.775 1.7 0 2.75.925t1.05 2.375q0 1.1-.65 2.075-.65.975-1.9 2.025-1.5 1.3-2.225 2.575-.725 1.275-.725 3.375ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z" fill="#FFFFFF"/></svg></button></div>
+                                    <div class="home-catalog__companies__item flex flex-a-center"><span class="fs-18 fw-500 color-white">DHOLLANDIA</span><button class="button-ico btn-ico-white home-catalog__companies__item__btn" data-hystmodal="#dhollandia"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48" width="48"><path d="M24.2 35.65q.8 0 1.35-.55t.55-1.35q0-.8-.55-1.35t-1.35-.55q-.8 0-1.35.55t-.55 1.35q0 .8.55 1.35t1.35.55Zm-1.75-7.3h2.95q0-1.3.325-2.375T27.75 23.5q1.55-1.3 2.2-2.55.65-1.25.65-2.75 0-2.65-1.725-4.25t-4.575-1.6q-2.45 0-4.325 1.225T17.25 16.95l2.65 1q.55-1.4 1.65-2.175 1.1-.775 2.6-.775 1.7 0 2.75.925t1.05 2.375q0 1.1-.65 2.075-.65.975-1.9 2.025-1.5 1.3-2.225 2.575-.725 1.275-.725 3.375ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z" fill="#FFFFFF"/></svg></button></div>
+                                    <div class="home-catalog__companies__item flex flex-a-center"><span class="fs-18 fw-500 color-white">PALFINGER</span><button class="button-ico btn-ico-white home-catalog__companies__item__btn" data-hystmodal="#palfinger"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48" width="48"><path d="M24.2 35.65q.8 0 1.35-.55t.55-1.35q0-.8-.55-1.35t-1.35-.55q-.8 0-1.35.55t-.55 1.35q0 .8.55 1.35t1.35.55Zm-1.75-7.3h2.95q0-1.3.325-2.375T27.75 23.5q1.55-1.3 2.2-2.55.65-1.25.65-2.75 0-2.65-1.725-4.25t-4.575-1.6q-2.45 0-4.325 1.225T17.25 16.95l2.65 1q.55-1.4 1.65-2.175 1.1-.775 2.6-.775 1.7 0 2.75.925t1.05 2.375q0 1.1-.65 2.075-.65.975-1.9 2.025-1.5 1.3-2.225 2.575-.725 1.275-.725 3.375ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z" fill="#FFFFFF"/></svg></button></div>
+                                    <div class="home-catalog__companies__item flex flex-a-center"><span class="fs-18 fw-500 color-white">ZEPRO</span><button class="button-ico btn-ico-white home-catalog__companies__item__btn" data-hystmodal="#zepro"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48" width="48"><path d="M24.2 35.65q.8 0 1.35-.55t.55-1.35q0-.8-.55-1.35t-1.35-.55q-.8 0-1.35.55t-.55 1.35q0 .8.55 1.35t1.35.55Zm-1.75-7.3h2.95q0-1.3.325-2.375T27.75 23.5q1.55-1.3 2.2-2.55.65-1.25.65-2.75 0-2.65-1.725-4.25t-4.575-1.6q-2.45 0-4.325 1.225T17.25 16.95l2.65 1q.55-1.4 1.65-2.175 1.1-.775 2.6-.775 1.7 0 2.75.925t1.05 2.375q0 1.1-.65 2.075-.65.975-1.9 2.025-1.5 1.3-2.225 2.575-.725 1.275-.725 3.375ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z" fill="#FFFFFF"/></svg></button></div>
+                                    <div class="home-catalog__companies__item flex flex-a-center"><span class="fs-18 fw-500 color-white">DAUTEL</span><button class="button-ico btn-ico-white home-catalog__companies__item__btn" data-hystmodal="#dautel"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="48" width="48"><path d="M24.2 35.65q.8 0 1.35-.55t.55-1.35q0-.8-.55-1.35t-1.35-.55q-.8 0-1.35.55t-.55 1.35q0 .8.55 1.35t1.35.55Zm-1.75-7.3h2.95q0-1.3.325-2.375T27.75 23.5q1.55-1.3 2.2-2.55.65-1.25.65-2.75 0-2.65-1.725-4.25t-4.575-1.6q-2.45 0-4.325 1.225T17.25 16.95l2.65 1q.55-1.4 1.65-2.175 1.1-.775 2.6-.775 1.7 0 2.75.925t1.05 2.375q0 1.1-.65 2.075-.65.975-1.9 2.025-1.5 1.3-2.225 2.575-.725 1.275-.725 3.375ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z" fill="#FFFFFF"/></svg></button></div>
+                                </div>
+                                <div class="home-catalog__hydraulic__buttons flex flex-sb">
+                                    <a class="btn btn-white home-catalog__hydraulic__btn" href="#"><span>Новые</span></a>
+                                    <a class="btn btn-white home-catalog__hydraulic__btn" href="#"><span>БУ</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about block">
+            <div class="about__title-container">
+                <h2 class="block__text fs-28 fw-600 color-black text-center">Почему выбирают нас?</h2>
+                <p class="block__text fs-16 fw-500 color-gray text-center">Компания «V-PROJ» более 20 лет является лидером в изготовлении всех видов высококачественных грузовых фургонов, прицепной техники, бортовых платформ, а также их ремонтом. Наша продукция является самой легкой, что позволяет перевозить больше груза, соответственно больше зарабатывать. Высокое качество продукции подтверждено многими годами эксплуатации.</p>
+                <a class="btn btn-black about__btn" href="#"><span>Подробнее</span></a>
+            </div>
+        </section>
+        <section class="about-media block">
+            <div class="block_middle">
+                <div class="block__media"></div>
+                <div class="block__media-info">
+                    <div class="block__media__title-container">
+                        <h3 class="block__media__title">Ultrices tincidunt arcu non sodales</h3>
+                    </div>
+                    <div class="block__media__text-container">
+                        <p class="block__media__text">Libero id faucibus nisl tincidunt eget. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Sit amet porttitor eget dolor. A diam sollicitudin tempor id eu nisl nunc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages block block-gray">
+            <div class="block_middle">
+                <div class="advantages__item">
+                    <div class="advantages__item__container">
+                        <h4 class="advantages__item__title">Богатый модельный ряд</h4>
+                        <p class="advantages__item__text">Мы специализируемся на изготовлении фургонов на заказ, предназначенных для транспортировки различных видов груза. При этом мы даем клиентам возможность самостоятельно выбрать тип шасси.</p>
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__item__container">
+                        <h4 class="advantages__item__title">Богатый модельный ряд</h4>
+                        <p class="advantages__item__text">Мы специализируемся на изготовлении фургонов на заказ, предназначенных для транспортировки различных видов груза. При этом мы даем клиентам возможность самостоятельно выбрать тип шасси.</p>
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__item__container">
+                        <h4 class="advantages__item__title">Богатый модельный ряд</h4>
+                        <p class="advantages__item__text">Мы специализируемся на изготовлении фургонов на заказ, предназначенных для транспортировки различных видов груза. При этом мы даем клиентам возможность самостоятельно выбрать тип шасси.</p>
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__item__container">
+                        <h4 class="advantages__item__title">Богатый модельный ряд</h4>
+                        <p class="advantages__item__text">Мы специализируемся на изготовлении фургонов на заказ, предназначенных для транспортировки различных видов груза. При этом мы даем клиентам возможность самостоятельно выбрать тип шасси.</p>
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__item__container">
+                        <h4 class="advantages__item__title">Богатый модельный ряд</h4>
+                        <p class="advantages__item__text">Мы специализируемся на изготовлении фургонов на заказ, предназначенных для транспортировки различных видов груза. При этом мы даем клиентам возможность самостоятельно выбрать тип шасси.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts block">
+            <div class="block_middle">
+                <div class="contacts__title-container">
+                    <h2 class="contacts__title">Контакты</h2>
+                </div>
+                <div class="contacts__map-container">
+                    <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2369.216452011451!2d49.264488416354226!3d53.57175346550372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41687776b954a9ed%3A0x59956b7b37d39368!2z0YPQuy4g0JLQvtC60LfQsNC70YzQvdCw0Y8sIDg0LCDQotC-0LvRjNGP0YLRgtC4LCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7LiwgNDQ1MDMy!5e0!3m2!1sru!2sru!4v1660819251546!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contacts__info-container">
+                    <div>
+                        <div class="contacts__info">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M24 23.55q1.45 0 2.5-1.05t1.05-2.5q0-1.45-1.05-2.5T24 16.45q-1.45 0-2.5 1.05T20.45 20q0 1.45 1.05 2.5t2.5 1.05Zm0 16.2q6.55-5.95 9.675-10.8Q36.8 24.1 36.8 20.4q0-5.8-3.7-9.5T24 7.2q-5.4 0-9.1 3.7-3.7 3.7-3.7 9.5 0 3.7 3.2 8.55 3.2 4.85 9.6 10.8Zm0 4.5q-8.15-6.9-12.175-12.85Q7.8 25.45 7.8 20.4q0-7.6 4.875-12.1T24 3.8q6.45 0 11.325 4.5Q40.2 12.8 40.2 20.4q0 5.05-4.025 11T24 44.25Zm0-23.85Z" fill="#171A20"/></svg>
+                            <span>ул. Вокзальная, 84, Тольятти, Самарская область</span>
+                        </div>
+                        <div class="contacts__info">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M39.75 42.3q-6.15 0-12.225-3.025Q21.45 36.25 16.6 31.4q-4.85-4.85-7.875-10.95Q5.7 14.35 5.7 8.25q0-1.1.725-1.825Q7.15 5.7 8.25 5.7h7q.85 0 1.5.55t.85 1.5l1.35 6.15q.15.85-.025 1.525-.175.675-.675 1.125l-5.05 5q2.75 4.45 6.075 7.775T26.8 34.95L31.65 30q.6-.65 1.325-.9t1.525-.05l5.7 1.3q.95.2 1.525.9t.575 1.65v6.85q0 1.05-.725 1.8t-1.825.75ZM11.5 18.45l4.05-4L14.4 9.1H9.15q-.05 1.9.525 4.15.575 2.25 1.825 5.2ZM30 36.6q1.95.95 4.3 1.55 2.35.6 4.6.7v-5.3l-5-1.05ZM11.5 18.45ZM30 36.6Z" fill="#171A20"/></svg>
+                            <span>+7 996 720 48 10</span>
+                        </div>
+                        <div class="contacts__info">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M24 44.3q-4.2 0-7.9-1.6t-6.45-4.35Q6.9 35.6 5.3 31.9 3.7 28.2 3.7 24t1.6-7.9q1.6-3.7 4.35-6.45Q12.4 6.9 16.1 5.3q3.7-1.6 7.9-1.6t7.9 1.6q3.7 1.6 6.45 4.35 2.75 2.75 4.35 6.45 1.6 3.7 1.6 7.9v2.65q0 2.9-2.025 4.85-2.025 1.95-5.025 1.95-1.8 0-3.425-.9-1.625-.9-2.475-2.5-1.3 1.7-3.225 2.55-1.925.85-4.125.85-3.95 0-6.725-2.75Q14.5 27.95 14.5 24t2.775-6.75q2.775-2.8 6.725-2.8 3.95 0 6.725 2.8Q33.5 20.05 33.5 24v2.55q0 1.55 1.1 2.575 1.1 1.025 2.65 1.025 1.55 0 2.65-1.025Q41 28.1 41 26.55V24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.1 0-12.05 4.95Q7 16.9 7 24q0 7.1 4.95 12.05Q16.9 41 24 41h10.7v3.3Zm0-14.15q2.6 0 4.4-1.775Q30.2 26.6 30.2 24q0-2.65-1.8-4.45-1.8-1.8-4.4-1.8-2.6 0-4.4 1.8-1.8 1.8-1.8 4.45 0 2.6 1.8 4.375T24 30.15Z" fill="#171A20"/></svg>
+                            <span>ул. Вокзальная, 84, Тольятти, Самарская область</span>
+                        </div>
+                    </div>
+                    <div class="contacts__social">
+                        <a href="#" class="contacts__social__item"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M24 44.3q-4.2 0-7.9-1.6t-6.45-4.35Q6.9 35.6 5.3 31.9 3.7 28.2 3.7 24t1.6-7.9q1.6-3.7 4.35-6.45Q12.4 6.9 16.1 5.3q3.7-1.6 7.9-1.6 4.25 0 7.925 1.6t6.425 4.35q2.75 2.75 4.35 6.45 1.6 3.7 1.6 7.9t-1.6 7.9q-1.6 3.7-4.35 6.45-2.75 2.75-6.45 4.35-3.7 1.6-7.9 1.6Zm-2.15-3.45v-4.1q-1.75 0-2.925-1.3-1.175-1.3-1.175-3v-2.2l-10.2-10.2q-.25 1-.35 1.975Q7.1 23 7.1 24q0 6.45 4.2 11.275t10.55 5.575ZM36.5 35.5q1.05-1.2 1.875-2.55.825-1.35 1.4-2.825t.85-3Q40.9 25.6 40.9 24q0-5.25-2.875-9.55-2.875-4.3-7.675-6.3v.9q0 1.7-1.225 3t-2.925 1.3h-4.35v4.3q0 .85-.675 1.4-.675.55-1.525.55h-4.1V24H28.4q.8 0 1.375.65t.575 1.45v6.35h2.1q1.45 0 2.55.85 1.1.85 1.5 2.2Z" fill="#171A20"/></svg></a>
+                        <a href="#" class="contacts__social__item"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M24 44.3q-4.2 0-7.9-1.6t-6.45-4.35Q6.9 35.6 5.3 31.9 3.7 28.2 3.7 24t1.6-7.9q1.6-3.7 4.35-6.45Q12.4 6.9 16.1 5.3q3.7-1.6 7.9-1.6 4.25 0 7.925 1.6t6.425 4.35q2.75 2.75 4.35 6.45 1.6 3.7 1.6 7.9t-1.6 7.9q-1.6 3.7-4.35 6.45-2.75 2.75-6.45 4.35-3.7 1.6-7.9 1.6Zm-2.15-3.45v-4.1q-1.75 0-2.925-1.3-1.175-1.3-1.175-3v-2.2l-10.2-10.2q-.25 1-.35 1.975Q7.1 23 7.1 24q0 6.45 4.2 11.275t10.55 5.575ZM36.5 35.5q1.05-1.2 1.875-2.55.825-1.35 1.4-2.825t.85-3Q40.9 25.6 40.9 24q0-5.25-2.875-9.55-2.875-4.3-7.675-6.3v.9q0 1.7-1.225 3t-2.925 1.3h-4.35v4.3q0 .85-.675 1.4-.675.55-1.525.55h-4.1V24H28.4q.8 0 1.375.65t.575 1.45v6.35h2.1q1.45 0 2.55.85 1.1.85 1.5 2.2Z" fill="#171A20"/></svg></a>
+                        <a href="#" class="contacts__social__item"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M24 44.3q-4.2 0-7.9-1.6t-6.45-4.35Q6.9 35.6 5.3 31.9 3.7 28.2 3.7 24t1.6-7.9q1.6-3.7 4.35-6.45Q12.4 6.9 16.1 5.3q3.7-1.6 7.9-1.6 4.25 0 7.925 1.6t6.425 4.35q2.75 2.75 4.35 6.45 1.6 3.7 1.6 7.9t-1.6 7.9q-1.6 3.7-4.35 6.45-2.75 2.75-6.45 4.35-3.7 1.6-7.9 1.6Zm-2.15-3.45v-4.1q-1.75 0-2.925-1.3-1.175-1.3-1.175-3v-2.2l-10.2-10.2q-.25 1-.35 1.975Q7.1 23 7.1 24q0 6.45 4.2 11.275t10.55 5.575ZM36.5 35.5q1.05-1.2 1.875-2.55.825-1.35 1.4-2.825t.85-3Q40.9 25.6 40.9 24q0-5.25-2.875-9.55-2.875-4.3-7.675-6.3v.9q0 1.7-1.225 3t-2.925 1.3h-4.35v4.3q0 .85-.675 1.4-.675.55-1.525.55h-4.1V24H28.4q.8 0 1.375.65t.575 1.45v6.35h2.1q1.45 0 2.55.85 1.1.85 1.5 2.2Z" fill="#171A20"/></svg></a>
+                        <a href="#" class="contacts__social__item"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M24 44.3q-4.2 0-7.9-1.6t-6.45-4.35Q6.9 35.6 5.3 31.9 3.7 28.2 3.7 24t1.6-7.9q1.6-3.7 4.35-6.45Q12.4 6.9 16.1 5.3q3.7-1.6 7.9-1.6 4.25 0 7.925 1.6t6.425 4.35q2.75 2.75 4.35 6.45 1.6 3.7 1.6 7.9t-1.6 7.9q-1.6 3.7-4.35 6.45-2.75 2.75-6.45 4.35-3.7 1.6-7.9 1.6Zm-2.15-3.45v-4.1q-1.75 0-2.925-1.3-1.175-1.3-1.175-3v-2.2l-10.2-10.2q-.25 1-.35 1.975Q7.1 23 7.1 24q0 6.45 4.2 11.275t10.55 5.575ZM36.5 35.5q1.05-1.2 1.875-2.55.825-1.35 1.4-2.825t.85-3Q40.9 25.6 40.9 24q0-5.25-2.875-9.55-2.875-4.3-7.675-6.3v.9q0 1.7-1.225 3t-2.925 1.3h-4.35v4.3q0 .85-.675 1.4-.675.55-1.525.55h-4.1V24H28.4q.8 0 1.375.65t.575 1.45v6.35h2.1q1.45 0 2.55.85 1.1.85 1.5 2.2Z" fill="#171A20"/></svg></a>
+                        <a href="#" class="contacts__social__item"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 48 48"><path d="M24 44.3q-4.2 0-7.9-1.6t-6.45-4.35Q6.9 35.6 5.3 31.9 3.7 28.2 3.7 24t1.6-7.9q1.6-3.7 4.35-6.45Q12.4 6.9 16.1 5.3q3.7-1.6 7.9-1.6 4.25 0 7.925 1.6t6.425 4.35q2.75 2.75 4.35 6.45 1.6 3.7 1.6 7.9t-1.6 7.9q-1.6 3.7-4.35 6.45-2.75 2.75-6.45 4.35-3.7 1.6-7.9 1.6Zm-2.15-3.45v-4.1q-1.75 0-2.925-1.3-1.175-1.3-1.175-3v-2.2l-10.2-10.2q-.25 1-.35 1.975Q7.1 23 7.1 24q0 6.45 4.2 11.275t10.55 5.575ZM36.5 35.5q1.05-1.2 1.875-2.55.825-1.35 1.4-2.825t.85-3Q40.9 25.6 40.9 24q0-5.25-2.875-9.55-2.875-4.3-7.675-6.3v.9q0 1.7-1.225 3t-2.925 1.3h-4.35v4.3q0 .85-.675 1.4-.675.55-1.525.55h-4.1V24H28.4q.8 0 1.375.65t.575 1.45v6.35h2.1q1.45 0 2.55.85 1.1.85 1.5 2.2Z" fill="#171A20"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="block_middle">
+                <div class="footer__container">
+                    <span class="footer__item">V-PROJ © 2022</span>
+                    <a href="#" class="footer__item">Главная</a>
+                    <a href="#" class="footer__item">О нас</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="hystmodal" id="bar" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div>
+                    <h3 class="modal-title fs-28 fw-500 color-black">BAR</h3>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam mollitia autem quam cumque, ipsa sunt dolores similique a nisi quibusdam voluptate ex libero voluptatum consectetur inventore voluptates explicabo nihil id.</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, molestiae. Nisi minima, quo laboriosam sunt, accusantium doloremque nulla autem error nostrum tempore velit voluptatum magnam modi soluta atque illo sed!</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis placeat at reiciendis minus saepe neque voluptatibus possimus culpa cum aliquid perspiciatis, molestias commodi aut autem vero. Animi, explicabo reiciendis!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="dhollandia" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div>
+                    <h3 class="modal-title fs-28 fw-500 color-black">DHOLLANDIA</h3>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam mollitia autem quam cumque, ipsa sunt dolores similique a nisi quibusdam voluptate ex libero voluptatum consectetur inventore voluptates explicabo nihil id.</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, molestiae. Nisi minima, quo laboriosam sunt, accusantium doloremque nulla autem error nostrum tempore velit voluptatum magnam modi soluta atque illo sed!</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis placeat at reiciendis minus saepe neque voluptatibus possimus culpa cum aliquid perspiciatis, molestias commodi aut autem vero. Animi, explicabo reiciendis!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="palfinger" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div>
+                    <h3 class="modal-title fs-28 fw-500 color-black">PALFINGER</h3>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam mollitia autem quam cumque, ipsa sunt dolores similique a nisi quibusdam voluptate ex libero voluptatum consectetur inventore voluptates explicabo nihil id.</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, molestiae. Nisi minima, quo laboriosam sunt, accusantium doloremque nulla autem error nostrum tempore velit voluptatum magnam modi soluta atque illo sed!</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis placeat at reiciendis minus saepe neque voluptatibus possimus culpa cum aliquid perspiciatis, molestias commodi aut autem vero. Animi, explicabo reiciendis!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="zepro" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div>
+                    <h3 class="modal-title fs-28 fw-500 color-black">ZEPRO</h3>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam mollitia autem quam cumque, ipsa sunt dolores similique a nisi quibusdam voluptate ex libero voluptatum consectetur inventore voluptates explicabo nihil id.</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, molestiae. Nisi minima, quo laboriosam sunt, accusantium doloremque nulla autem error nostrum tempore velit voluptatum magnam modi soluta atque illo sed!</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis placeat at reiciendis minus saepe neque voluptatibus possimus culpa cum aliquid perspiciatis, molestias commodi aut autem vero. Animi, explicabo reiciendis!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hystmodal" id="dautel" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+                <button data-hystclose class="hystmodal__close">Закрыть</button>
+                <div>
+                    <h3 class="modal-title fs-28 fw-500 color-black">DAUTEL</h3>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam mollitia autem quam cumque, ipsa sunt dolores similique a nisi quibusdam voluptate ex libero voluptatum consectetur inventore voluptates explicabo nihil id.</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, molestiae. Nisi minima, quo laboriosam sunt, accusantium doloremque nulla autem error nostrum tempore velit voluptatum magnam modi soluta atque illo sed!</p><br>
+                    <p class="fs-18 fw-400 color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti perferendis placeat at reiciendis minus saepe neque voluptatibus possimus culpa cum aliquid perspiciatis, molestias commodi aut autem vero. Animi, explicabo reiciendis!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="public/js/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="public/js/libs/dragscroll.js"></script>
+    <script src="public/js/libs/hystModal-0.5/hystmodal.min.js"></script>
+    <script src="public/js/main.js"></script>
+</body>
+</html>
