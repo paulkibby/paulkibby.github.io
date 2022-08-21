@@ -726,6 +726,7 @@ img {
 }
 
 .advantages__item {
+    display: flex;
     margin-bottom: 100px;
 }
 
@@ -734,7 +735,6 @@ img {
 }
 
 .advantages__item:nth-child(2n) {
-    display: flex;
     justify-content: flex-end;
 }
 
