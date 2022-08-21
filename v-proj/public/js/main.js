@@ -192,6 +192,8 @@ function closeHomeCatalog(fade = true) {
     homeMenuColor('#171A20');
 }
 
+
+
 // function a1() {
 //     // el = document.querySelector('.category-menu-item-link').getBoundingClientRect();
 //     let elem = document.elementFromPoint(x, y);
@@ -229,6 +231,15 @@ function closeHomeCatalog(fade = true) {
 
 */
 
+
+
+
+/*
+TODO: После завершения разработки:
+    - Удалить все id __DEV_*
+    - Удалить библиотеку Intro js
+    - Удалить весь код в main.js под комментарием __DEV__
+*/
 
 
 
