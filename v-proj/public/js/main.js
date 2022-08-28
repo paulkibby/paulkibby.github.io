@@ -2,6 +2,9 @@ const swiper = new Swiper(".home-slide", {
     loop: true,
     keyboard: true,
     effect: 'fade',
+    // fadeEffect: {
+    //     crossFade: true
+    // },
     speed: 1500,
 
     pagination: {
