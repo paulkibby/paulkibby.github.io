@@ -28,6 +28,10 @@ img {
     display: block;
 }
 
+p {
+    line-height: 150%;
+}
+
 .br-12 {
     border-radius: 12px;
 }
@@ -686,7 +690,6 @@ img {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    line-height: 22px;
 }
 
 .block__text_mt {
@@ -750,7 +753,6 @@ img {
     font-size: 16px;
     font-weight: 500;
     color: #595D64;
-    line-height: 22px;
 }
 
 .advantages {
@@ -792,7 +794,6 @@ img {
     font-size: 16px;
     font-weight: 500;
     color: #595D64;
-    line-height: 22px;
     margin-top: 15px;
 }
 
@@ -1038,7 +1039,6 @@ img {
     color: #595D64;
     font-size: 16px;
     font-weight: 500;
-    line-height: 22px;
 }
 
 .models__btn {
