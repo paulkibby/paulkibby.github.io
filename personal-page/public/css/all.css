@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gabriela', serif;
+    font-weight: 400;
 }
 
 body {
@@ -38,14 +39,14 @@ img {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 69px 86px;
+    padding: 80px 101px 88px 101px;
     /* width: calc(100% - (86px + 15px)); */
 }
 
 .book__page {
     position: relative;
-    width: calc(50% - 15px);
-    padding: 35px;
+    width: calc(50% - 15.5px);
+    padding: 35px 50px;
 }
 
 .book__avatar img {
@@ -59,18 +60,16 @@ img {
     text-align: center;
 }
 
-.book__title {
+.book__name {
     font-size: 36px;
-    font-weight: 400;
     text-align: center;
-    color: #67524B;
+    color: #876C51;
 }
 
-.book__description {
+.book__status {
     margin-top: 35px;
     font-size: 20px;
-    font-weight: 400;
-    color: rgba(103, 82, 75, .7);
+    color: rgba(135, 108, 81, .7);
 }
 
 .book__social {
@@ -112,12 +111,50 @@ img {
 
 .book__sub-info span {
     font-size: 18px;
-    font-weight: 400;
-    color: #67524B;
+    color: #876C51;
 }
 
+.book__title {
+    font-size: 36px;
+    color: #876C51;
+}
 
+.book__title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background-color: rgba(135, 108, 81, .2);
+}
 
+.book__skills {
+    width: 100%;
+}
+
+.book__skills__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.book__skills__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 318px;
+    height: 130px;
+    margin-bottom: 25px;
+    padding-left: 115px;
+}
+
+.book__skills__item span {
+    display: block;
+    color: #876C51;
+    font-size: 24px;
+}
 
 
 
