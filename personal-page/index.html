@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Little Universe</title>
+    <link rel="stylesheet" href="public/js/libs/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="public/css/all.css">
 </head>
 <body>
@@ -33,48 +34,288 @@
                         </div>
                     </div>
                     <div class="book__page">
-                        <h2 class="book__title">Навыки</h2>
-                        <div class="book__skills">
-                            <div class="book__skills__container">
-                                <div class="book__skills__item" style="background-image: url('public/img/html.png');">
-                                    <span>HTML</span>
-                                </div>
-                                <div class="book__skills__item" style="background-image: url('public/img/css.png');">
-                                    <span>CSS</span>
-                                </div>
-                                <div class="book__skills__item" style="background-image: url('public/img/js.png');">
-                                    <span>JavaScript</span>
-                                </div>
-                                <div class="book__skills__item" style="background-image: url('public/img/jquery.png');">
-                                    <span>JQuery</span>
+                        <div class="kb-slides book__tabs">
+                            <div class="kb-slide book__tab-content" data-kb-slide="book-1">
+                                <h2 class="book__title">Заметки</h2>
+                                <div class="book__page__container">
+                                    
                                 </div>
                             </div>
-                            <div class="book__skills__container">
-                                <div class="book__skills__item" style="background-image: url('public/img/php.png');">
-                                    <span>PHP</span>
-                                </div>
-                                <div class="book__skills__item" style="background-image: url('public/img/python.png');">
-                                    <span>Python</span>
-                                </div>
-                                <div class="book__skills__item" style="background-image: url('public/img/mysql.png');">
-                                    <span>MySQL</span>
+                            <div class="kb-slide book__tab-content" data-kb-slide="book-2">
+                                <h2 class="book__title">Навыки</h2>
+                                <div class="book__page__container">
+                                    <div class="book__skills">
+                                        <div class="book__skills__title">
+                                            <h3>Frontend</h3>
+                                        </div>
+                                        <div class="book__skills__container">
+                                            <div class="book__skills__item">
+                                                <div>
+                                                    <img src="public/img/html.png" alt="HTML">
+                                                </div>
+                                                <div>
+                                                    <span>HTML</span>
+                                                </div>
+                                            </div>
+                                            <div class="book__skills__item">
+                                                <div>
+                                                    <img src="public/img/css.png" alt="CSS">
+                                                </div>
+                                                <div>
+                                                    <span>CSS</span>
+                                                </div>
+                                            </div>
+                                            <div class="book__skills__item">
+                                                <div>
+                                                    <img src="public/img/js.png" alt="JavaScript">
+                                                </div>
+                                                <div>
+                                                    <span>JavaScript</span>
+                                                </div>
+                                            </div>
+                                            <div class="book__skills__item">
+                                                <div>
+                                                    <img src="public/img/jquery.png" alt="JQuery">
+                                                </div>
+                                                <div>
+                                                    <span>JQuery</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="book__skills__title">
+                                            <h3>Backend</h3>
+                                        </div>
+                                        <div class="book__skills__container">
+                                            <div class="book__skills__item">
+                                                <div>
+                                                    <img src="public/img/php.png" alt="PHP">
+                                                </div>
+                                                <div>
+                                                    <span>PHP</span>
+                                                </div>
+                                            </div>
+                                            <div class="book__skills__item">
+                                                <div>
+                                                    <img src="public/img/mysql.png" alt="MySQL">
+                                                </div>
+                                                <div>
+                                                    <span>MySQL</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="book__skills__title">
+                                            <h3>Прочее</h3>
+                                        </div>
+                                        <div class="book__skills__container">
+                                            <div class="book__skills__item">
+                                                <div>
+                                                    <img src="public/img/python.png" alt="Python">
+                                                </div>
+                                                <div>
+                                                    <span>Python</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="book__bookmarks book__bookmarks_top">
-                            <a class="book__bookmarks__item" style="background-image: url('public/img/bookmark_green.png');" href="#"><span>Навыки</span></a>
-                            <a class="book__bookmarks__item" style="background-image: url('public/img/bookmark_orange.png');" href="#"><span>Мысли</span></a>
-                            <a class="book__bookmarks__item" style="background-image: url('public/img/bookmark_blue.png');" href="#"><span>Списки</span></a>
-                        </div>
-                        <div class="book__bookmarks book__bookmarks_bottom">
-                            <a class="book__bookmarks__item" style="background-image: url('public/img/bookmark_brown.png');" href="#"><span>Изображения</span></a>
-                            <a class="book__bookmarks__item" style="background-image: url('public/img/bookmark_violet.png');" href="#"><span>Видео</span></a>
-                            <a class="book__bookmarks__item" style="background-image: url('public/img/bookmark_cyan.png');" href="#"><span>Проекты</span></a>
+                            <div class="kb-tabs">
+                                <div class="book__bookmarks book__bookmarks_top">
+                                    <button class="kb-tab book__bookmarks__item" style="background-image: url('public/img/bookmark_green.png');" onclick="KBOpenSlide('.kb-slides', 'book-1')" href="#"><span>Заметки</span></button>
+                                    <button class="kb-tab book__bookmarks__item" style="background-image: url('public/img/bookmark_orange.png');" onclick="KBOpenSlide('.kb-slides', 'book-2')" href="#"><span>Навыки</span></button>
+                                    <button class="kb-tab book__bookmarks__item" style="background-image: url('public/img/bookmark_blue.png');" onclick="KBOpenSlide('.kb-slides', 'book-3')" href="#"><span>Списки</span></button>
+                                </div>
+                                <div class="book__bookmarks book__bookmarks_bottom">
+                                    <a class="kb-tab book__bookmarks__item" style="background-image: url('public/img/bookmark_brown.png');" href="#last-images"><span>Изображения</span></a>
+                                    <a class="kb-tab book__bookmarks__item" style="background-image: url('public/img/bookmark_violet.png');" href="#"><span>Видео</span></a>
+                                    <a class="kb-tab book__bookmarks__item" style="background-image: url('public/img/bookmark_cyan.png');" href="#"><span>Проекты</span></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="last-images" class="block">
+            <div class="block__body">
+                <div class="block__header">
+                    <h2 class="block__title">Последние изображения</h2>
+                </div>
+                <div class="block__content">
+                    <div class="swiper block__slider last-images-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #1</span>
+                                        <span class="block__content__item__description">Lorem ipsum dolor ...</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block__nav">
+                <div id="last-image-button-prev" class="block__nav__item block__nav__nav">
+                    <span>V</span>
+                </div>
+                <div id="last-image-button-next" class="block__nav__item block__nav__nav">
+                    <span>V</span>
+                </div>
+                <div class="block__nav__item block__nav__button">
+                    <span>Показать ещё</span>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div id="block-tabs-1" class="block__tabs">
+                <div class="tabs__item block__tabs__item" onclick="changeTab('#block-tabs-1', 1, this)">
+                    <span>Веб</span>
+                    <div class="block__tabs__item-img"></div>
+                </div>
+                <div class="tabs__item block__tabs__item" onclick="changeTab('#block-tabs-1', 2, this)">
+                    <span>Десктоп</span>
+                    <div class="block__tabs__item-img"></div>
+                </div>
+            </div>
+            <div class="block__body">
+                <div class="block__header">
+                    <h2 class="block__title">Проекты - Веб</h2>
+                </div>
+                <div class="block__content">
+                    <div class="swiper block__slider projects-web-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block__content__item">
+                                    <div class="block__content__item__img-container">
+                                        <img class="block__content__item__img" src="public/img/screenshot.png" alt="screenshot">
+                                    </div>
+                                    <div class="block__content__item__title-container">
+                                        <span class="block__content__item__title">Screenshot #2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            
+            </div>
+            <div class="block__nav">
+                <div id="projects-web-button-prev" class="block__nav__item block__nav__nav">
+                    <span>V</span>
+                </div>
+                <div id="projects-web-button-next" class="block__nav__item block__nav__nav">
+                    <span>V</span>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="public/js/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="public/js/main.js"></script>
 </body>
 </html>
