@@ -229,6 +229,10 @@ img {
     justify-content: flex-start;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .align-center {
     align-items: center;
 }
@@ -527,6 +531,45 @@ rect {
 .btn:active rect {
     stroke: rgba(255, 255, 255, 0.7);
     stroke-width: 2;
+}
+
+.coming-soon {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 360px;
+    height: 58px;
+    padding: 0 25px;
+    background-color: #FFFFFF;
+    border-radius: 14px;
+}
+
+.coming-soon__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.coming-soon__text {
+    color: #18191E;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.coming-soon__close {
+    position: absolute;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.coming-soon__close img {
+    width: 24px;
+    height: 24px;
 }
 
 @keyframes heart1 {
