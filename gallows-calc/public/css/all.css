@@ -9,7 +9,6 @@
 
 body {
     background-color: #161616;
-    overflow: hidden;
 }
 
 .text-gradient {
@@ -26,8 +25,11 @@ body {
 }
 
 .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 310px;
-    margin: 100px auto 0 auto;
+    transform: translate(-50%, -50%);
 }
 
 .calc {
@@ -106,8 +108,12 @@ body {
     border-top: none;
 }
 
-.calc__control__btn-group:last-child .calc__button:first-child {
+.calc__control__btn-group:last-child .calc__button:nth-child(2) {
     border-bottom-left-radius: 15px;
+}
+
+.calc__control__btn-group:last-child .calc__button:last-child {
+    border-bottom-right-radius: 15px;
 }
 
 .calc__button:last-child {
@@ -139,7 +145,7 @@ body {
     top: 50%;
     right: 0;
     width: 77.5px;
-    height: 100vh;
+    height: calc((100vh / 2) - 268.25px + 38.75px);
 }
 
 /* --- */
@@ -267,6 +273,3 @@ body {
     75% { background-color: rgba(255, 255, 255, 0.1); }
     100% { background-color: rgba(255, 255, 255, 0.03); }
 }
-
-
-
