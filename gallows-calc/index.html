@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallows calc</title>
+    <link rel="stylesheet" href="public/css/all.css?v=22.11.23.911">
+</head>
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <div class="calc">
+                <div class="calc__header">
+                    <span class="calc__display text-gradient">0</span>
+                </div>
+                <div class="calc__control">
+                    <div class="calc__control__btn-group">
+                        <div class="calc__color-line calc__color-line_horizontal"></div>
+                        <button onclick="clearAll()" class="calc__button btn_gradient"><span>C</span></button>
+                        <button onclick="toggleMinus()" class="calc__button btn_gradient"><span>+/-</span></button>
+                        <button onclick="addSign('%')" class="calc__button btn_gradient"><span>%</span></button>
+                        <button onclick="addSign('/')" class="calc__button btn_gradient"><span>÷</span></button>
+                    </div>
+                    <div class="calc__control__btn-group">
+                        <button onclick="addNumber('7')" class="calc__button btn_black"><span class="text-gradient">7</span></button>
+                        <button onclick="addNumber('8')" class="calc__button btn_black"><span class="text-gradient">8</span></button>
+                        <button onclick="addNumber('9')" class="calc__button btn_black"><span class="text-gradient">9</span></button>
+                        <button onclick="addSign('*')" class="calc__button btn_gradient"><span>×</span></button>
+                    </div>
+                    <div class="calc__control__btn-group">
+                        <button onclick="addNumber('4')" class="calc__button btn_black"><span class="text-gradient">4</span></button>
+                        <button onclick="addNumber('5')" class="calc__button btn_black"><span class="text-gradient">5</span></button>
+                        <button onclick="addNumber('6')" class="calc__button btn_black"><span class="text-gradient">6</span></button>
+                        <button onclick="addSign('-')" class="calc__button btn_gradient"><span>-</span></button>
+                    </div>
+                    <div class="calc__control__btn-group">
+                        <button onclick="addNumber('1')" class="calc__button btn_black"><span class="text-gradient">1</span></button>
+                        <button onclick="addNumber('2')" class="calc__button btn_black"><span class="text-gradient">2</span></button>
+                        <button onclick="addNumber('3')" class="calc__button btn_black"><span class="text-gradient">3</span></button>
+                        <button onclick="addSign('+')" class="calc__button btn_gradient"><span>+</span></button>
+                    </div>
+                    <div class="calc__control__btn-group">
+                        <div class="calc__color-line calc__color-line_vertical"></div>
+                        <button onclick="addNumber('0')" class="calc__button btn_black"><span class="text-gradient">0</span></button>
+                        <button class="calc__button btn_black"><span class="text-gradient"></span></button>
+                        <button onclick="addNumber('.')" class="calc__button btn_black"><span class="text-gradient">.</span></button>
+                        <button onclick="resultCalc()" class="calc__button btn_gradient"><span>=</span></button>
+                    </div>
+                </div>
+
+                <div class="gallows">
+                    <div class="gallows__images">
+                        <img class="gallows__img" src="public/img/0.svg" alt="Gallows">
+                        <img class="gallows__img hide" src="public/img/1.svg" alt="Gallows">
+                        <img class="gallows__img hide" src="public/img/2.svg" alt="Gallows">
+                        <img class="gallows__img hide" src="public/img/3.svg" alt="Gallows">
+                        <img class="gallows__img hide" src="public/img/4.svg" alt="Gallows">
+                        <img class="gallows__img hide" src="public/img/5.svg" alt="Die">
+                        <img class="gallows__img hide" src="public/img/6.svg" alt="Alive">
+                    </div>
+                    <div class="gallows__control">
+                        <div class="gallows__header">
+                            <span class="gallows__display">_ _ _ _ _ _</span>
+                        </div>
+                        <div class="gallows__answer">
+                            <button onclick="addGallowsNumber('1')" class="gallows__btn">1</button>
+                            <button onclick="addGallowsNumber('2')" class="gallows__btn">2</button>
+                            <button onclick="addGallowsNumber('3')" class="gallows__btn">3</button>
+                            <button onclick="addGallowsNumber('4')" class="gallows__btn">4</button>
+                            <button onclick="addGallowsNumber('5')" class="gallows__btn">5</button>
+                            <button onclick="addGallowsNumber('6')" class="gallows__btn">6</button>
+                            <button onclick="addGallowsNumber('7')" class="gallows__btn">7</button>
+                            <button onclick="addGallowsNumber('8')" class="gallows__btn">8</button>
+                            <button onclick="addGallowsNumber('9')" class="gallows__btn">9</button>
+                            <button onclick="addGallowsNumber('0')" class="gallows__btn">0</button>
+                            <button onclick="addGallowsNumber('.')" class="gallows__btn">.</button>
+                        </div>
+                    </div>
+                    <div class="gallows__close" onclick="restart()">
+                        <img class="gallows__close__img" src="public/img/close.svg" alt="Gallows">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="public/js/main.js?v=22.11.23.911"></script>
+</body>
+</html>
