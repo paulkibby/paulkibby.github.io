@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#18191E">
+    <title>Подарочки</title>
+    <link rel="stylesheet" href="public/css/all.css">
+</head>
+<body>
+    <div class="root">
+        <div class="open-gift">
+            <video id="open-gift" style="pointer-events: none;" src="public/videos/gift.mp4" preload="auto" autoplay no-controls playsinline muted></video>
+        </div>
+
+        <!-- <div id="first__modal" class="modal">
+            <div id="first___modal__window" class="modal__window">
+                <div class="modal__window__content">
+                    <div class="modal__window__text">
+                        <p class="modal__window__desc">
+                            То, что ты здесь увидишь, будет слегка отличаться от ...<br><br>
+                            Теперь закрывай весь этот кошмар и отправляйся наконец на просторы магазинов выбирать подарки, которые ты так хотела)<br><br>
+                            Думаю за это время они успеют приехать к тебе...
+                        </p>
+                    </div>
+                </div>
+                <div class="modal__window__footer">
+                    <button class="btn modal__button">Так таак!</button>
+                </div>
+            </div>
+        </div> -->
+
+        <div id="last__modal" class="modal">
+            <div id="last__modal__window" class="modal__window">
+                <div class="modal__window__content">
+                    <div class="modal__window__text">
+                        <p class="modal__window__desc">
+                            Ну вот и всё =)<br><br>
+                            Теперь закрывай весь этот ночной кошмар и отправляйся наконец на просторы магазинов выбирать подарки, которые ты так хотела)<br><br>
+                            Главное - не обращай внимание на цены, это просто циферки!!<br><br>
+                            Думаю за это время подарки успеют приехать к твоему дню рождения...
+                        </p>
+                    </div>
+                </div>
+                <div class="modal__window__footer">
+                    <button id="last__button" class="btn modal__button">За подарками!!</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="gift__modal" class="modal">
+            <div id="gift__modal__window" class="modal__window">
+                <div class="modal__window__content">
+                    <div class="modal__window__img">
+                        <img id="gift__img" class="modal__window__img__img" src="public/img/headphone.svg" alt="Наушники" draggable="false">
+                    </div>
+                    <div class="modal__window__text">
+                        <h3 id="gift__title" class="modal__window__title">Наушники</h3>
+                        <p id="gift__subtitle" class="modal__window__subtitle">Ушки?</p>
+                    </div>
+                </div>
+                <div class="modal__window__footer">
+                    <button id="gift__button" class="btn modal__button">Следующий подарок!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading">
+            <div class="loading__content">
+                <div class="loading__chest">
+                    <img id="loading__chest" src="public/img/chest0.png" alt="Chest" draggable="false">
+                    <p class="loading__chest__prompt">Открывай</p>
+                </div>
+                <span class="loading__title">Загрузка новогоднего настроения<span class="loading__title__dots"></span></span>
+            </div>
+            <div class="loading__footer">
+                <img class="loading__footer__img" src="public/img/run.png" alt="Run" draggable="false">
+            </div>
+        </div>
+    </div>
+
+    <div style="position: absolute; top: 0; left: 0; opacity: 0; z-index: -100;">
+        <img src="public/img/chest.gif" alt="Chest..." draggable="false">
+    </div>
+
+    <script src="public/js/libs/jquery-3.6.1.min.js"></script>
+    <script src="public/js/snowfall.jquery.min.js"></script>
+    <script src="public/js/all.js"></script>
+    <style>
+        .snowfall-flakes {
+            opacity: .45;
+            pointer-events: none;
+        }
+    </style>
+</body>
+</html>
