@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#18191E">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Подарочки</title>
     <link rel="stylesheet" href="public/css/all.css">
 </head>
 <body>
+    <audio id="background-music" src="public/audio/snowflake.mp3" loop style="display: none; z-index:-100;"></audio>
     <div class="root">
         <div class="open-gift">
             <video id="open-gift" style="pointer-events: none;" src="public/videos/gift.mp4" preload="auto" autoplay no-controls playsinline muted></video>
@@ -37,14 +39,14 @@
                     <div class="modal__window__text">
                         <p class="modal__window__desc">
                             Ну вот и всё =)<br><br>
-                            Теперь закрывай весь этот ночной кошмар и отправляйся наконец на просторы магазинов выбирать подарки, которые ты так хотела)<br><br>
-                            Главное - не обращай внимание на цены, это просто циферки!!<br><br>
-                            Думаю за это время подарки успеют приехать к твоему дню рождения...
+                            Теперь ты можешь закрыть весь этот ночной кошмар и наконец отправиться на просторы дорогих магазинов выбирать эти подарки)<br><br>
+                            Главное - не обращай внимание на цены, это просто циферки!! Ни-икаких ограничений!<br><br>
+                            Отказы не принимаются.
                         </p>
                     </div>
                 </div>
                 <div class="modal__window__footer">
-                    <button id="last__button" class="btn modal__button">За подарками!!</button>
+                    <button id="last__button" class="btn modal__button">Пака</button>
                 </div>
             </div>
         </div>
@@ -56,8 +58,8 @@
                         <img id="gift__img" class="modal__window__img__img" src="public/img/headphone.svg" alt="Наушники" draggable="false">
                     </div>
                     <div class="modal__window__text">
-                        <h3 id="gift__title" class="modal__window__title">Наушники</h3>
-                        <p id="gift__subtitle" class="modal__window__subtitle">Ушки?</p>
+                        <h3 id="gift__title" class="modal__window__title">Что?</h3>
+                        <p id="gift__subtitle" class="modal__window__subtitle">Ты не должна этого видеть...</p>
                     </div>
                 </div>
                 <div class="modal__window__footer">
@@ -77,6 +79,12 @@
             <div class="loading__footer">
                 <img class="loading__footer__img" src="public/img/run.png" alt="Run" draggable="false">
             </div>
+        </div>
+    </div>
+
+    <div class="bye-bye">
+        <div class="bye-bye--content">
+            <span class="bye-bye--text">Ухади)</span>
         </div>
     </div>
 

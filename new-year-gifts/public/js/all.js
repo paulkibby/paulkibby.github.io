@@ -2,24 +2,29 @@ $(document).ready(function() {
 
     let gifts = {
         0: {
-            'title': 'Наушники',
-            'subtitle': 'Ушки?',
+            'title': 'Ушки',
+            'subtitle': 'Греть ушки классными звуками',
             'img': 'headphone.svg',
         },
         1: {
-            'title': 'Монитор',
+            'title': 'Квадрат малевича',
             'subtitle': 'Если найдём для него место =)',
             'img': 'monitor.svg',
         },
         2: {
-            'title': 'Клавиатура',
-            'subtitle': '...',
+            'title': 'QWERTY',
+            'subtitle': 'Какие-то кнопки, но красивые',
             'img': 'keyboard.svg',
         },
         3: {
-            'title': 'Мышь',
-            'subtitle': '...',
+            'title': 'ручная мыш(ь)',
+            'subtitle': 'Твёрдая опора для твоих ручек',
             'img': 'mouse.svg',
+        },
+        4: {
+            'title': 'Вкусняшки',
+            'subtitle': 'Которые ты получишь сегодня)',
+            'img': 'heart.svg',
         },
     };
 
@@ -49,6 +54,10 @@ $(document).ready(function() {
         }, 400);
     }
 
+    function setGiftModalButtonText(text) {
+        $('#gift__button').text(text);
+    }
+
     function currentGiftIdIncrement() {
         if (currentGiftId < (Object.keys(gifts).length - 1)) {
             currentGiftId++;
@@ -56,7 +65,7 @@ $(document).ready(function() {
         
         if (currentGiftId >= (Object.keys(gifts).length - 1)) {
             setTimeout(() => {
-                $('#gift__button').text('Ура!');
+                setGiftModalButtonText('Ура!');
             }, 800);
             giftsOver = true;
         }
@@ -97,7 +106,8 @@ $(document).ready(function() {
 
     $('#loading__chest').on('click', function() {
         $('#loading__chest').attr('src', 'public/img/chest.gif');
-
+        backgroundMusic.volume = 0.15;
+        backgroundMusic.play();
         setTimeout(() => {
             $('.loading__chest').fadeOut();
 
@@ -110,6 +120,7 @@ $(document).ready(function() {
     });
 
     let vid = document.querySelector('#open-gift');
+    let backgroundMusic = document.querySelector('#background-music');
     function openGiftPlay() {
         vid.play();
     }
@@ -132,14 +143,15 @@ $(document).ready(function() {
 
     $('#last__button').on('click', function() {
         closeLastModal();
+        $('.bye-bye').snowfall({minSize: 2, maxSize: 7, flakeCount: 15, maxSpeed: 0.5});
+        $('.bye-bye').fadeIn(800);
+        setTimeout(() => { $('.bye-bye--text').fadeIn(800); }, 1600);
     });
     
     // start
-
     setTimeout(() =>{
         $('.loading__title').fadeIn(800);
         setTimeout(() => { $('.loading__footer__img').fadeIn(800); }, 400);
-        
         setTimeout(() => {
             $('.loading__title').fadeOut(800);
             setTimeout(() => {

@@ -20,6 +20,30 @@ body {
 
 }
 
+.bye-bye {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #030819;
+    z-index: 1000;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.bye-bye--content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bye-bye--text {
+    display: none;
+}
+
 .loading {
     position: fixed;
     top: 0;
@@ -163,7 +187,7 @@ body {
 }
 
 .modal__window__subtitle {
-    color: rgba(3, 8, 25, .3);
+    color: rgba(3, 8, 25, .33);
     font-size: 18px;
     text-align: center;
     margin-top: 10px;
