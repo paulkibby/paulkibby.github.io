@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'Pixel Cyr';
-    src: url('../fonts/pixelcyr.ttf') format('ttf');
+    font-family: 'Pixel CyrK';
+    src: url('../fonts/pixelcyr_normal.ttf') format('truetype');
+    font-style: normal; 
+    font-weight: normal; 
 }
 
 * {
@@ -8,7 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     color-scheme: dark;
-    font-family: 'Pixel Cyr';
+    font-family: 'Pixel CyrK';
 }
 
 body {
