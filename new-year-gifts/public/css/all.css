@@ -1,8 +1,10 @@
 @font-face {
     font-family: 'Pixel CyrK';
     src: url('../fonts/pixelcyr_normal.ttf') format('truetype');
-    font-style: normal; 
-    font-weight: normal; 
+    src: url("../fonts/fonts/pixelcyr_normal.ttf") format("truetype"),
+    url("../fonts/fonts/pixelcyr_normal.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
 }
 
 * {
