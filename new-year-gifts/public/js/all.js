@@ -13,7 +13,7 @@ $(document).ready(function() {
         },
         2: {
             'title': 'QWERTY',
-            'subtitle': 'Какие-то кнопки, но красивые',
+            'subtitle': 'Какие-то кнопки, красивые',
             'img': 'keyboard.svg',
         },
         3: {
