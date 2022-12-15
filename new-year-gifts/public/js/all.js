@@ -18,7 +18,7 @@ $(document).ready(function() {
         },
         3: {
             'title': 'ручная мыш(ь)',
-            'subtitle': 'Твёрдая опора для твоих ручек',
+            'subtitle': 'Твёрдая опора для твоей ручки',
             'img': 'mouse.svg',
         },
         4: {
