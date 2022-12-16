@@ -8,7 +8,7 @@ $(document).ready(function() {
         },
         1: {
             'title': 'Квадрат малевича',
-            'subtitle': 'Если найдём для него место =)',
+            'subtitle': 'Если найдём для него место)',
             'img': 'monitor.svg',
         },
         2: {
