@@ -22,6 +22,11 @@ $(document).ready(function() {
             'img': 'mouse.svg',
         },
         4: {
+            'title': 'Дверь',
+            'subtitle': 'Защита от бабаек',
+            'img': 'door.svg',
+        },
+        5: {
             'title': 'Вкусняшки',
             'subtitle': 'Которые ты получишь сегодня)',
             'img': 'heart.svg',
