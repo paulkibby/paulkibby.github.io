@@ -165,8 +165,16 @@ img {
     margin-bottom: 50px;
 }
 
+.mb-35 {
+    margin-bottom: 35px;
+}
+
 .p-35 {
     padding: 35px;
+}
+
+.p-25 {
+    padding: 25px;
 }
 
 .fs-40 {

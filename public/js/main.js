@@ -47,10 +47,10 @@ setTimeout(() => {
 
 // ---
 
-document.querySelector('#close-notice').addEventListener('click', () => {
-    document.querySelector('.coming-soon').classList.replace('notice-show', 'notice-hide');
-});
+// document.querySelector('#close-notice').addEventListener('click', () => {
+//     document.querySelector('.coming-soon').classList.replace('notice-show', 'notice-hide');
+// });
 
-setTimeout(() => {
-    document.querySelector('.coming-soon').classList.replace('n-hide', 'notice-show');
-}, 2200);
+// setTimeout(() => {
+//     document.querySelector('.coming-soon').classList.replace('n-hide', 'notice-show');
+// }, 2200);
